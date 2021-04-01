@@ -71,6 +71,7 @@ asdf plugin add mage https://github.com/ggilmore/asdf-mage.git
 ## Docker commands
 
 ```sh
+yarn build
 docker build -t grafana-ext .
 docker run -d -p 3000:3000  grafana-ext
 ```
