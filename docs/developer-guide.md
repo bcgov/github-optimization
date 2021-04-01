@@ -26,6 +26,19 @@ If you have made any changes to any `go` files, you can use [mage](https://githu
 mage build:linux && mage reloadPlugin
 ```
 
+## Workaround
+
+These instructions are failing, but should work according to [grafana](https://github.com/grafana/grafana-plugin-sdk-go/tree/master/build), need to figure out why. 
+In the meantime, make sure to get the following:
+``` go
+go get github.com/grafana/grafana-plugin-sdk-go/build
+go get github.com/grafana/grafana-plugin-sdk-go/backend@v0.90.0
+go get github.com/hashicorp/go-plugin@v1.2.2
+go get github.com/grafana/grafana-plugin-sdk-go/data@v0.90.0
+```
+
+and run `mage buildAll` to compile the backend.
+
 ### Compiling the Frontend
 
 After you made the desired changes, you can build and test the new version of the plugin using `yarn`:
