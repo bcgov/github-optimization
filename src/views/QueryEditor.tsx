@@ -24,7 +24,6 @@ interface Props extends QueryEditorProps<DataSource, GitHubQuery, GithubDataSour
 export const LeftColumnWidth = 10;
 export const RightColumnWidth = 36;
 
-/* eslint-disable react/display-name */
 const queryEditors: {
   [key: string]: { component: (props: Props, onChange: (val: any) => void) => ReactNode };
 } = {
@@ -73,8 +72,6 @@ const queryEditors: {
     ),
   },
 };
-
-/* eslint-enable react/display-name */
 
 const queryTypeOptions: Array<SelectableValue<string>> = Object.keys(QueryType).map((v) => {
   return {
