@@ -1,7 +1,7 @@
 version: '3'
 services:
   grafana:
-    image: grafana/grafana:master
+    image: grafana/grafana
     ports:
       - '3090:3000'
     volumes:
