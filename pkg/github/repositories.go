@@ -36,13 +36,27 @@ type Repository struct {
 	Owner struct {
 		Login string
 	}
-	NameWithOwner string
-	URL           string
-	ForkCount     int64
-	IsFork        bool
-	IsMirror      bool
-	IsPrivate     bool
-	CreatedAt     githubv4.DateTime
+	NameWithOwner      string
+	URL                string
+	HomepageURL        string
+	Description        string
+	ForkCount          int64
+	IsFork             bool
+	IsMirror           bool
+	IsPrivate          bool
+	IsArchived         bool
+	IsTemplate         bool
+	StargazerCount     int64
+	DiskUsage          int64
+	HasIssuesEnabled   bool
+	HasProjectsEnabled bool
+	HasWikiEnabled     bool
+	MergeCommitAllowed bool
+	RebaseMergeAllowed bool
+	SquashMergeAllowed bool
+	CreatedAt          githubv4.DateTime
+	UpdatedAt          githubv4.DateTime
+	PushedAt           githubv4.DateTime
 }
 
 // Repositories is a list of GitHub repositories
@@ -56,11 +70,25 @@ func (r Repositories) Frames() data.Frames {
 		data.NewField("owner", nil, []string{}),
 		data.NewField("name_with_owner", nil, []string{}),
 		data.NewField("url", nil, []string{}),
+		data.NewField("homepage_url", nil, []string{}),
+		data.NewField("description", nil, []string{}),
 		data.NewField("forks", nil, []int64{}),
 		data.NewField("is_fork", nil, []bool{}),
 		data.NewField("is_mirror", nil, []bool{}),
 		data.NewField("is_private", nil, []bool{}),
+		data.NewField("is_archived", nil, []bool{}),
+		data.NewField("is_template", nil, []bool{}),
+		data.NewField("stars", nil, []int64{}),
+		data.NewField("disk_usage", nil, []int64{}),
+		data.NewField("has_issues_enabled", nil, []bool{}),
+		data.NewField("has_projects_enabled", nil, []bool{}),
+		data.NewField("has_wiki_enabled", nil, []bool{}),
+		data.NewField("merge_commit_allowed", nil, []bool{}),
+		data.NewField("rebase_merge_allowed", nil, []bool{}),
+		data.NewField("squash_merge_allowed", nil, []bool{}),
 		data.NewField("created_at", nil, []time.Time{}),
+		data.NewField("updated_at", nil, []time.Time{}),
+		data.NewField("pushed_at", nil, []time.Time{}),
 	)
 
 	for _, v := range r {
@@ -69,11 +97,25 @@ func (r Repositories) Frames() data.Frames {
 			v.Owner.Login,
 			v.NameWithOwner,
 			v.URL,
+			v.HomepageURL,
+			v.Description,
 			v.ForkCount,
 			v.IsFork,
 			v.IsMirror,
 			v.IsPrivate,
+			v.IsArchived,
+			v.IsTemplate,
+			v.StargazerCount,
+			v.DiskUsage,
+			v.HasIssuesEnabled,
+			v.HasProjectsEnabled,
+			v.HasWikiEnabled,
+			v.MergeCommitAllowed,
+			v.RebaseMergeAllowed,
+			v.SquashMergeAllowed,
 			v.CreatedAt.Time,
+			v.UpdatedAt.Time,
+			v.PushedAt.Time,
 		)
 	}
 
