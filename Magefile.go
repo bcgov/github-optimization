@@ -7,6 +7,6 @@ import (
 	build "github.com/grafana/grafana-plugin-sdk-go/build"
 )
 
-func BuildAll(){
+func BuildAll() {
 	build.BuildAll()
 }

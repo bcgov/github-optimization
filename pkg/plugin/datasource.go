@@ -41,7 +41,7 @@ func CheckHealth(ctx context.Context, d Datasource, req *backend.CheckHealthRequ
 		}, nil
 	}
 	return &backend.CheckHealthResult{
-		Status: backend.HealthStatusOk,
+		Status:  backend.HealthStatusOk,
 		Message: backend.HealthStatusOk.String(),
 	}, nil
 }
