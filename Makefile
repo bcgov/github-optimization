@@ -8,11 +8,15 @@ app_build:
 server_build:
 	mage buildAll
 
+.PHONY: go_fmt
+go_fmt:
+	./bin/go-fmt.sh
+
 # https://devcenter.heroku.com/articles/heroku-cli
 .PHONY: heroku_setup
 heroku_setup:
 	heroku login
-	./bin/heroku_setup.sh $(APP) $(ORG)
+	./bin/heroku-setup.sh $(APP) $(ORG)
 
 .PHONY: heroku_push
 # heroku_push: app_build
