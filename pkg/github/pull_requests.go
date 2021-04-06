@@ -163,7 +163,8 @@ func GetAllPullRequests(ctx context.Context, client Client, opts models.ListPull
 			break
 		}
 
-		created = prs[count-1].CreatedAt.Format("2006-01-02")
+		// see https://yourbasic.org/golang/format-parse-string-time-date-example/
+		created = prs[count-1].CreatedAt.Format("2006-01-02T15:04:05Z07:00")
 	}
 
 	return pullRequests, nil
