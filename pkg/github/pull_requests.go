@@ -28,7 +28,7 @@ type QueryListPullRequests struct {
 			PullRequest PullRequest `graphql:"... on PullRequest"`
 		}
 		PageInfo PageInfo
-	} `graphql:"search(query: $query, type: ISSUE, first: 100, after: $cursor)"`
+	} `graphql:"search(query: $query, type: ISSUE, last: 100)"`
 }
 
 // PullRequestAuthor is the structure of the Author object in a Pull Request (which requires a grapql object expansion on `User`)
@@ -135,20 +135,23 @@ func (p PullRequests) Frames() data.Frames {
 // GetAllPullRequests uses the graphql search endpoint API to search all pull requests in the repository
 func GetAllPullRequests(ctx context.Context, client Client, opts models.ListPullRequestsOptions) (PullRequests, error) {
 	var (
-		variables = map[string]interface{}{
-			"cursor": (*githubv4.String)(nil),
-			"query":  githubv4.String(buildQuery(opts)),
-		}
-
+		created      = ""
+		variables    = map[string]interface{}{}
 		pullRequests = []PullRequest{}
 	)
 
 	for {
 		q := &QueryListPullRequests{}
+		variables = map[string]interface{}{
+			"query": githubv4.String(buildQuery(opts, created)),
+		}
+
 		if err := client.Query(ctx, q, variables); err != nil {
 			return nil, errors.WithStack(err)
 		}
-		prs := make([]PullRequest, len(q.Search.Nodes))
+
+		count := len(q.Search.Nodes)
+		prs := make([]PullRequest, count)
 
 		for i, v := range q.Search.Nodes {
 			prs[i] = v.PullRequest
@@ -156,10 +159,12 @@ func GetAllPullRequests(ctx context.Context, client Client, opts models.ListPull
 
 		pullRequests = append(pullRequests, prs...)
 
-		if !q.Search.PageInfo.HasNextPage {
+		if count < 100 {
 			break
 		}
-		variables["cursor"] = q.Search.PageInfo.EndCursor
+
+		// see https://yourbasic.org/golang/format-parse-string-time-date-example/
+		created = prs[count-1].CreatedAt.Format("2006-01-02T15:04:05Z07:00")
 	}
 
 	return pullRequests, nil
@@ -186,9 +191,14 @@ func GetPullRequestsInRange(ctx context.Context, client Client, opts models.List
 }
 
 // buildQuery builds the "query" field for Pull Request searches
-func buildQuery(opts models.ListPullRequestsOptions) string {
+func buildQuery(opts models.ListPullRequestsOptions, created string) string {
 	search := []string{
 		"is:pr",
+		"sort:created",
+	}
+
+	if created != "" {
+		search = append(search, fmt.Sprintf("created:<%s", created))
 	}
 
 	if opts.Repository == "" {
