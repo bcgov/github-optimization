@@ -2,6 +2,7 @@ node_modules/
 coverage/
 ci/
 dist/
+.env
 
 # e2e
 provisioning/
