@@ -4,3 +4,4 @@ python 3.8.6
 golang 1.16
 mage 1.4.0
 docker-compose 1.28.6
+oc 4.7.5

@@ -79,6 +79,7 @@ After you are good to go, it is time to create a pull request to share your work
 ```sh
 cat .tool-versions | cut -f 1 -d ' ' | xargs -n 1 asdf plugin-add
 asdf plugin add mage https://github.com/ggilmore/asdf-mage.git
+asdf plugin add oc https://github.com/sqtran/asdf-oc.git
 asdf plugin-add docker-compose https://github.com/virtualstaticvoid/asdf-docker-compose.git
 ```
 
