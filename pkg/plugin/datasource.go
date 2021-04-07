@@ -19,6 +19,7 @@ type Datasource interface {
 	HandlePullRequestsQuery(context.Context, *models.PullRequestsQuery, backend.DataQuery) (dfutil.Framer, error)
 	HandleLabelsQuery(context.Context, *models.LabelsQuery, backend.DataQuery) (dfutil.Framer, error)
 	HandlePackagesQuery(context.Context, *models.PackagesQuery, backend.DataQuery) (dfutil.Framer, error)
+	HandleOrganizationQuery(context.Context, *models.OrganizationQuery, backend.DataQuery) (dfutil.Framer, error)
 	HandleMilestonesQuery(context.Context, *models.MilestonesQuery, backend.DataQuery) (dfutil.Framer, error)
 	CheckHealth(context.Context) error
 }
