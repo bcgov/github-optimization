@@ -2,8 +2,6 @@ package github
 
 import (
 	"context"
-	"fmt"
-	"strings"
 	"time"
 
 	"github.com/grafana/github-datasource/pkg/models"
@@ -22,12 +20,15 @@ import (
 //   }
 // }
 type QueryListRepositories struct {
-	Search struct {
-		Nodes []struct {
-			Repository Repository `graphql:"... on Repository"`
-		}
-		PageInfo PageInfo
-	} `graphql:"search(query: $query, type: REPOSITORY, first: 100, after: $cursor)"`
+	Organization struct {
+		Repositories struct {
+			PageInfo struct {
+				HasNextPage githubv4.Boolean
+				EndCursor   githubv4.String
+			}
+			Nodes []Repository
+		} `graphql:"repositories(first: 100, after: $cursor)"`
+	} `graphql:"organization(login: $org)"`
 }
 
 // Repository is a code repository
@@ -125,15 +126,10 @@ func (r Repositories) Frames() data.Frames {
 
 // GetAllRepositories retrieves all available repositories for an organization
 func GetAllRepositories(ctx context.Context, client Client, opts models.ListRepositoriesOptions) (Repositories, error) {
-	query := strings.Join([]string{
-		fmt.Sprintf("org:%s", opts.Owner),
-		opts.Repository,
-	}, " ")
-
 	var (
 		variables = map[string]interface{}{
 			"cursor": (*githubv4.String)(nil),
-			"query":  githubv4.String(query),
+			"org":    githubv4.String(opts.Owner),
 		}
 
 		repos = []Repository{}
@@ -144,18 +140,18 @@ func GetAllRepositories(ctx context.Context, client Client, opts models.ListRepo
 		if err := client.Query(ctx, q, variables); err != nil {
 			return nil, err
 		}
-		r := make([]Repository, len(q.Search.Nodes))
+		r := make([]Repository, len(q.Organization.Repositories.Nodes))
 
-		for i, v := range q.Search.Nodes {
-			r[i] = v.Repository
+		for i, v := range q.Organization.Repositories.Nodes {
+			r[i] = v
 		}
 
 		repos = append(repos, r...)
 
-		if !q.Search.PageInfo.HasNextPage {
+		if !q.Organization.Repositories.PageInfo.HasNextPage {
 			break
 		}
-		variables["cursor"] = q.Search.PageInfo.EndCursor
+		variables["cursor"] = q.Organization.Repositories.PageInfo.EndCursor
 	}
 
 	return repos, nil
