@@ -26,7 +26,6 @@ func main() {
 
 	client := githubv4.NewClient(httpClient)
 
-	fmt.Print(client)
 	err := client.Query(context.Background(), &query, nil)
 	if err != nil {
 		// Handle error.

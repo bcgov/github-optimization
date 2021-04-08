@@ -19,6 +19,8 @@ const (
 	QueryTypeRepositories = "Repositories"
 	// QueryTypeOrganizations is used when querying for GitHub organizations
 	QueryTypeOrganizations = "Organizations"
+	// QueryTypeOrganization is used when querying for GitHub organization
+	QueryTypeOrganization = "Organization"
 	// QueryTypeGraphQL is used when sending an ad-hoc graphql query
 	QueryTypeGraphQL = "GraphQL"
 	// QueryTypePackages is used when querying for NPM / Docker / etc packages
@@ -93,4 +95,10 @@ type PackagesQuery struct {
 type MilestonesQuery struct {
 	Query
 	Options ListMilestonesOptions `json:"options"`
+}
+
+// OrganizationQuery is used when querying for GitHub organization
+type OrganizationQuery struct {
+	Query
+	Options ListPullRequestsOptions `json:"options"`
 }

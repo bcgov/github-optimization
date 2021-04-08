@@ -61,6 +61,11 @@ func (i *Instance) HandlePackagesQuery(ctx context.Context, q *models.PackagesQu
 	return i.Datasource.HandlePackagesQuery(ctx, q, req)
 }
 
+// HandleOrganizationQuery ...
+func (i *Instance) HandleOrganizationQuery(ctx context.Context, q *models.OrganizationQuery, req backend.DataQuery) (dfutil.Framer, error) {
+	return i.Datasource.HandleOrganizationQuery(ctx, q, req)
+}
+
 // HandleMilestonesQuery ...
 func (i *Instance) HandleMilestonesQuery(ctx context.Context, q *models.MilestonesQuery, req backend.DataQuery) (dfutil.Framer, error) {
 	return i.Datasource.HandleMilestonesQuery(ctx, q, req)
