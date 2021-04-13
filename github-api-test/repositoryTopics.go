@@ -68,9 +68,11 @@ func main() {
 		fmt.Println(err)
 	}
 
-	f, err := os.Create(path + "/dat/repo-topics.txt")
+	f, err := os.Create(path + "/dat/repo-topics.csv")
 	check(err)
 	defer f.Close()
+
+	f.WriteString("Repository,Ministry Code\n")
 
 	for {
 		q := &QueryListRepositoryTopics{}
@@ -80,10 +82,10 @@ func main() {
 		}
 		for _, b := range q.Organization.Repositories.Nodes {
 			name := b.Name
-			f.WriteString(string(name) + ": ")
+			f.WriteString(string(name) + ",")
 			for _, c := range b.RepositoryTopics.Nodes {
 				if contains(codes[:], strings.ToUpper(string(c.Topic.Name))) {
-					f.WriteString(string(c.Topic.Name) + ", ")
+					f.WriteString(string(c.Topic.Name))
 				}
 			}
 			f.WriteString("\n")
