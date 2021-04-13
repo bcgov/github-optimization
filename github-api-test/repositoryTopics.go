@@ -81,14 +81,17 @@ func main() {
 			fmt.Print(err)
 		}
 		for _, b := range q.Organization.Repositories.Nodes {
+			hasTopic := false
 			name := b.Name
-			f.WriteString(string(name) + ",")
 			for _, c := range b.RepositoryTopics.Nodes {
 				if contains(codes[:], strings.ToUpper(string(c.Topic.Name))) {
-					f.WriteString(string(c.Topic.Name))
+					f.WriteString(string(name) + "," + string(c.Topic.Name) + "\n")
+					hasTopic = true
 				}
 			}
-			f.WriteString("\n")
+			if !hasTopic {
+				f.WriteString(string(name) + "," + "\n")
+			}
 		}
 		if !q.Organization.Repositories.PageInfo.HasNextPage {
 			break
