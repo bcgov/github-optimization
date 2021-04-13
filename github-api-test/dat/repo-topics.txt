@@ -1,0 +1,980 @@
+wqbc: env,
+BC-Policy-Framework-For-GitHub: citz,
+bcgroundwater: env,
+groundwater-levels-indicator: env,
+ckanext-googleanalytics: citz,
+ckanext-hierarchy: citz,
+ckanext-ga-report:
+EnvReportBC: env,
+envreportutils: env,
+CSB-eFile:
+ckanext-bcgov: citz,
+bcmaps: env,
+dbcrss: citz,
+bc-laws-api:
+rcaaqs: env,
+ozone-caaqs-indicator: env,
+pm25-caaqs-indicator: env,
+esm-server:
+datapusher:
+ltema:
+bearmon:
+openconsult:
+protected-lands-and-waters-indicator: env,
+BCDevExchange-app:
+bc-population-indicator: env,
+data-fp: citz,
+nrs-sparx-automation:
+playbook:
+govHackServiceCatalogue:
+guides:
+pages:
+guides-template:
+DBC-APIM: citz,
+cpf:
+drivebc-webcam-api:
+databc-web-map-services:
+agile-guide:
+digital-toolkit:
+eba-guide:
+data-driven-decision-making:
+bcdc-devops: citz,
+data-fp-features: citz,
+issue-aggregator:
+api-specs:
+DevEx-Roadmap:
+interactive-infographic:
+service-patterns:
+piwik:
+Gov-2.0-Bootstrap-Skeleton:
+ckan:
+PMO-Database:
+rems: env,
+ckanext-geoview:
+agile-labor-categories:
+FGDB-Standards-Tools: flnr,
+ghg-emissions-indicator: env,
+ols-devkit:
+MyGovBC-core-server:
+MyGovBC-core-client:
+MyGovBC-core-headerFooterService:
+MyGovBC-notification-server: citz,
+MyGovBC-widget-sharedservices-foodsafe:
+MyGovBC-widget-info-template:
+BCStats: jedc,
+WES-engagement-states: citz,
+simple-R-shiny: env,
+land-designations-indicator: env,
+land-designations-shinyapp: env,
+envreportbc-snippets: env,
+climate-change-indicators-2015: env,
+tire-recycling-indicator: env,
+invasive-species-indicator: env,
+update-VRI-volumes: flnr,
+cccharts: env,
+mygovbc:
+WES-demographic-profile: citz,
+eDivorce: ag,
+designatedlands: env,
+mygovbc-nginx: citz,
+mygovbc-foodsafe-nginx: citz,
+water-quality-analysis: env,
+SecurityAwareness:
+MyGovBC-MSP:
+smtp-om-core:
+schoolbus-orig:
+schoolbus: tran,
+burn-severity: flnr,
+housing-data-visualization-project: jedc,
+ckanext-openapiviewer: citz,
+BC-demography: citz,
+smtp-om-cas-common:
+HelloSimon_Web:
+slack-dev-bot-BCGov:
+Mock-Server:
+Swagger-Editor:
+SchemaSpy:
+streamflow-trends-on-multi-stats:
+Swagger-Codegen-Extension:
+career-survey: citz,
+mygovbc-foodsafe: citz,
+hets: tran,
+MyGovBC-MSP-Service:
+gwa:
+jxon:
+batch-pdf-reports: citz,
+R-presentation:
+tfrs: tran, empr,
+fabric.js:
+MyGovBC-CAPTCHA-Service:
+MyGovBC-CAPTCHA-Widget:
+BCWaterDischargeAnalysis: env,
+housing-data-challenge-ruby:
+ligo-lib: citz,
+kapua:
+kura:
+housing-data-challenge-exponentian:
+housing-data-challenge-plot-scatter:
+housing-data-challenge-plotly:
+housing-data-challenge-foundry-spatial:
+BCWaterDischargeAnalysis-SampleScripts: flnr,
+Oahu-UI:
+gwells: env,
+oahu-api:
+oahu-dbsrv:
+kura-emulator:
+chart-tool:
+legacy-eao-inspections-ios:
+epic-mobile-app-android:
+moti-iot-challenges: tran,
+LTEM-sample-analyses: flnr,
+moti-iot-poc:
+sonarqube-openshift-docker:
+navUnit:
+tfrs-sonar-scanner:
+dbc-kml-apps: citz,
+dbc-cms-vis: citz,
+tfrs-functional-test-runner:
+SSD-methods: env,
+csnr-dmod: env,
+nrs-cmdb: flnr,
+sbc-qsystem:
+openshift-openjfx:
+agile-sdlc: env,
+eao-nginx:
+mygovbc-bootstrap-theme:
+angular-scaffold:
+eao-parse-server:
+eao-public:
+eao-public-consultation:
+dbc-j2ee-template:
+gw-licensing-transition-summary: env,
+service-patterns-temp:
+ligo: citz,
+FASSTX: env,
+shinyhydat: env,
+mem-admin:
+mem-mmti:
+eao-geo-service:
+mem-geo-service:
+mem-nginx:
+mem-mmti-public:
+nifi-atlas: citz,
+namer: citz,
+bcgovr: citz, env,
+angular-scaffold-captcha:
+agri-nmp: agri,
+sm-bridge-service:
+von: citz,
+bc-raster-roads: env,
+IM-Report-GBears:
+CANSIM-dataviewer: jedc,
+prime-web: hlth,
+MyGovBC-ServiceProviderTools:
+water-quality-analysis-northeastbc:
+hydrolook: env,
+TheOrgBook: citz,
+openshift-postgresql-oracle_fdw:
+NatureServe-GBPU-Ranking:
+ocp-sso: citz,
+s2i-ruby-nodejs:
+jekyll-barebones:
+ckanext-galileo:
+WES-NLP-tool: citz,
+HectaresBC:
+bootstrap-theme: citz,
+quickstart:
+roadless-areas-indicator: env,
+child-support-lookup-tool:
+bcmapsdata: env,
+drat: env,
+fasstr: env,
+openshift-solr:
+von-connector: citz,
+von-network: citz,
+s2i-nginx:
+getting_started_with_R: citz,
+WES-results-visualization: citz,
+nrts-prc-public:
+forest-management-indicators: env,
+gcpe-news-api-client:
+ssdtools: env,
+bcgov-data-science-resources: citz,
+Family-Protection-Order: ag,
+greenlight: citz,
+esm-admin:
+secure-image-android: citz,
+secure-image-ios: citz,
+jag-shuber-frontend: ag,
+jag-shuber-api: ag,
+secure-image-api: citz,
+nrts-prc-api:
+air-monitoring-visualization:
+gcpe-news-media-proxy:
+nrts-prc-admin:
+splunk-forwarder:
+mobile-authentication-ios:
+mobile-authentication-android:
+mobile-authentication-js:
+bc-aquifer-dashboard: flnr,
+smk-legacy-ui: citz,
+smk-datastore:
+gcpe-news-webapp:
+name-examination:
+canwqdata: env,
+shinyssdtools: env,
+range-ios: flnr,
+range-web: flnr,
+indy-sdk:
+wqindex: env,
+GDX-Analytics: citz,
+http-did-auth-proxy: citz,
+jag-efiling-hub:
+jag-efiling-frontend:
+jag-efiling-api:
+jag-lcrb-carla-public: ag,
+gcpe-news-archive:
+did-auth-relying-party: citz,
+did-auth-extension: citz,
+eao-inspections-web:
+GDX-Analytics-Looker-Snowplow-Web-Block: citz,
+grizzly-bear-IUCN-threats: env,
+clus: flnr,
+clamav:
+workforce-profile-tool: citz,
+mds: empr,
+student-outcomes-dataviz: citz,
+msw-disposal-indicator: env,
+namex-solr:
+bc-hydrometric-dashboard: flnr,
+Skeena-CE-Grizzly:
+namex:
+queue-management: citz,
+GDX-Analytics-Looker-cfms_block:
+moh-fpcare:
+intro-to-tidyhydat-and-tidyverse: citz,
+field-inspection-app-ios:
+field-inspection-app-android:
+prime-session:
+nbcclim:
+gwa-ip-anonymity:
+gwa-ui:
+gwa-kong-endpoint:
+dbc-pylib: citz,
+argg-api: citz,
+argg-ui:
+ols-router: citz,
+mwslds:
+GDX-Analytics-Looker-Redshift_Admin_By_AWS: citz,
+devhub-signing-agent: citz,
+devhub-signing-api: citz,
+devhub-signing-web: citz,
+prime-oauth:
+sp2s3: citz,
+kirk:
+von-bc-registries-agent: citz,
+geometr: citz,
+SecNewsFeedReader:
+env-moosetracker-android:
+env-moosetracker-ios:
+servicebc:
+common-nodejs-utils: citz,
+gcpe-azure-sample:
+representation-grant: ag,
+pssg-cscp-vsd:
+BCwebcheck: citz,
+SecNewsFeedReader-Drupal: citz,
+moh-oauth:
+smk: citz,
+snow-dur-analysis:
+bcgov-sso-theme:
+smk-bcparks:
+smk-moh: citz, hlth,
+RasterLandCover:
+gcpe-NRMS-frontend:
+gcpe-NRMS-api:
+jag-scheduling-hub:
+kq-ui: citz,
+kq-api:
+sbc-mcap:
+scj-online-booking-system:
+ldf_drf_db_comments:
+range-api: flnr,
+devhub-app-web: citz,
+OCWA: citz,
+common-ui-components:
+repomountie: citz,
+common-web-utils:
+spa-env-server:
+design-system: citz,
+bcgov-useR: citz, env,
+bowron-ssn:
+scheduler:
+jag-pill-press-registry:
+gcpe-news-dashboard:
+VON-ESB-DRS-Agent:
+smk-common-iac:
+aquifer-factsheets: env,
+von-agent-template:
+bcgov-rstats-public-presentations: citz, env, jedc,
+ckanext-bcgov-disqus:
+ckanext-bcgov-cli: citz,
+HunterDensity:
+HumanLivestockDensity:
+gcpe-hub-api:
+entity:
+WEStblr: citz,
+replication_health_check:
+EDUC-ECAS:
+bcgov-Shiny-deployment-paths: jedc, env, citz,
+wqo_shuswap:
+hydrometric_stations: citz,
+isb-rsi-courtsintegration:
+moh-common-styles:
+SCJ-Online-Booking: ag,
+aries-vcr: citz,
+bcdata: env, citz,
+mdms-nodejs-client:
+CHSP_dataviewer:
+EDUC-NGN: educ,
+eagle-public: eao,
+eagle-admin: eao,
+eagle-api: eao,
+gcpe-hub:
+Caribou_disturb_TT:
+Caribou_Disturb_B: flnr,
+mdms-device-signout-api:
+mdms-device-signout-app:
+reggie:
+GB_Unreported:
+reggie-web:
+GB_Data:
+grizzly-bear-status-indicator: env,
+devhub-resources:
+GB_Mortality:
+teis-utilities:
+postman-bdd:
+wetlandmapR:
+chimp:
+FAIB: flnr,
+ckan-bcgov-terraform:
+docker-clamav:
+foi-requests:
+pdfmagic:
+ts-rs-modis-snow:
+lear:
+sbc-pay:
+sbc-auth:
+invasive-species-system-build:
+digital-gov:
+GB_DNA:
+GB_Salmon:
+data-stream:
+popApp: citz,
+air-zone-reports: env,
+bcgov-looker-snowplow:
+eao-inspections-evidence-locker: flnr, citz, empr,
+nr-messaging-service-showcase: env,
+nr-document-management-showcase: env,
+document-generation-showcase: env,
+FADM_Edit_Workflows: flnr,
+GDX-Analytics-Looker-Google-Block: citz,
+GDX-Analytics-OpenShift-Snowplow-Gateway-Service: citz,
+embc-ess:
+statscan-taxdata-tidying: citz,
+TransAction: tran,
+Project-and-time-tracker: citz,
+moh-sitereg:
+landuseplanning-admin:
+landuseplanning-public:
+landuseplanning-api:
+CaribouBC: flnr,
+imit-procurement-data-analysis: citz,
+ckanext-sso: citz,
+ckan-ui: citz,
+smk-francophone: citz,
+csv-to-api:
+shinyrems:
+lngcanada-admin:
+lngcanada-api:
+lngcanada-public:
+GDX-Analytics-Looker-theq_sdpr_block: citz,
+jag-spd-spice:
+iamp-maven-resources:
+bcgov-data-science-cop: citz,
+range-dashboard-ios: flnr,
+nr-get-token: env,
+SharePoint_Solutions:
+bc-econ-status-indices: citz,
+CITZ-IMB-SharePoint:
+realm-o-matic: citz,
+jag-rsbc-carma:
+site-inspections-app-ios:
+cas-ggircs:
+indy-email-verification: citz,
+agri-dcbr: agri,
+cas-docker-sqitch:
+lucy-web: flnr,
+iiwbook: citz,
+mobile-starter-kit:
+Agile-Delivery-Process: citz,
+flatfile-tools: citz,
+cas-metabase: env,
+GDX-Analytics-Drupal-Snowplow: citz,
+healthgateway: hlth,
+aqadvisories-eservice: env,
+sbc-common-components:
+bcdc-test: citz,
+pssg-cornet-dynamics: ag, pssg,
+goshawk-ios:
+sae-workbench: citz,
+Skeena_WB:
+cas-ggircs-metabase:
+cas-ggircs-metabase-builder:
+EDUC-UMU:
+ExchangeLabOps: citz,
+pssg-cornet-dynamics-config:
+pssg-cornet-dynamics-queue-proc:
+EDUC-CAPS: educ,
+sk_tda: flnr,
+eForWasteBC: flnr,
+rems2aquachem:
+api-guidelines: citz,
+ckanext-edc-rss: citz,
+recycling-indicator: env,
+iamp-email-service:
+iamp-mq-component:
+gis-pantry: flnr,
+EDUC-DIGITALID-API: educ,
+envair: env,
+bcca-payment-hub: citz,
+von-oil-gas-poc: citz,
+eagle-helper-pods:
+nr-email-microservice: env,
+pssg-cornet-dynamics-end2end-service:
+digital-lakes:
+nmp-arm: agri,
+pssg-cornet-dynamics-queue-proc-rabbitmq:
+aries-vcr-issuer-controller: citz,
+EDUC-CURRICWS: educ,
+skeena-ogma-amendments-assessment:
+cas-shipit:
+forestry-quarterly-report:
+jrcc-document-access-libs:
+jag-isb-devorg:
+ranktrends: env,
+pssg-cordyn-management-console:
+pssg-cordyn-rabbitmq-interface-controller:
+AGOL_getMapFromApp: flnr,
+AGOL_getSizeFromGroup: flnr,
+FAIBOracle: flnr,
+forestDroughtTool:
+FAIBCompiler: flnr,
+FAIBBase: flnr,
+eagle-dev-guides: eao,
+cloud-adoption-patterns:
+cas-postgres:
+GDX-Analytics-Looker-Google-MyBusiness: citz,
+eagle-reports: eao,
+EDUC-ISFS: educ,
+EDUC-STUDENTSUCCESS: educ,
+vc-authn-oidc: citz,
+iamp-apps-configs:
+bcparis-service:
+nr-showcase-devops-tools: env,
+nr-showcase-devops-tools-demo-sq: env,
+gatsby-source-matomo:
+jrcc-sample-app:
+rocketgate:
+gatsby-source-github-raw:
+native-species-rank-indicator: env,
+orgbook-configurations: citz,
+cas-ggircs-ciip-2018-schema: env,
+cas-ciip-portal: env,
+fwben:
+drake-example: citz,
+cas-pipeline:
+cas-metascript:
+bc-sans: citz,
+ols-geocoder: citz,
+forageConversionTool:
+cas-ggircs-metabase-build:
+aries-cloudagent-container: citz,
+new2Q-reports: flnr,
+census_geography_bc: jedc,
+ols-util: citz,
+GDX-Analytics-Looker-Google-MyBusiness-ServiceBC: citz,
+cas-ggircs-ciip-2018-extract:
+common-hosted-email-service: env,
+bcparis-apps-configs:
+bcws-psu-research: citz, flnr,
+eagle-common-components:
+searchgate:
+ocwa-file-scanner: citz,
+EDUC-CURRI: educ,
+url-filter-proxy: citz,
+gitlab-keycloak-group-sync: citz,
+asdm-postgres: citz,
+git-sae-ops:
+digital-marketplace:
+von-bc-registries-agent-configurations: citz,
+GDX-Analytics-Looker-CleanBC: citz,
+law-society-demo: citz,
+Skeena_ESI_Wetlands:
+cap-eagle-admin:
+cap-eagle-public:
+cap-eagle-dev-guides:
+cap-eagle-api:
+ckanext-bcgov-schema: citz,
+cap-eagle-helper-pods:
+EDUC-PASS:
+ds-cop-intro-to-r: citz,
+moh-prime: hlth,
+docugate:
+aries-cloudcontroller-node:
+fams3: ag,
+bcgov-r-geo-workshop: citz, flnr, env,
+ExitSurveyAdmin:
+ppr-deprecated:
+mhr:
+pssg-psd-css: pssg,
+moh-bcp:
+moh-address-validation:
+jag-cullencommission: ag,
+Biodiversity_CC:
+telemetry: flnr, env,
+EDUC-KEYCLOAK-SOAM:
+popProjApp: citz,
+hsdProj: citz,
+GCS: citz,
+Forester-Job-Placement:
+embc-ess-mod: embc,
+NRPTI: empr, env,
+dpdd-snippets: citz,
+design-system-web-components:
+pipeline-bot: citz,
+cass-api: ag,
+cass-frontend: ag,
+bc-fwa-river-profiles: flnr,
+GDX-Analytics-Looker-SBC-Call-Centre: citz,
+invasivesBC-mussels-iOS:
+eagle-mobile-inspections: eao,
+keycloak-group-extension: citz,
+shinywqg: env,
+nr-metabase-showcase: env,
+tukey: citz,
+CANSIM-retail-trade-shiny: citz,
+issuer-kit: citz,
+EDUC-STUDENT-API: educ,
+EDUC-PEN-REQUEST-API: educ,
+ols-geocoder-cpf-plugin: citz,
+cap-eagle-mobile-inspections:
+HMCR: tran,
+common-document-generation-service: env,
+digital_marketplace: citz,
+EDUC-SOAM-API:
+sfts2s3: citz,
+jag-dps: ag,
+PIMS: citz,
+namerequest:
+EDUC-STUDENT-ADMIN: educ,
+bcsnowdata: flnr,
+digital-policy:
+zeva:
+digital.gov.bc.ca: citz,
+EDUC-INFRA-COMMON:
+digital-principles:
+offSiteTrees:
+Similkameen-WQOs: env,
+arcgis_hackers: flnr,
+AGOL-PullandPushMetadata:
+AGOL_UsageReport: flnr,
+bcdevexchange: citz,
+MapRobot: flnr,
+eagle-minio-openshift:
+sae-virtual-display: citz,
+SBC_DivApps: citz,
+design-research-guide: citz,
+smk-tlink: citz,
+MPB-regeneration: flnr,
+citz-imb-sp-breadcrumbs: citz,
+BCSC-SS: citz,
+business-create-ui:
+citz-imb-sp-vdr: citz,
+moose_lch: flnr,
+moh-soapui:
+jag-ceis-crdp-integration:
+bcdc2bcdc: citz,
+bcrs-utilities:
+EDUC-DOCUMENT-API:
+EDUC-COURSE-API: educ,
+design-system-temporary:
+common-service-showcase: env,
+EDUC-COURSE-ACHIEVE-API:
+sbc-search: citz,
+sdd-nifi: citz,
+bcrs-template-ui:
+EDUC-COURSE-ACHIEVEMENT-UI:
+zevtesthello:
+diputils: citz,
+EDUC-GRADUATION-CLIENT: educ,
+nr-arch: env, eao, flnr,
+aporeto-demo-project: citz,
+wqg_data: env,
+maltd:
+cap-information:
+rsbc-dmf: ag, pssg,
+EDUC-curricdrpl: educ,
+devops-credential-issuer: citz,
+moh-iam: hlth,
+GDX-Analytics-Looker-CMSLite-Metadata: citz,
+family-law-act-app: ag,
+wps: flnr,
+hosted-application-logging-performance-aggregation-services: env,
+common-components-wiki: citz,
+common-logging: env,
+cas-helm:
+openshift-launchpad: citz,
+gwater-report: env,
+wps-api:
+wps-web: flnr,
+cap-eagle-traffic-runner:
+cas-airflow:
+moh-middleware-test:
+bcstats_ohcs_craigslist: citz,
+jag-instrumentation:
+business-schemas:
+EDUC-COURSE-ACHIEVEMENT-API: educ,
+EDUC-PROGRAM-RULE-API: educ,
+EDUC-SERVICES-CARD-API: educ,
+aries-vcr-api-draft:
+healthgateproxy:
+EDUC-PEN-DEMOG-API:
+EDUC-GRADUATION-STATUS-API: educ,
+business-filings-ui:
+RSBC-DataHub-API: ag,
+jag-justin-courtlist-api:
+jag-ecrc: ag, pssg,
+Wetland_SkeenaESI_Monitoring: env,
+bcsc-sample-client:
+cloud-adoption-patterns-II:
+cloud-pathfinder:
+cloud-pathfinder-business-process:
+python_beginning: citz,
+intro-to-r: env, flnr,
+dipr: citz,
+metadata-curator: citz,
+nr-team-zero:
+citz-imb-sp-collectionnavigation:
+openshift-launchpad-fe-vue:
+openshift-launchpad-be-node:
+openshift-launchpad-fe-react:
+openshift-launchpad-be-python:
+citz-imb-sp-peoplepicker:
+elucidate: sdpr,
+EDUC-HUB: educ,
+EDUC-PROMETHEUS-GRAFANA:
+openshift-launchpad-deployment:
+helm-charts:
+EDUC-REPORT-API: educ,
+workbc-sdd-map:
+a2a-trust-over-ip-configurations: ag,
+citz-imb-sp-batchrestapi:
+common-components-catalogue: citz,
+foi-report-download: citz,
+common-services-team-library: env,
+zeebe-camunda:
+bcgov-python-presentations: citz,
+cloud-guardrails:
+CC_Biodiversity_Refugia:
+GDX-Analytics-Looker-FOI: citz,
+platform-services-status: citz,
+cas-shelf:
+citz-imb-sp-utilities: citz,
+HADF-Overview: citz,
+bctw-api: flnr, env,
+openshift-notifications: citz,
+bctw-ui: flnr, env,
+gdx-covid-19-dashboard:
+covid19:
+epr:
+EDUC-RULE-ENGINE-API: educ,
+cascade_border_data: citz,
+spa-text-service:
+common-hosted-form-service: env,
+EDUC-LOAD-TEST:
+InvasivesBC-iOS:
+enhanced-travel-screening:
+bctw-db: env,
+ts-rs-modis-snow-perc-norm: flnr,
+bcrs-charts:
+essential-services-delivery: citz,
+vc-visual-verifier: citz,
+dts-esr-demo:
+dts-safe-entry-demo: citz,
+namex-synonyms-api-py-client:
+EDUC-STUDENT-PROFILE-API:
+forum-api: citz,
+ds-intro-to-r-2-day: citz,
+Foreign-Farm-Workers-Permitting-System:
+EDUC-STUDENT-PROFILE-EMAIL-API: educ,
+silviculture-ipc: flnr,
+secure-image-app:
+EDUC-STUDENT-PROFILE:
+platform-services-registry: citz,
+supreme-court-viewer: ag,
+EDUC-STUDENT-PROFILE-SAGA-API:
+bowron-ssn-openstars: flnr,
+servicescard-selfservice: citz,
+jag-pcss: ag,
+indy-tails-server: citz,
+moh-eRx:
+jag-bcsc-auth-service: ag,
+forms-flow-ai:
+supreme-court-viewer-configurations: ag,
+sdpr-orbeon:
+data-publication:
+dormant-site-reclamation-program:
+CITZ-IMB-playbook: citz,
+CITZ-IMB-Capstone2020: citz,
+moh-fpincome:
+common-forms-toolkit: env,
+service-analytics-guide: citz,
+moh-keycloak-user-management: hlth,
+sae-docs-bridge: citz,
+nr-dell-objectstore_admin: eao,
+site-status-checker:
+jag-vips-client:
+EDUC-SERVICES-CARD-SAGA-API: educ,
+startup-sample-project: citz,
+STUDENTSUCCESS-V2.0:
+Wetlands_OperationalFactors_SkeenaEastESI:
+violation-dispute-form: ag,
+embc-eaf: ag,
+s2i-caddy-nodejs: citz,
+containerization-and-cloud-economic-model:
+semantic_infer:
+jag-rsbc-digital-forms-vips-integration:
+jag-file-submission:
+cas-notebooks:
+bcregistry:
+IRIS:
+Protected-Area-Wetland-Assessment-By-Assessment-Area:
+community-air-quality-reports: env,
+EDUC-EDNET: educ,
+figma: citz,
+labour-force-survey-digest: citz,
+nr-mals: agri,
+cloud-iac:
+mobile-signing-service: citz,
+nr-alm-ops:
+namex-payment-api-py-client:
+bcwebmaps-options:
+moh-plr-fhir: hlth,
+CIT:
+moh-hnclient-v2-PoC: hlth,
+react-shared-components:
+EDUC-PEN-REG-BATCH-API: educ,
+spring-boot-starters:
+Digital-Support-Team-Guidelines:
+tutorials:
+EDUC-PEN-MATCH-API:
+smk-tradebc: citz,
+epi.branch.sim: hlth,
+Watershed_SkeenaESI_Monitoring:
+workbc-small-grants: sdpr,
+bcdc-smk: citz,
+CE_RipDist_AddingFireInsect:
+orgbook-api: citz,
+Technology-Code-of-Practice:
+jag-isb-splunk-chatops: ag,
+EDUC-forms: educ,
+business-edit-ui:
+vue-shared-components:
+smk-cli: citz,
+gwa-cli:
+api-serv-gw:
+bcrs-shared-components:
+citz-imb-sp-projectIntakeForm:
+agri-nmp-msa: agri,
+workbc-wage-subsidy: sdpr,
+hcap: hlth,
+EDUC-PEN-DEMOG-MIGRATION-API: educ,
+entity-selection-tool:
+moh-iam-kong-keycloak: hlth,
+sheriff-scheduling: ag,
+biohubbc: env, flnr,
+biohubbc-common-codes: env, flnr,
+jason-test-123: citz,
+MD10A1_MSLP_LDA: flnr,
+bcmoh-iam-integration-guide: hlth,
+sheriff-scheduling-configurations: ag,
+ensemble-app-CMIP5:
+parks-adventure-mobile: env,
+invasivesbc: env,
+GDX-Analytics-Looker-DES-Reporting: citz,
+moh-iam-kong-plugin: hlth,
+Interactive_topic_modeling:
+GCS_update: citz,
+vue-scaffold: env,
+EDUC-MSDYN-COMMON: educ,
+EDUC-PEN-SERVICES-API: educ,
+bcrs-testing:
+FNDFAS:
+pssg-cscp-vsu:
+EDUC-STUDENT-COURSE_API: educ,
+gwa-api: citz,
+EDUC-STUDENT-ASSESSMENT-API: educ,
+EDUC-STUDENT-EXAM-API: educ,
+EDUC-PEN-REG-AUTOMATION:
+GDX-Analytics-Looker-Maintenance: citz,
+EDUC-GRAD-STUDENT-API: educ,
+EDUC-GRAD-ADMIN: educ,
+MOH-MSP-Enrolment: hlth,
+whse_2_agol: citz,
+EDUC-GRAD-COURSE-API: educ,
+issuer-kit-demo-verifier-chat:
+MoH-SAT: hlth,
+ddm-documents: citz,
+BGC3D:
+ClimateApp_FLP:
+nr-designer-erstudio:
+EDUC-GRAD-SANDBOX-REPO: educ,
+EDUC-GRAD-ASSESSMENT-API: educ,
+von-bc-registries-audit: citz,
+EDUC-GRAD-PROGRAM-MANAGEMENT-API: educ,
+EDUC-GRAD-ALGORITHM-API: educ,
+jag-document-utils:
+EDUC-GRAD-SCHOOL-API: educ,
+patroni-postgres-container: citz,
+EDUC-GRAD-PSI-API: educ,
+smk-fap-bcfls: citz,
+smk-fap-fcb: citz,
+smk-fap-stcb: citz,
+geoserver_build:
+EDUC-GRAD-CODE-API: educ,
+ofi-tools: citz,
+court-interpreter-scheduling:
+tracks:
+tracks-devops:
+jag-pci-gateway:
+Wetland_Summary:
+sbc-maximus-services:
+mines-digital-trust: empr,
+EDUC-GRAD-GRADUATION-STATUS-API: educ,
+cmip6-BC:
+EDUC-GRAD-GRADUATION-API: educ,
+EDUC-GRAD-COMMON-API: educ,
+moh-bcer:
+EDUC-SCHOOL-API:
+SSAF_FFH_Summary:
+safepaths: citz,
+pssg-cscp-cpu:
+crt: tran,
+EDUC-SLD-API:
+EDUC-PEN-TRAX-API:
+jag-lrb-web:
+NotifyBC: citz,
+SIMS: aest,
+moh-maid:
+cas-airflow-upstream:
+climate-disturbances: citz,
+nr-fom-admin: flnr,
+aps-portal:
+nr-fom-public: flnr,
+nr-fom-api: flnr,
+MOH-AOP-OOP:
+bc-data-literacy-self-assessment:
+streamflow-indicator: env,
+ccsummary-tahltan:
+MOH-BCP-Enrolment:
+moh-hnclient-v2:
+moh-hni-esb:
+ccsummary-FLP:
+jag-traffic-courts-online: ag,
+jag-trafficcourts-partner:
+jag-trafficcourts-api:
+rocketchat: citz,
+moh-external-api-protocol-mapper: hlth,
+performance:
+citz-imb-sp-aar:
+PSP:
+MOH-FPC-Enrolment:
+startup-sample-project-terraform-modules:
+Wetzinkwa:
+aries-vcr-client: citz,
+Mautic-Subscription-App:
+EDUC-PEN-REPORT-GENERATION-API: educ,
+smk-helms: citz,
+orgbook-bc-client: citz,
+orgbook-on-client: citz,
+ets-cpf-ea-onboarding:
+citz-imb-sp-restapi:
+transportation-datascience-sandbox:
+smk-actions: citz,
+jag-rsbc-nextcloud:
+Teams-FAQ-Bot: citz,
+cloud-custodian-policies:
+ppr:
+registry-schemas:
+EDUC-PEN-REPLICATION-API: educ,
+material-table:
+aries-vcr-issuer-agency:
+GDX-Analytics-microservice: citz,
+nrm-ea-onboarding:
+dip-metadata-viewer: citz,
+bc_dtm_testing: env,
+court-of-appeal: ag,
+nr-rfc-processing: flnr,
+networkpolicy-migration-workshop: citz,
+MOH-IAM-Enrolment:
+nr-rfc-ensweather: flnr,
+representation-grant-app: ag,
+economic_recovery_indicators: citz,
+geodock:
+Distributed-Leader-ToolKit:
+access-to-technology: sdpr,
+Mautic-Openshift:
+EDUC-FSA-ILR: educ,
+mds-startup-sample-project:
+citz-imb-sp-gdx-bif: citz,
+smk-moh-mhsu:
+ised-business-banking-initiative: citz,
+dbutils:
+CCISS_ShinyApp: flnr,
+moh-ldap-service: hlth,
+eco-info:
+EDUC-TRAX-NOTIFICATION-API: educ,
+digital_talent:
+moh-iam-sf:
+SBC-AUTH-Service:
+css-job-scheduling:
+EDUC-GRAD-BATCH-GRADUATION-API: educ,
+common-lib-vue:
+groundwater-level-review-report: env,
+identity-kit-configurations:
+aps-testing:
+jag-github-templates:
+BCP-CMS:
+platform-services-edb-template:
+jag-mail-it:
+EDUC-PEN-API-GATEWAY:
+mtc-scripts: citz,
+mhsu-broker:
+elmsd-workbc-comms:
+nr-lidar-viewer:
+vue-test-utils-helpers:
+github-optimization:
+cas-onboarding:
+platform-services-requestron:
+dts-vc-issuer-service: hlth, citz,
+platform-services-template: citz,
+nr-playbook:
+b2b-credential-manager:
+platform-services-archeobot: citz,
+cas-payment-interface: pssg,
+nr-flnr-ecas-processing:
+PECSF:
+cmip6-BC-eval: flnr,
+bcregistry-sre:
+jason-test-delete-me: citz,
