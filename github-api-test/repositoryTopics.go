@@ -81,20 +81,16 @@ func main() {
 		for _, b := range q.Organization.Repositories.Nodes {
 			name := b.Name
 			f.WriteString(string(name) + ": ")
-			// topics := make([]string, len(b.RepositoryTopics.Nodes))
 			for _, c := range b.RepositoryTopics.Nodes {
 				if contains(codes[:], strings.ToUpper(string(c.Topic.Name))) {
 					f.WriteString(string(c.Topic.Name) + ", ")
-					// topics = append(topics, string(c.Topic.Name))
 				}
 			}
 			f.WriteString("\n")
-
 		}
 		if !q.Organization.Repositories.PageInfo.HasNextPage {
 			break
 		}
 		variables["cursor"] = q.Organization.Repositories.PageInfo.EndCursor
 	}
-
 }
