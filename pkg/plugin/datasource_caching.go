@@ -176,6 +176,16 @@ func (c *CachedDatasource) HandleMilestonesQuery(ctx context.Context, q *models.
 	return c.saveCache(req, f, err)
 }
 
+// HandleOrganizationQuery is the cache wrapper for the issue query handler
+func (c *CachedDatasource) HandleOrganizationQuery(ctx context.Context, q *models.OrganizationQuery, req backend.DataQuery) (dfutil.Framer, error) {
+	if value, err := c.getCache(req); err == nil {
+		return value, err
+	}
+
+	f, err := c.datasource.HandleOrganizationQuery(ctx, q, req)
+	return c.saveCache(req, f, err)
+}
+
 // CheckHealth forwards the request to the datasource and does not perform any caching
 func (c *CachedDatasource) CheckHealth(ctx context.Context) error {
 	return c.datasource.CheckHealth(ctx)
