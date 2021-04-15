@@ -1,5 +1,7 @@
 # Grafana GitHub datasource
 
+This repository is built on top of code forked from the [grafana-plugin](https://github.com/grafana/grafana-plugin-repository).
+
 [![CircleCI](https://circleci.com/gh/grafana/github-datasource.svg?style=svg)](https://circleci.com/gh/grafana/github-datasource)
 [![Known Vulnerabilities](https://snyk.io/test/github/grafana/github-datasource/badge.svg)](https://snyk.io/test/github/grafana/github-datasource)
 
