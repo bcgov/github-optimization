@@ -1,10 +1,2 @@
-node_modules/
-coverage/
-ci/
-dist/
+node_modules
 .env
-
-# e2e
-provisioning/
-cypress/screenshots/
-cypress/videos/
