@@ -5,6 +5,7 @@ package main
 import (
 	"context"
 	"fmt"
+	"math"
 	"os"
 	"strconv"
 	"time"
@@ -116,10 +117,13 @@ func main() {
 		fmt.Println(err)
 	}
 
-	err = os.MkdirAll(path+"/dat", os.ModePerm)
+	targetDir := "../../../notebook/dat/"
+	targetFile := "/repository-issue-total.csv"
+
+	err = os.MkdirAll(path+targetDir, os.ModePerm)
 	check(err)
 
-	f, err := os.Create(path + "/dat/repository-issue-total.csv")
+	f, err := os.Create(path + targetDir + targetFile)
 	check(err)
 	defer f.Close()
 
@@ -146,7 +150,7 @@ func main() {
 
 		issueTotalCountStr := strconv.Itoa(issueTotalCount)
 		daysOpenStr := strconv.Itoa(int(daysOpen))
-		averageIssueCountPerDayStr := strconv.Itoa(int(averageIssueCountPerDay))
+		averageIssueCountPerDayStr := strconv.FormatFloat(math.Round(averageIssueCountPerDay*100)/100, 'f', -1, 32)
 
 		cells := [...]string{name, issueTotalCountStr, daysOpenStr, averageIssueCountPerDayStr}
 
