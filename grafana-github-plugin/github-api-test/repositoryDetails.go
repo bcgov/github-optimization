@@ -5,10 +5,8 @@ package main
 import (
 	"context"
 	"fmt"
-	"math"
 	"os"
 	"strconv"
-	"time"
 
 	"github.com/shurcooL/githubv4"
 	"golang.org/x/oauth2"
@@ -20,7 +18,7 @@ func check(e error) {
 	}
 }
 
-func writeLineToFile(f *os.File, cells [4]string) {
+func writeLineToFile(f *os.File, cells [9]string) {
 	var line string
 	for i, b := range cells {
 		if i == 0 {
@@ -33,15 +31,6 @@ func writeLineToFile(f *os.File, cells [4]string) {
 }
 
 // QueryListRepositories is the GraphQL query for retrieving a list of repositories for an organization
-// {
-//   search(query: "is:pr repo:grafana/grafana merged:2020-08-19..*", type: ISSUE, first: 100) {
-//     nodes {
-//       ... on PullRequest {
-//         id
-//         title
-//       }
-//   }
-// }
 type QueryListRepositories struct {
 	Organization struct {
 		Repositories struct {
@@ -57,11 +46,29 @@ type QueryListRepositories struct {
 // Repository is a code repository
 type Repository struct {
 	Name      string
-	CreatedAt githubv4.DateTime
-	UpdatedAt githubv4.DateTime
-	PushedAt  githubv4.DateTime
-	Issues    struct {
+	Packages struct {
 		TotalCount int
+	}
+	Projects struct {
+		TotalCount int
+	}
+	Releases struct {
+		TotalCount int
+	}
+	Submodules struct {
+		TotalCount int
+	}
+	DeployKeys struct {
+		TotalCount int
+	}
+	RepositoryTopics struct {
+		TotalCount int
+	}
+	LicenseInfo struct {
+		Name string
+	}
+	CodeOfConduct struct {
+		Name string
 	}
 }
 
@@ -80,8 +87,8 @@ func GetRepositories(ctx context.Context, client Client) (Repositories, error) {
 			"cursor": (*githubv4.String)(nil),
 		}
 
-		repos = []Repository{}
-		page  = 1
+		repos  = []Repository{}
+		page   = 1
 	)
 
 	for {
@@ -89,6 +96,7 @@ func GetRepositories(ctx context.Context, client Client) (Repositories, error) {
 
 		query := &QueryListRepositories{}
 		if err := client.Query(ctx, query, variables); err != nil {
+			fmt.Println(err)
 			return nil, err
 		}
 		r := make([]Repository, len(query.Organization.Repositories.Nodes))
@@ -105,6 +113,8 @@ func GetRepositories(ctx context.Context, client Client) (Repositories, error) {
 
 		variables["cursor"] = query.Organization.Repositories.PageInfo.EndCursor
 		page++
+
+		// time.Sleep(10 * time.Minute)
 	}
 
 	return repos, nil
@@ -118,7 +128,7 @@ func main() {
 	}
 
 	targetDir := "../../../notebook/dat/"
-	targetFile := "/repository-issue-total.csv"
+	targetFile := "/repository-details-1.csv"
 
 	err = os.MkdirAll(path+targetDir, os.ModePerm)
 	check(err)
@@ -138,21 +148,48 @@ func main() {
 	repos, _ := GetRepositories(context.Background(), client)
 
 	// Append data into csv
-	header := [...]string{"Repository", "IssueTotalCount", "DaysOpen", "AverageIssueCountPerDay"}
+	header := [...]string{
+		"Repository",
+		"PackageCount",
+		"ProjectCount",
+		"ReleaseCount",
+		"SubmoduleCount",
+		"DeployKeyCount",
+		"TopicCount",
+		"License",
+		"CodeOfConduct",
+	}
 	writeLineToFile(f, header)
 
 	for _, repo := range repos {
 		name := repo.Name
-		issueTotalCount := repo.Issues.TotalCount
-		hoursOpen := time.Now().UTC().Sub(repo.CreatedAt.UTC()).Hours()
-		daysOpen := hoursOpen / 24
-		averageIssueCountPerDay := float64(issueTotalCount) / daysOpen
+		packageCount := repo.Packages.TotalCount
+		projectCount := repo.Projects.TotalCount
+		releaseCount := repo.Releases.TotalCount
+		submoduleCount := repo.Submodules.TotalCount
+		deployKeyCount := repo.DeployKeys.TotalCount
+		topicCount := repo.RepositoryTopics.TotalCount
+		license := repo.LicenseInfo.Name
+		codeOfConduct := repo.CodeOfConduct.Name
 
-		issueTotalCountStr := strconv.Itoa(issueTotalCount)
-		daysOpenStr := strconv.Itoa(int(daysOpen))
-		averageIssueCountPerDayStr := strconv.FormatFloat(math.Round(averageIssueCountPerDay*100)/100, 'f', -1, 32)
+		packageCountStr := strconv.Itoa(packageCount)
+		projectCountStr := strconv.Itoa(projectCount)
+		releaseCountStr := strconv.Itoa(releaseCount)
+		submoduleCountStr := strconv.Itoa(submoduleCount)
+		deployKeyCountStr := strconv.Itoa(deployKeyCount)
+		topicCountStr := strconv.Itoa(topicCount)
 
-		cells := [...]string{name, issueTotalCountStr, daysOpenStr, averageIssueCountPerDayStr}
+		cells := [...]string{
+			name,
+			packageCountStr,
+			projectCountStr,
+			releaseCountStr,
+			submoduleCountStr,
+			deployKeyCountStr,
+			topicCountStr,
+			license,
+			codeOfConduct,
+		}
 
 		writeLineToFile(f, cells)
 	}
