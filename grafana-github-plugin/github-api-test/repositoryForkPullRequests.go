@@ -121,20 +121,7 @@ type BranchOptions struct {
 	Name    string
 }
 
-// QueryForkPullRequestCount is the GraphQL query for retrieving a list of repositories for an organization
-// query {
-// 	 repository(name: "$name", owner: "$owner") {
-//     ref(qualifiedName: "$qualifiedName") {
-// 	     target {
-// 	       ... on Commit {
-//           history {
-//             totalCount
-//           }
-//         }
-//       }
-// 	   }
-// 	 }
-// }
+// QueryForkPullRequestCount is ...
 type QueryForkPullRequestCount struct {
 	Repository struct {
 		PullRequests struct {
