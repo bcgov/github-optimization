@@ -167,7 +167,7 @@ func GetForkPullRequestCount(ctx context.Context, client Client, ops BranchOptio
 		}
 
 		for _, v := range query.Repository.PullRequests.Nodes {
-			if v.BaseRepository.Name != v.HeadRepository.Name {
+			if v.Repository.Name == v.BaseRepository.Name && v.HeadRepository.Name != "" && v.BaseRepository.Name != v.HeadRepository.Name {
 				forkPrCount++
 			}
 		}
