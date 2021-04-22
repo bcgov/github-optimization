@@ -1,0 +1,1010 @@
+Repository,Ministry Code,Ministry Name
+a2a-trust-over-ip-configurations,ag,Attorney General
+access-to-technology,sdpr,Social Development & Poverty Reduction
+Agile-Delivery-Process,citz,Citizens' Services
+agile-guide,,#N/A
+agile-labor-categories,,#N/A
+agile-sdlc,env,Environment & Climate Change Strategy
+AGOL_getMapFromApp,flnr,"Forests, Lands, Natural Resource Operations & Rural Development"
+AGOL_getSizeFromGroup,flnr,"Forests, Lands, Natural Resource Operations & Rural Development"
+AGOL_UsageReport,flnr,"Forests, Lands, Natural Resource Operations & Rural Development"
+AGOL-PullandPushMetadata,,#N/A
+agri-dcbr,agri,Agriculture
+agri-nmp,agri,Agriculture
+agri-nmp-msa,agri,Agriculture
+air-monitoring-visualization,,#N/A
+air-zone-reports,env,Environment & Climate Change Strategy
+angular-scaffold,,#N/A
+angular-scaffold-captcha,,#N/A
+api-guidelines,citz,Citizens' Services
+api-serv-gw,,#N/A
+api-specs,,#N/A
+aporeto-demo-project,citz,Citizens' Services
+aps-portal,,#N/A
+aps-testing,,#N/A
+aqadvisories-eservice,env,Environment & Climate Change Strategy
+aquifer-factsheets,env,Environment & Climate Change Strategy
+arcgis_hackers,flnr,"Forests, Lands, Natural Resource Operations & Rural Development"
+argg-api,citz,Citizens' Services
+argg-ui,,#N/A
+aries-cloudagent-container,citz,Citizens' Services
+aries-cloudcontroller-node,,#N/A
+aries-vcr,citz,Citizens' Services
+aries-vcr-api-draft,,#N/A
+aries-vcr-client,citz,Citizens' Services
+aries-vcr-issuer-agency,,#N/A
+aries-vcr-issuer-controller,citz,Citizens' Services
+asdm-postgres,citz,Citizens' Services
+b2b-credential-manager,,#N/A
+batch-pdf-reports,citz,Citizens' Services
+bc_dtm_testing,env,Environment & Climate Change Strategy
+bc-aquifer-dashboard,flnr,"Forests, Lands, Natural Resource Operations & Rural Development"
+bc-data-literacy-self-assessment,,#N/A
+BC-demography,citz,Citizens' Services
+bc-econ-status-indices,citz,Citizens' Services
+bc-fwa-river-profiles,flnr,"Forests, Lands, Natural Resource Operations & Rural Development"
+bc-hydrometric-dashboard,flnr,"Forests, Lands, Natural Resource Operations & Rural Development"
+bc-laws-api,,#N/A
+BC-Policy-Framework-For-GitHub,citz,Citizens' Services
+bc-population-indicator,env,Environment & Climate Change Strategy
+bc-raster-roads,env,Environment & Climate Change Strategy
+bc-sans,citz,Citizens' Services
+bcca-payment-hub,citz,Citizens' Services
+bcdata,env,Environment & Climate Change Strategy
+bcdata,citz,Citizens' Services
+bcdc-devops,citz,Citizens' Services
+bcdc-smk,citz,Citizens' Services
+bcdc-test,citz,Citizens' Services
+bcdc2bcdc,citz,Citizens' Services
+bcdevexchange,citz,Citizens' Services
+BCDevExchange-app,,#N/A
+bcgov-data-science-cop,citz,Citizens' Services
+bcgov-data-science-resources,citz,Citizens' Services
+bcgov-looker-snowplow,,#N/A
+bcgov-python-presentations,citz,Citizens' Services
+bcgov-r-geo-workshop,citz,Citizens' Services
+bcgov-r-geo-workshop,flnr,"Forests, Lands, Natural Resource Operations & Rural Development"
+bcgov-r-geo-workshop,env,Environment & Climate Change Strategy
+bcgov-rstats-public-presentations,citz,Citizens' Services
+bcgov-rstats-public-presentations,env,Environment & Climate Change Strategy
+bcgov-rstats-public-presentations,jedc,"Jobs, Economic Development & Competitiveness"
+bcgov-Shiny-deployment-paths,jedc,"Jobs, Economic Development & Competitiveness"
+bcgov-Shiny-deployment-paths,env,Environment & Climate Change Strategy
+bcgov-Shiny-deployment-paths,citz,Citizens' Services
+bcgov-sso-theme,,#N/A
+bcgov-useR,citz,Citizens' Services
+bcgov-useR,env,Environment & Climate Change Strategy
+bcgovr,citz,Citizens' Services
+bcgovr,env,Environment & Climate Change Strategy
+bcgroundwater,env,Environment & Climate Change Strategy
+bcmaps,env,Environment & Climate Change Strategy
+bcmapsdata,env,Environment & Climate Change Strategy
+bcmoh-iam-integration-guide,hlth,Health
+BCP-CMS,,#N/A
+bcparis-apps-configs,,#N/A
+bcparis-service,,#N/A
+bcregistry,,#N/A
+bcregistry-sre,,#N/A
+bcrs-charts,,#N/A
+bcrs-shared-components,,#N/A
+bcrs-template-ui,,#N/A
+bcrs-testing,,#N/A
+bcrs-utilities,,#N/A
+bcsc-sample-client,,#N/A
+BCSC-SS,citz,Citizens' Services
+bcsnowdata,flnr,"Forests, Lands, Natural Resource Operations & Rural Development"
+BCStats,jedc,"Jobs, Economic Development & Competitiveness"
+bcstats_ohcs_craigslist,citz,Citizens' Services
+bctw-api,flnr,"Forests, Lands, Natural Resource Operations & Rural Development"
+bctw-api,env,Environment & Climate Change Strategy
+bctw-db,env,Environment & Climate Change Strategy
+bctw-ui,flnr,"Forests, Lands, Natural Resource Operations & Rural Development"
+bctw-ui,env,Environment & Climate Change Strategy
+BCWaterDischargeAnalysis,env,Environment & Climate Change Strategy
+BCWaterDischargeAnalysis-SampleScripts,flnr,"Forests, Lands, Natural Resource Operations & Rural Development"
+BCwebcheck,citz,Citizens' Services
+bcwebmaps-options,,#N/A
+bcws-psu-research,citz,Citizens' Services
+bcws-psu-research,flnr,"Forests, Lands, Natural Resource Operations & Rural Development"
+bearmon,,#N/A
+BGC3D,,#N/A
+Biodiversity_CC,,#N/A
+biohubbc,env,Environment & Climate Change Strategy
+biohubbc,flnr,"Forests, Lands, Natural Resource Operations & Rural Development"
+biohubbc-common-codes,env,Environment & Climate Change Strategy
+biohubbc-common-codes,flnr,"Forests, Lands, Natural Resource Operations & Rural Development"
+bootstrap-theme,citz,Citizens' Services
+bowron-ssn,,#N/A
+bowron-ssn-openstars,flnr,"Forests, Lands, Natural Resource Operations & Rural Development"
+burn-severity,flnr,"Forests, Lands, Natural Resource Operations & Rural Development"
+business-create-ui,,#N/A
+business-edit-ui,,#N/A
+business-filings-ui,,#N/A
+business-schemas,,#N/A
+CANSIM-dataviewer,jedc,"Jobs, Economic Development & Competitiveness"
+CANSIM-retail-trade-shiny,citz,Citizens' Services
+canwqdata,env,Environment & Climate Change Strategy
+cap-eagle-admin,,#N/A
+cap-eagle-api,,#N/A
+cap-eagle-dev-guides,,#N/A
+cap-eagle-helper-pods,,#N/A
+cap-eagle-mobile-inspections,,#N/A
+cap-eagle-public,,#N/A
+cap-eagle-traffic-runner,,#N/A
+cap-information,,#N/A
+career-survey,citz,Citizens' Services
+Caribou_Disturb_B,flnr,"Forests, Lands, Natural Resource Operations & Rural Development"
+Caribou_disturb_TT,,#N/A
+CaribouBC,flnr,"Forests, Lands, Natural Resource Operations & Rural Development"
+cas-airflow,,#N/A
+cas-airflow-upstream,,#N/A
+cas-ciip-portal,env,Environment & Climate Change Strategy
+cas-docker-sqitch,,#N/A
+cas-ggircs,,#N/A
+cas-ggircs-ciip-2018-extract,,#N/A
+cas-ggircs-ciip-2018-schema,env,Environment & Climate Change Strategy
+cas-ggircs-metabase,,#N/A
+cas-ggircs-metabase-build,,#N/A
+cas-ggircs-metabase-builder,,#N/A
+cas-helm,,#N/A
+cas-metabase,env,Environment & Climate Change Strategy
+cas-metascript,,#N/A
+cas-notebooks,,#N/A
+cas-onboarding,,#N/A
+cas-payment-interface,pssg,Public Safety and Solicitor General
+cas-pipeline,,#N/A
+cas-postgres,,#N/A
+cas-shelf,,#N/A
+cas-shipit,,#N/A
+cascade_border_data,citz,Citizens' Services
+cass-api,ag,Attorney General
+cass-frontend,ag,Attorney General
+CC_Biodiversity_Refugia,,#N/A
+cccharts,env,Environment & Climate Change Strategy
+CCISS_ShinyApp,flnr,"Forests, Lands, Natural Resource Operations & Rural Development"
+ccsummary-FLP,,#N/A
+ccsummary-tahltan,,#N/A
+CE_RipDist_AddingFireInsect,,#N/A
+census_geography_bc,jedc,"Jobs, Economic Development & Competitiveness"
+chart-tool,,#N/A
+child-support-lookup-tool,,#N/A
+chimp,,#N/A
+CHSP_dataviewer,,#N/A
+CIT,,#N/A
+CITZ-IMB-Capstone2020,citz,Citizens' Services
+CITZ-IMB-playbook,citz,Citizens' Services
+CITZ-IMB-SharePoint,,#N/A
+citz-imb-sp-aar,,#N/A
+citz-imb-sp-batchrestapi,,#N/A
+citz-imb-sp-breadcrumbs,citz,Citizens' Services
+citz-imb-sp-collectionnavigation,,#N/A
+citz-imb-sp-gdx-bif,citz,Citizens' Services
+citz-imb-sp-peoplepicker,,#N/A
+citz-imb-sp-projectIntakeForm,,#N/A
+citz-imb-sp-restapi,,#N/A
+citz-imb-sp-utilities,citz,Citizens' Services
+citz-imb-sp-vdr,citz,Citizens' Services
+ckan,,#N/A
+ckan-bcgov-terraform,,#N/A
+ckan-ui,citz,Citizens' Services
+ckanext-bcgov,citz,Citizens' Services
+ckanext-bcgov-cli,citz,Citizens' Services
+ckanext-bcgov-disqus,,#N/A
+ckanext-bcgov-schema,citz,Citizens' Services
+ckanext-edc-rss,citz,Citizens' Services
+ckanext-ga-report,,#N/A
+ckanext-galileo,,#N/A
+ckanext-geoview,,#N/A
+ckanext-googleanalytics,citz,Citizens' Services
+ckanext-hierarchy,citz,Citizens' Services
+ckanext-openapiviewer,citz,Citizens' Services
+ckanext-sso,citz,Citizens' Services
+clamav,,#N/A
+climate-change-indicators-2015,env,Environment & Climate Change Strategy
+climate-disturbances,citz,Citizens' Services
+ClimateApp_FLP,,#N/A
+cloud-adoption-patterns,,#N/A
+cloud-adoption-patterns-II,,#N/A
+cloud-custodian-policies,,#N/A
+cloud-guardrails,,#N/A
+cloud-iac,,#N/A
+cloud-pathfinder,,#N/A
+cloud-pathfinder-business-process,,#N/A
+clus,flnr,"Forests, Lands, Natural Resource Operations & Rural Development"
+cmip6-BC,,#N/A
+cmip6-BC-eval,flnr,"Forests, Lands, Natural Resource Operations & Rural Development"
+common-components-catalogue,citz,Citizens' Services
+common-components-wiki,citz,Citizens' Services
+common-document-generation-service,env,Environment & Climate Change Strategy
+common-forms-toolkit,env,Environment & Climate Change Strategy
+common-hosted-email-service,env,Environment & Climate Change Strategy
+common-hosted-form-service,env,Environment & Climate Change Strategy
+common-lib-vue,,#N/A
+common-logging,env,Environment & Climate Change Strategy
+common-nodejs-utils,citz,Citizens' Services
+common-service-showcase,env,Environment & Climate Change Strategy
+common-services-team-library,env,Environment & Climate Change Strategy
+common-ui-components,,#N/A
+common-web-utils,,#N/A
+community-air-quality-reports,env,Environment & Climate Change Strategy
+containerization-and-cloud-economic-model,,#N/A
+court-interpreter-scheduling,,#N/A
+court-of-appeal,ag,Attorney General
+covid19,,#N/A
+cpf,,#N/A
+crt,tran,Transportation & Infrastructure
+CSB-eFile,,#N/A
+csnr-dmod,env,Environment & Climate Change Strategy
+css-job-scheduling,,#N/A
+csv-to-api,,#N/A
+data-driven-decision-making,,#N/A
+data-fp,citz,Citizens' Services
+data-fp-features,citz,Citizens' Services
+data-publication,,#N/A
+data-stream,,#N/A
+databc-web-map-services,,#N/A
+datapusher,,#N/A
+DBC-APIM,citz,Citizens' Services
+dbc-cms-vis,citz,Citizens' Services
+dbc-j2ee-template,,#N/A
+dbc-kml-apps,citz,Citizens' Services
+dbc-pylib,citz,Citizens' Services
+dbcrss,citz,Citizens' Services
+dbutils,,#N/A
+ddm-documents,citz,Citizens' Services
+design-research-guide,citz,Citizens' Services
+design-system,citz,Citizens' Services
+design-system-temporary,,#N/A
+design-system-web-components,,#N/A
+designatedlands,env,Environment & Climate Change Strategy
+DevEx-Roadmap,,#N/A
+devhub-app-web,citz,Citizens' Services
+devhub-resources,,#N/A
+devhub-signing-agent,citz,Citizens' Services
+devhub-signing-api,citz,Citizens' Services
+devhub-signing-web,citz,Citizens' Services
+devops-credential-issuer,citz,Citizens' Services
+did-auth-extension,citz,Citizens' Services
+did-auth-relying-party,citz,Citizens' Services
+digital_marketplace,citz,Citizens' Services
+digital_talent,,#N/A
+digital-gov,,#N/A
+digital-lakes,,#N/A
+digital-marketplace,,#N/A
+digital-policy,,#N/A
+digital-principles,,#N/A
+Digital-Support-Team-Guidelines,,#N/A
+digital-toolkit,,#N/A
+digital.gov.bc.ca,citz,Citizens' Services
+dip-metadata-viewer,citz,Citizens' Services
+dipr,citz,Citizens' Services
+diputils,citz,Citizens' Services
+Distributed-Leader-ToolKit,,#N/A
+docker-clamav,,#N/A
+docugate,,#N/A
+document-generation-showcase,env,Environment & Climate Change Strategy
+dormant-site-reclamation-program,,#N/A
+dpdd-snippets,citz,Citizens' Services
+drake-example,citz,Citizens' Services
+drat,env,Environment & Climate Change Strategy
+drivebc-webcam-api,,#N/A
+ds-cop-intro-to-r,citz,Citizens' Services
+ds-intro-to-r-2-day,citz,Citizens' Services
+dts-esr-demo,,#N/A
+dts-safe-entry-demo,citz,Citizens' Services
+dts-vc-issuer-service,hlth,Health
+dts-vc-issuer-service,citz,Citizens' Services
+eagle-admin,eao,Environmental Assessment Office
+eagle-api,eao,Environmental Assessment Office
+eagle-common-components,,#N/A
+eagle-dev-guides,eao,Environmental Assessment Office
+eagle-helper-pods,,#N/A
+eagle-minio-openshift,,#N/A
+eagle-mobile-inspections,eao,Environmental Assessment Office
+eagle-public,eao,Environmental Assessment Office
+eagle-reports,eao,Environmental Assessment Office
+eao-geo-service,,#N/A
+eao-inspections-evidence-locker,flnr,"Forests, Lands, Natural Resource Operations & Rural Development"
+eao-inspections-evidence-locker,citz,Citizens' Services
+eao-inspections-evidence-locker,empr,"Energy, Mines & Petroleum Resources"
+eao-inspections-web,,#N/A
+eao-nginx,,#N/A
+eao-parse-server,,#N/A
+eao-public,,#N/A
+eao-public-consultation,,#N/A
+eba-guide,,#N/A
+eco-info,,#N/A
+economic_recovery_indicators,citz,Citizens' Services
+eDivorce,ag,Attorney General
+EDUC-CAPS,educ,Education
+EDUC-COURSE-ACHIEVE-API,,#N/A
+EDUC-COURSE-ACHIEVEMENT-API,educ,Education
+EDUC-COURSE-ACHIEVEMENT-UI,,#N/A
+EDUC-COURSE-API,educ,Education
+EDUC-CURRI,educ,Education
+EDUC-curricdrpl,educ,Education
+EDUC-CURRICWS,educ,Education
+EDUC-DIGITALID-API,educ,Education
+EDUC-DOCUMENT-API,,#N/A
+EDUC-ECAS,,#N/A
+EDUC-EDNET,educ,Education
+EDUC-forms,educ,Education
+EDUC-FSA-ILR,educ,Education
+EDUC-GRAD-ADMIN,educ,Education
+EDUC-GRAD-ALGORITHM-API,educ,Education
+EDUC-GRAD-ASSESSMENT-API,educ,Education
+EDUC-GRAD-BATCH-GRADUATION-API,educ,Education
+EDUC-GRAD-CODE-API,educ,Education
+EDUC-GRAD-COMMON-API,educ,Education
+EDUC-GRAD-COURSE-API,educ,Education
+EDUC-GRAD-GRADUATION-API,educ,Education
+EDUC-GRAD-GRADUATION-STATUS-API,educ,Education
+EDUC-GRAD-PROGRAM-MANAGEMENT-API,educ,Education
+EDUC-GRAD-PSI-API,educ,Education
+EDUC-GRAD-SANDBOX-REPO,educ,Education
+EDUC-GRAD-SCHOOL-API,educ,Education
+EDUC-GRAD-STUDENT-API,educ,Education
+EDUC-GRADUATION-CLIENT,educ,Education
+EDUC-GRADUATION-STATUS-API,educ,Education
+EDUC-HUB,educ,Education
+EDUC-INFRA-COMMON,,#N/A
+EDUC-ISFS,educ,Education
+EDUC-KEYCLOAK-SOAM,,#N/A
+EDUC-LOAD-TEST,,#N/A
+EDUC-MSDYN-COMMON,educ,Education
+EDUC-NGN,educ,Education
+EDUC-PASS,,#N/A
+EDUC-PEN-API-GATEWAY,,#N/A
+EDUC-PEN-DEMOG-API,,#N/A
+EDUC-PEN-DEMOG-MIGRATION-API,educ,Education
+EDUC-PEN-MATCH-API,,#N/A
+EDUC-PEN-REG-AUTOMATION,,#N/A
+EDUC-PEN-REG-BATCH-API,educ,Education
+EDUC-PEN-REPLICATION-API,educ,Education
+EDUC-PEN-REPORT-GENERATION-API,educ,Education
+EDUC-PEN-REQUEST-API,educ,Education
+EDUC-PEN-SERVICES-API,educ,Education
+EDUC-PEN-TRAX-API,,#N/A
+EDUC-PROGRAM-RULE-API,educ,Education
+EDUC-PROMETHEUS-GRAFANA,,#N/A
+EDUC-REPORT-API,educ,Education
+EDUC-RULE-ENGINE-API,educ,Education
+EDUC-SCHOOL-API,,#N/A
+EDUC-SERVICES-CARD-API,educ,Education
+EDUC-SERVICES-CARD-SAGA-API,educ,Education
+EDUC-SLD-API,,#N/A
+EDUC-SOAM-API,,#N/A
+EDUC-STUDENT-ADMIN,educ,Education
+EDUC-STUDENT-API,educ,Education
+EDUC-STUDENT-ASSESSMENT-API,educ,Education
+EDUC-STUDENT-COURSE_API,educ,Education
+EDUC-STUDENT-EXAM-API,educ,Education
+EDUC-STUDENT-PROFILE,,#N/A
+EDUC-STUDENT-PROFILE-API,,#N/A
+EDUC-STUDENT-PROFILE-EMAIL-API,educ,Education
+EDUC-STUDENT-PROFILE-SAGA-API,,#N/A
+EDUC-STUDENTSUCCESS,educ,Education
+EDUC-TRAX-NOTIFICATION-API,educ,Education
+EDUC-UMU,,#N/A
+eForWasteBC,flnr,"Forests, Lands, Natural Resource Operations & Rural Development"
+elmsd-workbc-comms,,#N/A
+elucidate,sdpr,Social Development & Poverty Reduction
+embc-eaf,ag,Attorney General
+embc-ess,,#N/A
+embc-ess-mod,embc,Emergency Management BC
+enhanced-travel-screening,,#N/A
+ensemble-app-CMIP5,,#N/A
+entity,,#N/A
+entity-selection-tool,,#N/A
+env-moosetracker-android,,#N/A
+env-moosetracker-ios,,#N/A
+envair,env,Environment & Climate Change Strategy
+EnvReportBC,env,Environment & Climate Change Strategy
+envreportbc-snippets,env,Environment & Climate Change Strategy
+envreportutils,env,Environment & Climate Change Strategy
+epi.branch.sim,hlth,Health
+epic-mobile-app-android,,#N/A
+epr,,#N/A
+esm-admin,,#N/A
+esm-server,,#N/A
+essential-services-delivery,citz,Citizens' Services
+ets-cpf-ea-onboarding,,#N/A
+ExchangeLabOps,citz,Citizens' Services
+ExitSurveyAdmin,,#N/A
+fabric.js,,#N/A
+FADM_Edit_Workflows,flnr,"Forests, Lands, Natural Resource Operations & Rural Development"
+FAIB,flnr,"Forests, Lands, Natural Resource Operations & Rural Development"
+FAIBBase,flnr,"Forests, Lands, Natural Resource Operations & Rural Development"
+FAIBCompiler,flnr,"Forests, Lands, Natural Resource Operations & Rural Development"
+FAIBOracle,flnr,"Forests, Lands, Natural Resource Operations & Rural Development"
+family-law-act-app,ag,Attorney General
+Family-Protection-Order,ag,Attorney General
+fams3,ag,Attorney General
+fasstr,env,Environment & Climate Change Strategy
+FASSTX,env,Environment & Climate Change Strategy
+FGDB-Standards-Tools,flnr,"Forests, Lands, Natural Resource Operations & Rural Development"
+field-inspection-app-android,,#N/A
+field-inspection-app-ios,,#N/A
+figma,citz,Citizens' Services
+flatfile-tools,citz,Citizens' Services
+FNDFAS,,#N/A
+foi-report-download,citz,Citizens' Services
+foi-requests,,#N/A
+forageConversionTool,,#N/A
+Foreign-Farm-Workers-Permitting-System,,#N/A
+forest-management-indicators,env,Environment & Climate Change Strategy
+forestDroughtTool,,#N/A
+Forester-Job-Placement,,#N/A
+forestry-quarterly-report,,#N/A
+forms-flow-ai,,#N/A
+forum-api,citz,Citizens' Services
+fwben,,#N/A
+gatsby-source-github-raw,,#N/A
+gatsby-source-matomo,,#N/A
+GB_Data,,#N/A
+GB_DNA,,#N/A
+GB_Mortality,,#N/A
+GB_Salmon,,#N/A
+GB_Unreported,,#N/A
+gcpe-azure-sample,,#N/A
+gcpe-hub,,#N/A
+gcpe-hub-api,,#N/A
+gcpe-news-api-client,,#N/A
+gcpe-news-archive,,#N/A
+gcpe-news-dashboard,,#N/A
+gcpe-news-media-proxy,,#N/A
+gcpe-news-webapp,,#N/A
+gcpe-NRMS-api,,#N/A
+gcpe-NRMS-frontend,,#N/A
+GCS,citz,Citizens' Services
+GCS_update,citz,Citizens' Services
+GDX-Analytics,citz,Citizens' Services
+GDX-Analytics-Drupal-Snowplow,citz,Citizens' Services
+GDX-Analytics-Looker-cfms_block,,#N/A
+GDX-Analytics-Looker-CleanBC,citz,Citizens' Services
+GDX-Analytics-Looker-CMSLite-Metadata,citz,Citizens' Services
+GDX-Analytics-Looker-DES-Reporting,citz,Citizens' Services
+GDX-Analytics-Looker-FOI,citz,Citizens' Services
+GDX-Analytics-Looker-Google-Block,citz,Citizens' Services
+GDX-Analytics-Looker-Google-MyBusiness,citz,Citizens' Services
+GDX-Analytics-Looker-Google-MyBusiness-ServiceBC,citz,Citizens' Services
+GDX-Analytics-Looker-Maintenance,citz,Citizens' Services
+GDX-Analytics-Looker-Redshift_Admin_By_AWS,citz,Citizens' Services
+GDX-Analytics-Looker-SBC-Call-Centre,citz,Citizens' Services
+GDX-Analytics-Looker-Snowplow-Web-Block,citz,Citizens' Services
+GDX-Analytics-Looker-theq_sdpr_block,citz,Citizens' Services
+GDX-Analytics-microservice,citz,Citizens' Services
+GDX-Analytics-OpenShift-Snowplow-Gateway-Service,citz,Citizens' Services
+gdx-covid-19-dashboard,,#N/A
+geodock,,#N/A
+geometr,citz,Citizens' Services
+geoserver_build,,#N/A
+getting_started_with_R,citz,Citizens' Services
+ghg-emissions-indicator,env,Environment & Climate Change Strategy
+gis-pantry,flnr,"Forests, Lands, Natural Resource Operations & Rural Development"
+git-sae-ops,,#N/A
+github-optimization,,#N/A
+gitlab-keycloak-group-sync,citz,Citizens' Services
+goshawk-ios,,#N/A
+Gov-2.0-Bootstrap-Skeleton,,#N/A
+govHackServiceCatalogue,,#N/A
+greenlight,citz,Citizens' Services
+grizzly-bear-IUCN-threats,env,Environment & Climate Change Strategy
+grizzly-bear-status-indicator,env,Environment & Climate Change Strategy
+groundwater-level-review-report,env,Environment & Climate Change Strategy
+groundwater-levels-indicator,env,Environment & Climate Change Strategy
+guides,,#N/A
+guides-template,,#N/A
+gw-licensing-transition-summary,env,Environment & Climate Change Strategy
+gwa,,#N/A
+gwa-api,citz,Citizens' Services
+gwa-cli,,#N/A
+gwa-ip-anonymity,,#N/A
+gwa-kong-endpoint,,#N/A
+gwa-ui,,#N/A
+gwater-report,env,Environment & Climate Change Strategy
+gwells,env,Environment & Climate Change Strategy
+HADF-Overview,citz,Citizens' Services
+hcap,hlth,Health
+healthgateproxy,,#N/A
+healthgateway,hlth,Health
+HectaresBC,,#N/A
+HelloSimon_Web,,#N/A
+helm-charts,,#N/A
+hets,tran,Transportation & Infrastructure
+HMCR,tran,Transportation & Infrastructure
+hosted-application-logging-performance-aggregation-services,env,Environment & Climate Change Strategy
+housing-data-challenge-exponentian,,#N/A
+housing-data-challenge-foundry-spatial,,#N/A
+housing-data-challenge-plot-scatter,,#N/A
+housing-data-challenge-plotly,,#N/A
+housing-data-challenge-ruby,,#N/A
+housing-data-visualization-project,jedc,"Jobs, Economic Development & Competitiveness"
+hsdProj,citz,Citizens' Services
+http-did-auth-proxy,citz,Citizens' Services
+HumanLivestockDensity,,#N/A
+HunterDensity,,#N/A
+hydrolook,env,Environment & Climate Change Strategy
+hydrometric_stations,citz,Citizens' Services
+iamp-apps-configs,,#N/A
+iamp-email-service,,#N/A
+iamp-maven-resources,,#N/A
+iamp-mq-component,,#N/A
+identity-kit-configurations,,#N/A
+iiwbook,citz,Citizens' Services
+IM-Report-GBears,,#N/A
+imit-procurement-data-analysis,citz,Citizens' Services
+indy-email-verification,citz,Citizens' Services
+indy-sdk,,#N/A
+indy-tails-server,citz,Citizens' Services
+Interactive_topic_modeling,,#N/A
+interactive-infographic,,#N/A
+intro-to-r,env,Environment & Climate Change Strategy
+intro-to-r,flnr,"Forests, Lands, Natural Resource Operations & Rural Development"
+intro-to-tidyhydat-and-tidyverse,citz,Citizens' Services
+invasive-species-indicator,env,Environment & Climate Change Strategy
+invasive-species-system-build,,#N/A
+invasivesbc,env,Environment & Climate Change Strategy
+InvasivesBC-iOS,,#N/A
+invasivesBC-mussels-iOS,,#N/A
+IRIS,,#N/A
+isb-rsi-courtsintegration,,#N/A
+ised-business-banking-initiative,citz,Citizens' Services
+issue-aggregator,,#N/A
+issuer-kit,citz,Citizens' Services
+issuer-kit-demo-verifier-chat,,#N/A
+jag-bcsc-auth-service,ag,Attorney General
+jag-ceis-crdp-integration,,#N/A
+jag-cullencommission,ag,Attorney General
+jag-document-utils,,#N/A
+jag-dps,ag,Attorney General
+jag-ecrc,ag,Attorney General
+jag-ecrc,pssg,Public Safety and Solicitor General
+jag-efiling-api,,#N/A
+jag-efiling-frontend,,#N/A
+jag-efiling-hub,,#N/A
+jag-file-submission,,#N/A
+jag-github-templates,,#N/A
+jag-instrumentation,,#N/A
+jag-isb-devorg,,#N/A
+jag-isb-splunk-chatops,ag,Attorney General
+jag-justin-courtlist-api,,#N/A
+jag-lcrb-carla-public,ag,Attorney General
+jag-lrb-web,,#N/A
+jag-mail-it,,#N/A
+jag-pci-gateway,,#N/A
+jag-pcss,ag,Attorney General
+jag-pill-press-registry,,#N/A
+jag-rsbc-carma,,#N/A
+jag-rsbc-digital-forms-vips-integration,,#N/A
+jag-rsbc-nextcloud,,#N/A
+jag-scheduling-hub,,#N/A
+jag-shuber-api,ag,Attorney General
+jag-shuber-frontend,ag,Attorney General
+jag-spd-spice,,#N/A
+jag-traffic-courts-online,ag,Attorney General
+jag-trafficcourts-api,,#N/A
+jag-trafficcourts-partner,,#N/A
+jag-vips-client,,#N/A
+jason-test-123,citz,Citizens' Services
+jason-test-delete-me,citz,Citizens' Services
+jekyll-barebones,,#N/A
+jrcc-document-access-libs,,#N/A
+jrcc-sample-app,,#N/A
+jxon,,#N/A
+kapua,,#N/A
+keycloak-group-extension,citz,Citizens' Services
+kirk,,#N/A
+kq-api,,#N/A
+kq-ui,citz,Citizens' Services
+kura,,#N/A
+kura-emulator,,#N/A
+labour-force-survey-digest,citz,Citizens' Services
+land-designations-indicator,env,Environment & Climate Change Strategy
+land-designations-shinyapp,env,Environment & Climate Change Strategy
+landuseplanning-admin,,#N/A
+landuseplanning-api,,#N/A
+landuseplanning-public,,#N/A
+law-society-demo,citz,Citizens' Services
+ldf_drf_db_comments,,#N/A
+lear,,#N/A
+legacy-eao-inspections-ios,,#N/A
+ligo,citz,Citizens' Services
+ligo-lib,citz,Citizens' Services
+lngcanada-admin,,#N/A
+lngcanada-api,,#N/A
+lngcanada-public,,#N/A
+LTEM-sample-analyses,flnr,"Forests, Lands, Natural Resource Operations & Rural Development"
+ltema,,#N/A
+lucy-web,flnr,"Forests, Lands, Natural Resource Operations & Rural Development"
+maltd,,#N/A
+MapRobot,flnr,"Forests, Lands, Natural Resource Operations & Rural Development"
+material-table,,#N/A
+Mautic-Openshift,,#N/A
+Mautic-Subscription-App,,#N/A
+MD10A1_MSLP_LDA,flnr,"Forests, Lands, Natural Resource Operations & Rural Development"
+mdms-device-signout-api,,#N/A
+mdms-device-signout-app,,#N/A
+mdms-nodejs-client,,#N/A
+mds,empr,"Energy, Mines & Petroleum Resources"
+mds-startup-sample-project,,#N/A
+mem-admin,,#N/A
+mem-geo-service,,#N/A
+mem-mmti,,#N/A
+mem-mmti-public,,#N/A
+mem-nginx,,#N/A
+metadata-curator,citz,Citizens' Services
+mhr,,#N/A
+mhsu-broker,,#N/A
+mines-digital-trust,empr,"Energy, Mines & Petroleum Resources"
+mobile-authentication-android,,#N/A
+mobile-authentication-ios,,#N/A
+mobile-authentication-js,,#N/A
+mobile-signing-service,citz,Citizens' Services
+mobile-starter-kit,,#N/A
+Mock-Server,,#N/A
+moh-address-validation,,#N/A
+MOH-AOP-OOP,,#N/A
+moh-bcer,,#N/A
+moh-bcp,,#N/A
+MOH-BCP-Enrolment,,#N/A
+moh-common-styles,,#N/A
+moh-eRx,,#N/A
+moh-external-api-protocol-mapper,hlth,Health
+MOH-FPC-Enrolment,,#N/A
+moh-fpcare,,#N/A
+moh-fpincome,,#N/A
+moh-hnclient-v2,,#N/A
+moh-hnclient-v2-PoC,hlth,Health
+moh-hni-esb,,#N/A
+moh-iam,hlth,Health
+MOH-IAM-Enrolment,,#N/A
+moh-iam-kong-keycloak,hlth,Health
+moh-iam-kong-plugin,hlth,Health
+moh-iam-sf,,#N/A
+moh-keycloak-user-management,hlth,Health
+moh-ldap-service,hlth,Health
+moh-maid,,#N/A
+moh-middleware-test,,#N/A
+MOH-MSP-Enrolment,hlth,Health
+moh-oauth,,#N/A
+moh-plr-fhir,hlth,Health
+moh-prime,hlth,Health
+MoH-SAT,hlth,Health
+moh-sitereg,,#N/A
+moh-soapui,,#N/A
+moose_lch,flnr,"Forests, Lands, Natural Resource Operations & Rural Development"
+moti-iot-challenges,tran,Transportation & Infrastructure
+moti-iot-poc,,#N/A
+MPB-regeneration,flnr,"Forests, Lands, Natural Resource Operations & Rural Development"
+msw-disposal-indicator,env,Environment & Climate Change Strategy
+mtc-scripts,citz,Citizens' Services
+mwslds,,#N/A
+mygovbc,,#N/A
+mygovbc-bootstrap-theme,,#N/A
+MyGovBC-CAPTCHA-Service,,#N/A
+MyGovBC-CAPTCHA-Widget,,#N/A
+MyGovBC-core-client,,#N/A
+MyGovBC-core-headerFooterService,,#N/A
+MyGovBC-core-server,,#N/A
+mygovbc-foodsafe,citz,Citizens' Services
+mygovbc-foodsafe-nginx,citz,Citizens' Services
+MyGovBC-MSP,,#N/A
+MyGovBC-MSP-Service,,#N/A
+mygovbc-nginx,citz,Citizens' Services
+MyGovBC-notification-server,citz,Citizens' Services
+MyGovBC-ServiceProviderTools,,#N/A
+MyGovBC-widget-info-template,,#N/A
+MyGovBC-widget-sharedservices-foodsafe,,#N/A
+name-examination,,#N/A
+namer,citz,Citizens' Services
+namerequest,,#N/A
+namex,,#N/A
+namex-payment-api-py-client,,#N/A
+namex-solr,,#N/A
+namex-synonyms-api-py-client,,#N/A
+native-species-rank-indicator,env,Environment & Climate Change Strategy
+NatureServe-GBPU-Ranking,,#N/A
+navUnit,,#N/A
+nbcclim,,#N/A
+networkpolicy-migration-workshop,citz,Citizens' Services
+new2Q-reports,flnr,"Forests, Lands, Natural Resource Operations & Rural Development"
+nifi-atlas,citz,Citizens' Services
+nmp-arm,agri,Agriculture
+NotifyBC,citz,Citizens' Services
+nr-alm-ops,,#N/A
+nr-arch,env,Environment & Climate Change Strategy
+nr-arch,eao,Environmental Assessment Office
+nr-arch,flnr,"Forests, Lands, Natural Resource Operations & Rural Development"
+nr-dell-objectstore_admin,eao,Environmental Assessment Office
+nr-designer-erstudio,,#N/A
+nr-document-management-showcase,env,Environment & Climate Change Strategy
+nr-email-microservice,env,Environment & Climate Change Strategy
+nr-flnr-ecas-processing,,#N/A
+nr-fom-admin,flnr,"Forests, Lands, Natural Resource Operations & Rural Development"
+nr-fom-api,flnr,"Forests, Lands, Natural Resource Operations & Rural Development"
+nr-fom-public,flnr,"Forests, Lands, Natural Resource Operations & Rural Development"
+nr-get-token,env,Environment & Climate Change Strategy
+nr-lidar-viewer,,#N/A
+nr-mals,agri,Agriculture
+nr-messaging-service-showcase,env,Environment & Climate Change Strategy
+nr-metabase-showcase,env,Environment & Climate Change Strategy
+nr-playbook,,#N/A
+nr-rfc-ensweather,flnr,"Forests, Lands, Natural Resource Operations & Rural Development"
+nr-rfc-processing,flnr,"Forests, Lands, Natural Resource Operations & Rural Development"
+nr-showcase-devops-tools,env,Environment & Climate Change Strategy
+nr-showcase-devops-tools-demo-sq,env,Environment & Climate Change Strategy
+nr-team-zero,,#N/A
+nrm-ea-onboarding,,#N/A
+NRPTI,empr,"Energy, Mines & Petroleum Resources"
+NRPTI,env,Environment & Climate Change Strategy
+nrs-cmdb,flnr,"Forests, Lands, Natural Resource Operations & Rural Development"
+nrs-sparx-automation,,#N/A
+nrts-prc-admin,,#N/A
+nrts-prc-api,,#N/A
+nrts-prc-public,,#N/A
+oahu-api,,#N/A
+oahu-dbsrv,,#N/A
+Oahu-UI,,#N/A
+ocp-sso,citz,Citizens' Services
+OCWA,citz,Citizens' Services
+ocwa-file-scanner,citz,Citizens' Services
+offSiteTrees,,#N/A
+ofi-tools,citz,Citizens' Services
+ols-devkit,,#N/A
+ols-geocoder,citz,Citizens' Services
+ols-geocoder-cpf-plugin,citz,Citizens' Services
+ols-router,citz,Citizens' Services
+ols-util,citz,Citizens' Services
+openconsult,,#N/A
+openshift-launchpad,citz,Citizens' Services
+openshift-launchpad-be-node,,#N/A
+openshift-launchpad-be-python,,#N/A
+openshift-launchpad-deployment,,#N/A
+openshift-launchpad-fe-react,,#N/A
+openshift-launchpad-fe-vue,,#N/A
+openshift-notifications,citz,Citizens' Services
+openshift-openjfx,,#N/A
+openshift-postgresql-oracle_fdw,,#N/A
+openshift-solr,,#N/A
+orgbook-api,citz,Citizens' Services
+orgbook-bc-client,citz,Citizens' Services
+orgbook-configurations,citz,Citizens' Services
+orgbook-on-client,citz,Citizens' Services
+ozone-caaqs-indicator,env,Environment & Climate Change Strategy
+pages,,#N/A
+parks-adventure-mobile,env,Environment & Climate Change Strategy
+patroni-postgres-container,citz,Citizens' Services
+pdfmagic,,#N/A
+PECSF,,#N/A
+performance,,#N/A
+PIMS,citz,Citizens' Services
+pipeline-bot,citz,Citizens' Services
+piwik,,#N/A
+platform-services-archeobot,citz,Citizens' Services
+platform-services-edb-template,,#N/A
+platform-services-registry,citz,Citizens' Services
+platform-services-requestron,,#N/A
+platform-services-status,citz,Citizens' Services
+platform-services-template,citz,Citizens' Services
+playbook,,#N/A
+pm25-caaqs-indicator,env,Environment & Climate Change Strategy
+PMO-Database,,#N/A
+popApp,citz,Citizens' Services
+popProjApp,citz,Citizens' Services
+postman-bdd,,#N/A
+ppr,,#N/A
+ppr-deprecated,,#N/A
+prime-oauth,,#N/A
+prime-session,,#N/A
+prime-web,hlth,Health
+Project-and-time-tracker,citz,Citizens' Services
+Protected-Area-Wetland-Assessment-By-Assessment-Area,,#N/A
+protected-lands-and-waters-indicator,env,Environment & Climate Change Strategy
+PSP,,#N/A
+pssg-cordyn-management-console,,#N/A
+pssg-cordyn-rabbitmq-interface-controller,,#N/A
+pssg-cornet-dynamics,ag,Attorney General
+pssg-cornet-dynamics,pssg,Public Safety and Solicitor General
+pssg-cornet-dynamics-config,,#N/A
+pssg-cornet-dynamics-end2end-service,,#N/A
+pssg-cornet-dynamics-queue-proc,,#N/A
+pssg-cornet-dynamics-queue-proc-rabbitmq,,#N/A
+pssg-cscp-cpu,,#N/A
+pssg-cscp-vsd,,#N/A
+pssg-cscp-vsu,,#N/A
+pssg-psd-css,pssg,Public Safety and Solicitor General
+python_beginning,citz,Citizens' Services
+queue-management,citz,Citizens' Services
+quickstart,,#N/A
+R-presentation,,#N/A
+range-api,flnr,"Forests, Lands, Natural Resource Operations & Rural Development"
+range-dashboard-ios,flnr,"Forests, Lands, Natural Resource Operations & Rural Development"
+range-ios,flnr,"Forests, Lands, Natural Resource Operations & Rural Development"
+range-web,flnr,"Forests, Lands, Natural Resource Operations & Rural Development"
+ranktrends,env,Environment & Climate Change Strategy
+RasterLandCover,,#N/A
+rcaaqs,env,Environment & Climate Change Strategy
+react-shared-components,,#N/A
+realm-o-matic,citz,Citizens' Services
+recycling-indicator,env,Environment & Climate Change Strategy
+reggie,,#N/A
+reggie-web,,#N/A
+registry-schemas,,#N/A
+rems,env,Environment & Climate Change Strategy
+rems2aquachem,,#N/A
+replication_health_check,,#N/A
+repomountie,citz,Citizens' Services
+representation-grant,ag,Attorney General
+representation-grant-app,ag,Attorney General
+roadless-areas-indicator,env,Environment & Climate Change Strategy
+rocketchat,citz,Citizens' Services
+rocketgate,,#N/A
+RSBC-DataHub-API,ag,Attorney General
+rsbc-dmf,ag,Attorney General
+rsbc-dmf,pssg,Public Safety and Solicitor General
+s2i-caddy-nodejs,citz,Citizens' Services
+s2i-nginx,,#N/A
+s2i-ruby-nodejs,,#N/A
+sae-docs-bridge,citz,Citizens' Services
+sae-virtual-display,citz,Citizens' Services
+sae-workbench,citz,Citizens' Services
+safepaths,citz,Citizens' Services
+SBC_DivApps,citz,Citizens' Services
+sbc-auth,,#N/A
+SBC-AUTH-Service,,#N/A
+sbc-common-components,,#N/A
+sbc-maximus-services,,#N/A
+sbc-mcap,,#N/A
+sbc-pay,,#N/A
+sbc-qsystem,,#N/A
+sbc-search,citz,Citizens' Services
+scheduler,,#N/A
+SchemaSpy,,#N/A
+schoolbus,tran,Transportation & Infrastructure
+schoolbus-orig,,#N/A
+SCJ-Online-Booking,ag,Attorney General
+scj-online-booking-system,,#N/A
+sdd-nifi,citz,Citizens' Services
+sdpr-orbeon,,#N/A
+searchgate,,#N/A
+SecNewsFeedReader,,#N/A
+SecNewsFeedReader-Drupal,citz,Citizens' Services
+secure-image-android,citz,Citizens' Services
+secure-image-api,citz,Citizens' Services
+secure-image-app,,#N/A
+secure-image-ios,citz,Citizens' Services
+SecurityAwareness,,#N/A
+semantic_infer,,#N/A
+service-analytics-guide,citz,Citizens' Services
+service-patterns,,#N/A
+service-patterns-temp,,#N/A
+servicebc,,#N/A
+servicescard-selfservice,citz,Citizens' Services
+sfts2s3,citz,Citizens' Services
+SharePoint_Solutions,,#N/A
+sheriff-scheduling,ag,Attorney General
+sheriff-scheduling-configurations,ag,Attorney General
+shinyhydat,env,Environment & Climate Change Strategy
+shinyrems,,#N/A
+shinyssdtools,env,Environment & Climate Change Strategy
+shinywqg,env,Environment & Climate Change Strategy
+silviculture-ipc,flnr,"Forests, Lands, Natural Resource Operations & Rural Development"
+Similkameen-WQOs,env,Environment & Climate Change Strategy
+simple-R-shiny,env,Environment & Climate Change Strategy
+SIMS,aest,"Advanced Education, Skills & Training"
+site-inspections-app-ios,,#N/A
+site-status-checker,,#N/A
+sk_tda,flnr,"Forests, Lands, Natural Resource Operations & Rural Development"
+Skeena_ESI_Wetlands,,#N/A
+Skeena_WB,,#N/A
+Skeena-CE-Grizzly,,#N/A
+skeena-ogma-amendments-assessment,,#N/A
+slack-dev-bot-BCGov,,#N/A
+sm-bridge-service,,#N/A
+smk,citz,Citizens' Services
+smk-actions,citz,Citizens' Services
+smk-bcparks,,#N/A
+smk-cli,citz,Citizens' Services
+smk-common-iac,,#N/A
+smk-datastore,,#N/A
+smk-fap-bcfls,citz,Citizens' Services
+smk-fap-fcb,citz,Citizens' Services
+smk-fap-stcb,citz,Citizens' Services
+smk-francophone,citz,Citizens' Services
+smk-helms,citz,Citizens' Services
+smk-legacy-ui,citz,Citizens' Services
+smk-moh,citz,Citizens' Services
+smk-moh,hlth,Health
+smk-moh-mhsu,,#N/A
+smk-tlink,citz,Citizens' Services
+smk-tradebc,citz,Citizens' Services
+smtp-om-cas-common,,#N/A
+smtp-om-core,,#N/A
+snow-dur-analysis,,#N/A
+sonarqube-openshift-docker,,#N/A
+sp2s3,citz,Citizens' Services
+spa-env-server,,#N/A
+spa-text-service,,#N/A
+splunk-forwarder,,#N/A
+spring-boot-starters,,#N/A
+SSAF_FFH_Summary,,#N/A
+SSD-methods,env,Environment & Climate Change Strategy
+ssdtools,env,Environment & Climate Change Strategy
+startup-sample-project,citz,Citizens' Services
+startup-sample-project-terraform-modules,,#N/A
+statscan-taxdata-tidying,citz,Citizens' Services
+streamflow-indicator,env,Environment & Climate Change Strategy
+streamflow-trends-on-multi-stats,,#N/A
+student-outcomes-dataviz,citz,Citizens' Services
+STUDENTSUCCESS-V2.0,,#N/A
+supreme-court-viewer,ag,Attorney General
+supreme-court-viewer-configurations,ag,Attorney General
+Swagger-Codegen-Extension,,#N/A
+Swagger-Editor,,#N/A
+Teams-FAQ-Bot,citz,Citizens' Services
+Technology-Code-of-Practice,,#N/A
+teis-utilities,,#N/A
+telemetry,flnr,"Forests, Lands, Natural Resource Operations & Rural Development"
+telemetry,env,Environment & Climate Change Strategy
+tfrs,tran,Transportation & Infrastructure
+tfrs,empr,"Energy, Mines & Petroleum Resources"
+tfrs-functional-test-runner,,#N/A
+tfrs-sonar-scanner,,#N/A
+TheOrgBook,citz,Citizens' Services
+tire-recycling-indicator,env,Environment & Climate Change Strategy
+tracks,,#N/A
+tracks-devops,,#N/A
+TransAction,tran,Transportation & Infrastructure
+transportation-datascience-sandbox,,#N/A
+ts-rs-modis-snow,,#N/A
+ts-rs-modis-snow-perc-norm,flnr,"Forests, Lands, Natural Resource Operations & Rural Development"
+tukey,citz,Citizens' Services
+tutorials,,#N/A
+update-VRI-volumes,flnr,"Forests, Lands, Natural Resource Operations & Rural Development"
+url-filter-proxy,citz,Citizens' Services
+vc-authn-oidc,citz,Citizens' Services
+vc-visual-verifier,citz,Citizens' Services
+violation-dispute-form,ag,Attorney General
+von,citz,Citizens' Services
+von-agent-template,,#N/A
+von-bc-registries-agent,citz,Citizens' Services
+von-bc-registries-agent-configurations,citz,Citizens' Services
+von-bc-registries-audit,citz,Citizens' Services
+von-connector,citz,Citizens' Services
+VON-ESB-DRS-Agent,,#N/A
+von-network,citz,Citizens' Services
+von-oil-gas-poc,citz,Citizens' Services
+vue-scaffold,env,Environment & Climate Change Strategy
+vue-shared-components,,#N/A
+vue-test-utils-helpers,,#N/A
+water-quality-analysis,env,Environment & Climate Change Strategy
+water-quality-analysis-northeastbc,,#N/A
+Watershed_SkeenaESI_Monitoring,,#N/A
+WES-demographic-profile,citz,Citizens' Services
+WES-engagement-states,citz,Citizens' Services
+WES-NLP-tool,citz,Citizens' Services
+WES-results-visualization,citz,Citizens' Services
+WEStblr,citz,Citizens' Services
+Wetland_SkeenaESI_Monitoring,env,Environment & Climate Change Strategy
+Wetland_Summary,,#N/A
+wetlandmapR,,#N/A
+Wetlands_OperationalFactors_SkeenaEastESI,,#N/A
+Wetzinkwa,,#N/A
+whse_2_agol,citz,Citizens' Services
+workbc-sdd-map,,#N/A
+workbc-small-grants,sdpr,Social Development & Poverty Reduction
+workbc-wage-subsidy,sdpr,Social Development & Poverty Reduction
+workforce-profile-tool,citz,Citizens' Services
+wps,flnr,"Forests, Lands, Natural Resource Operations & Rural Development"
+wps-api,,#N/A
+wps-web,flnr,"Forests, Lands, Natural Resource Operations & Rural Development"
+wqbc,env,Environment & Climate Change Strategy
+wqg_data,env,Environment & Climate Change Strategy
+wqindex,env,Environment & Climate Change Strategy
+wqo_shuswap,,#N/A
+zeebe-camunda,,#N/A
+zeva,,#N/A
+zevtesthello,,#N/A
+,,#N/A
+,,#N/A

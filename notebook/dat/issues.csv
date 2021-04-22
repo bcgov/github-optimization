@@ -12483,7 +12483,7 @@ lucy-web,mikeshasko,TRUE,2020-09-09T21:48:25Z,2020-03-25T17:19:28Z,,CLOSED,store
 lucy-web,mikeshasko,TRUE,2020-09-09T21:40:54Z,2020-03-25T17:20:08Z,2020-05-07T21:56:56Z,CLOSED,integrate API with PostGIS (our API doesn't normally integrate with it?),2020-09-09T21:48:22Z,168.181088
 lucy-web,mikeshasko,TRUE,2020-09-09T21:40:54Z,2020-03-25T17:21:23Z,,CLOSED,Pipeline Audit by DevOps Specialist,2020-09-09T21:48:22Z,168.1802199
 lucy-web,mikeshasko,FALSE,,2020-03-26T14:25:40Z,,OPEN,Chemical Monitoring,2020-07-03T15:11:08Z,#VALUE!
-lucy-web,mikeshasko,TRUE,2020-04-01T19:59:03Z,2020-03-26T14:35:17Z,2020-03-26T14:38:05Z,CLOSED,Add general Comments field for plant observations: ,2020-04-01T19:59:03Z,6.224837963
+lucy-web,mikeshasko,TRUE,2020-04-01T19:59:03Z,2020-03-26T14:35:17Z,2020-03-26T14:38:05Z,CLOSED,Add general Comments field for plant observations:,2020-04-01T19:59:03Z,6.224837963
 lucy-web,mikeshasko,FALSE,,2020-03-26T15:07:15Z,,OPEN,Biological Monitoring (web),2020-04-15T21:40:17Z,#VALUE!
 lucy-web,mikeshasko,FALSE,,2020-03-26T15:40:49Z,,OPEN,Create Basic Biological Treatment,2020-03-26T15:40:49Z,#VALUE!
 lucy-web,mikeshasko,FALSE,,2020-03-31T16:44:06Z,2020-06-08T15:57:17Z,OPEN,View an entered Geometry on the map (web),2020-10-22T23:13:18Z,#VALUE!
