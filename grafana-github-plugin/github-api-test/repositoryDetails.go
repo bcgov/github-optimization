@@ -5,10 +5,8 @@ package main
 import (
 	"context"
 	"fmt"
-	"math"
 	"os"
 	"strconv"
-	"time"
 
 	"github.com/shurcooL/githubv4"
 	"golang.org/x/oauth2"
@@ -48,38 +46,41 @@ type QueryListRepositories struct {
 // Repository is a code repository
 type Repository struct {
 	Name      string
-	CreatedAt githubv4.DateTime
-	UpdatedAt githubv4.DateTime
-	PushedAt  githubv4.DateTime
-	Issues    struct {
+	Packages struct {
 		TotalCount int
 	}
-	PullRequests struct {
+	Projects struct {
 		TotalCount int
 	}
-	DefaultBranchRef struct {
-		Name   string
-		Prefix string
+	Releases struct {
+		TotalCount int
+	}
+	Submodules struct {
+		TotalCount int
+	}
+	DeployKeys struct {
+		TotalCount int
+	}
+	RepositoryTopics struct {
+		TotalCount int
+	}
+	LicenseInfo struct {
+		Name string
+	}
+	CodeOfConduct struct {
+		Name string
 	}
 }
 
 // Repositories is a list of GitHub repositories
 type Repositories []Repository
 
-// RepositoryExtra is ...
-type RepositoryExtra struct {
-	DefaultBranchCommitCount int
-}
-
-// RepositoryExtras is ...
-type RepositoryExtras []RepositoryExtra
-
 type Client interface {
 	Query(ctx context.Context, q interface{}, variables map[string]interface{}) error
 }
 
 // GetRepositories retruns the organization basic information for the client
-func GetRepositories(ctx context.Context, client Client) (Repositories, RepositoryExtras, error) {
+func GetRepositories(ctx context.Context, client Client) (Repositories, error) {
 	var (
 		variables = map[string]interface{}{
 			"org":    githubv4.String("bcgov"),
@@ -87,7 +88,6 @@ func GetRepositories(ctx context.Context, client Client) (Repositories, Reposito
 		}
 
 		repos  = []Repository{}
-		extras = []RepositoryExtra{}
 		page   = 1
 	)
 
@@ -97,23 +97,11 @@ func GetRepositories(ctx context.Context, client Client) (Repositories, Reposito
 		query := &QueryListRepositories{}
 		if err := client.Query(ctx, query, variables); err != nil {
 			fmt.Println(err)
-			return nil, nil, err
+			return nil, err
 		}
 		r := make([]Repository, len(query.Organization.Repositories.Nodes))
 
 		for i, v := range query.Organization.Repositories.Nodes {
-			opts := BranchOptions{
-				Org:     "bcgov",
-				Name:    v.Name,
-				RefName: v.DefaultBranchRef.Name,
-			}
-
-			n, _ := GetDefaultBranchCommitCount(ctx, client, opts)
-			extra := RepositoryExtra{
-				DefaultBranchCommitCount: n,
-			}
-			extras = append(extras, extra)
-
 			r[i] = v
 		}
 
@@ -125,64 +113,11 @@ func GetRepositories(ctx context.Context, client Client) (Repositories, Reposito
 
 		variables["cursor"] = query.Organization.Repositories.PageInfo.EndCursor
 		page++
+
+		// time.Sleep(10 * time.Minute)
 	}
 
-	return repos, extras, nil
-}
-
-type BranchOptions struct {
-	Org     string
-	Name    string
-	RefName string
-}
-
-// QueryDefaultBranchCommitCount is the GraphQL query for retrieving a list of repositories for an organization
-// query {
-// 	 repository(name: "$name", owner: "$owner") {
-//     ref(qualifiedName: "$qualifiedName") {
-// 	     target {
-// 	       ... on Commit {
-//           history {
-//             totalCount
-//           }
-//         }
-//       }
-// 	   }
-// 	 }
-// }
-type QueryDefaultBranchCommitCount struct {
-	Repository struct {
-		Ref struct {
-			Target struct {
-				Commit struct {
-					History struct {
-						TotalCount int
-					}
-				} `graphql:"... on Commit"`
-			}
-		} `graphql:"ref(qualifiedName: $refName)"`
-	} `graphql:"repository(name: $name, owner: $org)"`
-}
-
-// GetDefaultBranchCommitCount retruns ...
-func GetDefaultBranchCommitCount(ctx context.Context, client Client, ops BranchOptions) (int, error) {
-	var (
-		variables = map[string]interface{}{
-			"org":     githubv4.String(ops.Org),
-			"name":    githubv4.String(ops.Name),
-			"refName": githubv4.String(ops.RefName),
-		}
-	)
-
-	query := &QueryDefaultBranchCommitCount{}
-	if err := client.Query(ctx, query, variables); err != nil {
-		fmt.Println(err)
-		return 0, err
-	}
-
-	count := query.Repository.Ref.Target.Commit.History.TotalCount
-
-	return count, nil
+	return repos, nil
 }
 
 func main() {
@@ -193,7 +128,7 @@ func main() {
 	}
 
 	targetDir := "../../../notebook/dat/"
-	targetFile := "/repository-details.csv"
+	targetFile := "/repository-details-1.csv"
 
 	err = os.MkdirAll(path+targetDir, os.ModePerm)
 	check(err)
@@ -210,35 +145,51 @@ func main() {
 
 	client := githubv4.NewClient(httpClient)
 
-	repos, extras, _ := GetRepositories(context.Background(), client)
+	repos, _ := GetRepositories(context.Background(), client)
 
 	// Append data into csv
-	header := [...]string{"Repository", "IssueTotalCount", "PrTotalCount", "CommitTotalCount", "DaysOpen", "AverageIssueCountPerDay", "AveragePrCountPerDay", "AverageCommitCountPerDay", "DefaultBranchName"}
+	header := [...]string{
+		"Repository",
+		"PackageCount",
+		"ProjectCount",
+		"ReleaseCount",
+		"SubmoduleCount",
+		"DeployKeyCount",
+		"TopicCount",
+		"License",
+		"CodeOfConduct",
+	}
 	writeLineToFile(f, header)
 
-	for i, repo := range repos {
+	for _, repo := range repos {
 		name := repo.Name
-		issueTotalCount := repo.Issues.TotalCount
-		prTotalCount := repo.PullRequests.TotalCount
-		commitTotalCount := extras[i].DefaultBranchCommitCount
-		defaultBranchName := repo.DefaultBranchRef.Name
+		packageCount := repo.Packages.TotalCount
+		projectCount := repo.Projects.TotalCount
+		releaseCount := repo.Releases.TotalCount
+		submoduleCount := repo.Submodules.TotalCount
+		deployKeyCount := repo.DeployKeys.TotalCount
+		topicCount := repo.RepositoryTopics.TotalCount
+		license := repo.LicenseInfo.Name
+		codeOfConduct := repo.CodeOfConduct.Name
 
-		hoursOpen := time.Now().UTC().Sub(repo.CreatedAt.UTC()).Hours()
-		daysOpen := hoursOpen / 24
+		packageCountStr := strconv.Itoa(packageCount)
+		projectCountStr := strconv.Itoa(projectCount)
+		releaseCountStr := strconv.Itoa(releaseCount)
+		submoduleCountStr := strconv.Itoa(submoduleCount)
+		deployKeyCountStr := strconv.Itoa(deployKeyCount)
+		topicCountStr := strconv.Itoa(topicCount)
 
-		averageIssueCountPerDay := float64(issueTotalCount) / daysOpen
-		averagePrCountPerDay := float64(prTotalCount) / daysOpen
-		averageCommitCountPerDay := float64(commitTotalCount) / daysOpen
-
-		issueTotalCountStr := strconv.Itoa(issueTotalCount)
-		prTotalCountStr := strconv.Itoa(prTotalCount)
-		commitTotalCountStr := strconv.Itoa(commitTotalCount)
-		daysOpenStr := strconv.Itoa(int(daysOpen))
-		averageIssueCountPerDayStr := strconv.FormatFloat(math.Round(averageIssueCountPerDay*100)/100, 'f', -1, 32)
-		averagePrCountPerDayStr := strconv.FormatFloat(math.Round(averagePrCountPerDay*100)/100, 'f', -1, 32)
-		averageCommitCountPerDayStr := strconv.FormatFloat(math.Round(averageCommitCountPerDay*100)/100, 'f', -1, 32)
-
-		cells := [...]string{name, issueTotalCountStr, prTotalCountStr, commitTotalCountStr, daysOpenStr, averageIssueCountPerDayStr, averagePrCountPerDayStr, averageCommitCountPerDayStr, defaultBranchName}
+		cells := [...]string{
+			name,
+			packageCountStr,
+			projectCountStr,
+			releaseCountStr,
+			submoduleCountStr,
+			deployKeyCountStr,
+			topicCountStr,
+			license,
+			codeOfConduct,
+		}
 
 		writeLineToFile(f, cells)
 	}

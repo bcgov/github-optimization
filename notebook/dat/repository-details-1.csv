@@ -1,0 +1,980 @@
+Repository,PackageCount,ProjectCount,ReleaseCount,SubmoduleCount,DeployKeyCount,TopicCount,License,CodeOfConduct
+wqbc,0,0,9,0,0,5,Apache License 2.0,Contributor Covenant
+BC-Policy-Framework-For-GitHub,0,0,1,0,0,8,Other,Contributor Covenant
+bcgroundwater,0,0,2,0,0,4,Apache License 2.0,Contributor Covenant
+groundwater-levels-indicator,0,0,0,0,0,5,Apache License 2.0,Contributor Covenant
+ckanext-googleanalytics,0,0,0,0,0,1,,
+ckanext-hierarchy,0,0,0,0,0,1,,
+ckanext-ga-report,0,0,0,0,0,0,Other,
+EnvReportBC,0,0,0,0,0,4,Other,Contributor Covenant
+envreportutils,0,0,14,0,0,4,Apache License 2.0,Contributor Covenant
+CSB-eFile,0,0,0,0,0,0,Apache License 2.0,
+ckanext-bcgov,0,0,48,0,0,4,GNU Affero General Public License v3.0,
+bcmaps,0,1,26,0,0,5,Apache License 2.0,Contributor Covenant
+dbcrss,0,0,0,0,0,6,Apache License 2.0,
+bc-laws-api,0,0,0,0,0,0,Other,
+rcaaqs,0,0,3,0,0,4,Apache License 2.0,Contributor Covenant
+ozone-caaqs-indicator,0,0,1,0,0,4,Apache License 2.0,Contributor Covenant
+pm25-caaqs-indicator,0,0,1,0,0,4,Apache License 2.0,Contributor Covenant
+esm-server,0,0,27,0,0,0,Other,
+datapusher,0,0,0,0,0,0,GNU Affero General Public License v3.0,
+ltema,0,0,0,0,0,0,Other,
+bearmon,0,0,0,0,0,0,Apache License 2.0,
+openconsult,0,0,0,0,0,0,Creative Commons Attribution 4.0 International,
+protected-lands-and-waters-indicator,0,0,0,0,0,4,Apache License 2.0,Contributor Covenant
+BCDevExchange-app,0,0,0,0,0,0,Other,
+bc-population-indicator,0,0,0,0,0,4,Apache License 2.0,Contributor Covenant
+data-fp,0,0,4,0,0,3,MIT License,
+nrs-sparx-automation,0,0,0,0,0,0,Apache License 2.0,
+playbook,0,0,0,0,0,0,,
+govHackServiceCatalogue,0,0,0,0,0,0,,
+guides,0,0,0,0,0,0,Other,
+pages,0,0,0,0,0,0,Other,
+guides-template,0,0,0,0,0,0,Other,
+DBC-APIM,0,0,0,0,0,2,Apache License 2.0,
+cpf,0,0,3,0,0,0,Apache License 2.0,
+drivebc-webcam-api,0,0,0,0,0,0,Other,
+databc-web-map-services,0,0,0,0,0,0,Other,
+agile-guide,0,0,0,0,0,6,Other,
+digital-toolkit,0,0,2,0,0,7,Apache License 2.0,
+eba-guide,0,0,0,0,0,4,Other,
+bcdc-devops,0,0,0,0,0,1,MIT License,
+data-fp-features,0,0,0,0,0,3,Apache License 2.0,
+issue-aggregator,0,0,0,0,0,0,Apache License 2.0,Contributor Covenant
+api-specs,0,0,0,0,0,4,Other,
+DevEx-Roadmap,0,0,0,0,0,0,Other,
+interactive-infographic,0,0,0,0,0,0,Other,Contributor Covenant
+service-patterns,0,0,0,0,0,0,,
+piwik,0,0,0,13,0,0,,
+Gov-2.0-Bootstrap-Skeleton,0,0,0,0,0,4,,
+ckan,0,0,0,0,0,0,Other,
+PMO-Database,0,0,0,0,0,0,Apache License 2.0,
+rems,0,0,14,0,0,4,Apache License 2.0,Contributor Covenant
+ckanext-geoview,0,0,0,0,0,1,MIT License,
+agile-labor-categories,0,0,0,0,0,0,,
+FGDB-Standards-Tools,0,0,0,0,0,7,Apache License 2.0,
+ghg-emissions-indicator,0,0,1,0,0,4,Apache License 2.0,Contributor Covenant
+ols-devkit,0,0,0,0,0,6,Apache License 2.0,
+MyGovBC-core-server,0,0,0,0,0,0,Apache License 2.0,
+MyGovBC-core-client,0,0,0,0,0,0,Apache License 2.0,
+MyGovBC-core-headerFooterService,0,0,0,0,0,0,Apache License 2.0,
+MyGovBC-notification-server,0,0,32,0,0,3,Apache License 2.0,
+MyGovBC-widget-sharedservices-foodsafe,0,0,0,0,0,0,Apache License 2.0,
+MyGovBC-widget-info-template,0,0,0,0,0,0,Apache License 2.0,
+BCStats,0,0,0,0,0,3,,
+WES-engagement-states,0,0,0,0,0,4,Apache License 2.0,Contributor Covenant
+simple-R-shiny,0,0,0,0,0,4,Apache License 2.0,
+land-designations-indicator,0,0,2,0,0,4,Apache License 2.0,Contributor Covenant
+land-designations-shinyapp,0,0,0,0,0,4,Apache License 2.0,Contributor Covenant
+envreportbc-snippets,0,0,0,0,0,4,Apache License 2.0,Contributor Covenant
+climate-change-indicators-2015,0,0,0,0,0,4,Apache License 2.0,Contributor Covenant
+tire-recycling-indicator,0,0,0,0,0,4,Apache License 2.0,Contributor Covenant
+invasive-species-indicator,0,0,0,0,0,4,Apache License 2.0,Contributor Covenant
+update-VRI-volumes,0,0,0,0,0,1,Apache License 2.0,
+cccharts,0,0,0,0,0,4,Apache License 2.0,Contributor Covenant
+mygovbc,0,0,0,0,0,0,Apache License 2.0,
+WES-demographic-profile,0,0,0,0,0,4,Apache License 2.0,Contributor Covenant
+eDivorce,0,0,1,0,0,3,Apache License 2.0,
+designatedlands,0,0,3,0,0,6,Apache License 2.0,
+mygovbc-nginx,0,0,2,0,0,1,Apache License 2.0,
+mygovbc-foodsafe-nginx,0,0,0,0,0,1,Apache License 2.0,
+water-quality-analysis,0,0,0,0,0,4,Apache License 2.0,Contributor Covenant
+SecurityAwareness,0,0,0,0,0,0,Apache License 2.0,
+MyGovBC-MSP,0,0,11,0,0,2,Apache License 2.0,Contributor Covenant
+smtp-om-core,0,0,0,0,0,0,Apache License 2.0,
+schoolbus-orig,0,0,0,0,0,0,Apache License 2.0,
+schoolbus,0,0,5,0,0,1,Apache License 2.0,Contributor Covenant
+burn-severity,0,0,0,0,0,1,Apache License 2.0,
+housing-data-visualization-project,0,0,0,0,0,4,Apache License 2.0,Contributor Covenant
+ckanext-openapiviewer,0,0,8,0,0,7,MIT License,
+BC-demography,0,0,0,0,0,5,Apache License 2.0,Contributor Covenant
+smtp-om-cas-common,0,0,0,0,0,0,Other,
+HelloSimon_Web,0,0,0,0,0,0,,
+slack-dev-bot-BCGov,0,0,0,0,0,0,Apache License 2.0,
+Mock-Server,0,0,0,0,0,0,Apache License 2.0,
+Swagger-Editor,0,0,0,0,0,0,Apache License 2.0,
+SchemaSpy,0,0,0,0,0,0,Apache License 2.0,Contributor Covenant
+streamflow-trends-on-multi-stats,0,0,0,0,0,0,Apache License 2.0,
+Swagger-Codegen-Extension,0,0,0,0,0,0,Apache License 2.0,
+career-survey,0,0,0,0,0,2,Apache License 2.0,
+mygovbc-foodsafe,0,0,0,0,0,1,Apache License 2.0,
+hets,0,0,5,0,0,1,Apache License 2.0,Contributor Covenant
+MyGovBC-MSP-Service,0,0,1,0,0,0,Apache License 2.0,
+gwa,0,0,0,0,0,3,Apache License 2.0,
+jxon,0,0,0,0,0,0,GNU General Public License v3.0,
+batch-pdf-reports,0,0,0,0,0,2,Apache License 2.0,
+R-presentation,0,0,0,0,0,0,Apache License 2.0,
+tfrs,0,1,168,0,0,20,Apache License 2.0,Contributor Covenant
+fabric.js,0,0,0,0,0,0,Other,Contributor Covenant
+MyGovBC-CAPTCHA-Service,0,0,15,0,0,0,Apache License 2.0,
+MyGovBC-CAPTCHA-Widget,0,0,20,0,0,0,Apache License 2.0,
+housing-data-challenge-ruby,0,0,0,0,0,3,Apache License 2.0,Contributor Covenant
+ligo-lib,0,0,4,0,0,1,Apache License 2.0,Other
+kapua,0,0,0,0,0,0,Eclipse Public License 1.0,
+kura,0,0,0,0,0,0,Eclipse Public License 1.0,
+housing-data-challenge-exponentian,0,0,0,0,0,5,Apache License 2.0,
+housing-data-challenge-plot-scatter,0,0,0,0,0,2,Apache License 2.0,
+housing-data-challenge-plotly,0,0,0,0,0,4,Apache License 2.0,
+housing-data-challenge-foundry-spatial,0,0,0,0,0,2,Apache License 2.0,
+BCWaterDischargeAnalysis-SampleScripts,0,0,0,0,0,1,Apache License 2.0,
+Oahu-UI,0,0,0,0,0,0,Apache License 2.0,
+gwells,0,0,8,0,0,5,Apache License 2.0,Contributor Covenant
+oahu-api,0,0,0,0,0,0,Apache License 2.0,
+oahu-dbsrv,0,0,0,0,0,0,Apache License 2.0,
+kura-emulator,0,0,0,0,0,0,Eclipse Public License 1.0,
+chart-tool,0,0,0,0,0,0,MIT License,
+legacy-eao-inspections-ios,0,0,0,0,0,0,,
+epic-mobile-app-android,0,0,0,0,0,0,Apache License 2.0,
+moti-iot-challenges,0,0,0,0,0,1,Apache License 2.0,
+LTEM-sample-analyses,0,0,0,0,0,1,Apache License 2.0,Contributor Covenant
+moti-iot-poc,0,0,0,0,0,0,Apache License 2.0,
+sonarqube-openshift-docker,0,0,0,0,0,0,,
+navUnit,0,0,0,0,0,0,Apache License 2.0,
+tfrs-sonar-scanner,0,0,0,0,0,0,,
+dbc-kml-apps,0,0,0,0,0,4,Apache License 2.0,
+dbc-cms-vis,0,0,0,0,0,5,Apache License 2.0,
+tfrs-functional-test-runner,0,0,0,0,0,0,,
+SSD-methods,0,0,0,0,0,2,Apache License 2.0,
+csnr-dmod,0,0,0,0,0,6,Apache License 2.0,Contributor Covenant
+nrs-cmdb,0,1,0,0,0,1,Apache License 2.0,None
+sbc-qsystem,0,0,0,0,0,0,GNU General Public License v3.0,
+openshift-openjfx,0,0,0,0,0,0,Other,
+agile-sdlc,0,0,1,0,0,8,Apache License 2.0,
+eao-nginx,0,0,0,0,0,0,Apache License 2.0,
+mygovbc-bootstrap-theme,0,0,4,0,0,3,Apache License 2.0,
+angular-scaffold,0,0,5,0,0,4,Other,
+eao-parse-server,0,0,0,0,0,0,Apache License 2.0,
+eao-public,0,0,3,0,0,0,Apache License 2.0,
+eao-public-consultation,0,0,0,0,0,0,Apache License 2.0,
+dbc-j2ee-template,0,0,0,0,0,8,Apache License 2.0,
+gw-licensing-transition-summary,0,0,0,0,0,4,Apache License 2.0,Contributor Covenant
+service-patterns-temp,0,0,0,0,0,0,Apache License 2.0,
+ligo,0,0,2,0,0,4,Apache License 2.0,Contributor Covenant
+FASSTX,0,0,0,0,0,6,Apache License 2.0,Contributor Covenant
+shinyhydat,0,0,0,0,0,2,Apache License 2.0,Contributor Covenant
+mem-admin,0,0,16,0,1,0,Other,
+mem-mmti,0,0,3,0,0,0,Other,
+eao-geo-service,0,0,0,0,0,0,Apache License 2.0,
+mem-geo-service,0,0,0,0,0,0,Apache License 2.0,
+mem-nginx,0,0,0,0,0,0,Apache License 2.0,
+mem-mmti-public,0,0,4,0,1,4,Apache License 2.0,
+nifi-atlas,0,0,0,0,0,6,Apache License 2.0,Contributor Covenant
+namer,0,0,0,0,0,5,Apache License 2.0,
+bcgovr,0,0,12,0,0,5,Apache License 2.0,Contributor Covenant
+angular-scaffold-captcha,0,0,0,0,0,0,Other,
+agri-nmp,0,0,3,0,0,2,Apache License 2.0,Contributor Covenant
+sm-bridge-service,0,0,0,0,0,0,Apache License 2.0,
+von,0,0,0,0,0,6,Other,Contributor Covenant
+bc-raster-roads,0,0,1,0,0,4,Apache License 2.0,Contributor Covenant
+IM-Report-GBears,0,0,0,0,0,0,Apache License 2.0,Contributor Covenant
+CANSIM-dataviewer,0,0,0,0,0,5,Apache License 2.0,Contributor Covenant
+prime-web,0,0,0,0,0,1,Other,
+MyGovBC-ServiceProviderTools,0,0,0,0,0,0,Apache License 2.0,
+water-quality-analysis-northeastbc,0,0,0,0,0,7,Apache License 2.0,Contributor Covenant
+hydrolook,0,0,6,0,0,3,Apache License 2.0,Contributor Covenant
+TheOrgBook,0,0,0,0,0,6,Apache License 2.0,Contributor Covenant
+openshift-postgresql-oracle_fdw,0,0,0,0,0,0,Apache License 2.0,
+NatureServe-GBPU-Ranking,0,0,0,0,0,0,Apache License 2.0,Contributor Covenant
+ocp-sso,0,0,0,0,0,2,Apache License 2.0,
+s2i-ruby-nodejs,0,0,0,0,0,0,Apache License 2.0,
+jekyll-barebones,0,0,0,0,0,0,Other,
+ckanext-galileo,0,0,0,0,0,0,MIT License,
+WES-NLP-tool,0,0,0,0,0,6,Apache License 2.0,Contributor Covenant
+HectaresBC,0,0,0,0,0,0,Apache License 2.0,
+bootstrap-theme,0,0,4,0,0,1,Apache License 2.0,
+quickstart,0,0,0,0,0,0,Other,
+roadless-areas-indicator,0,0,1,0,0,4,Apache License 2.0,Contributor Covenant
+child-support-lookup-tool,0,0,0,0,0,0,Apache License 2.0,
+bcmapsdata,0,0,10,0,0,5,Apache License 2.0,Contributor Covenant
+drat,0,0,0,0,0,4,Apache License 2.0,
+fasstr,0,0,2,0,0,9,Apache License 2.0,Contributor Covenant
+openshift-solr,0,0,0,0,0,0,MIT License,
+von-connector,0,0,0,0,0,6,Apache License 2.0,
+von-network,0,0,0,0,0,6,Apache License 2.0,
+s2i-nginx,0,0,0,0,0,0,Apache License 2.0,
+getting_started_with_R,0,0,0,0,0,3,Other,Contributor Covenant
+WES-results-visualization,0,0,0,0,0,4,Apache License 2.0,Contributor Covenant
+nrts-prc-public,0,0,15,0,0,1,Apache License 2.0,
+forest-management-indicators,0,0,2,0,0,4,Apache License 2.0,Contributor Covenant
+gcpe-news-api-client,0,0,0,0,0,0,Apache License 2.0,Contributor Covenant
+ssdtools,0,0,7,0,0,4,Apache License 2.0,Contributor Covenant
+bcgov-data-science-resources,0,0,0,0,0,4,Other,Contributor Covenant
+Family-Protection-Order,0,0,0,0,0,1,Apache License 2.0,Contributor Covenant
+greenlight,0,0,0,0,0,8,Apache License 2.0,
+esm-admin,0,0,0,0,0,0,Other,
+secure-image-android,0,0,0,0,0,5,Apache License 2.0,Contributor Covenant
+secure-image-ios,0,0,0,0,0,5,Apache License 2.0,
+jag-shuber-frontend,0,0,0,0,0,9,Apache License 2.0,Contributor Covenant
+jag-shuber-api,0,0,0,0,0,14,Apache License 2.0,Contributor Covenant
+secure-image-api,0,0,0,0,0,2,Apache License 2.0,
+nrts-prc-api,0,0,15,0,0,1,Apache License 2.0,
+air-monitoring-visualization,0,1,0,0,0,0,Apache License 2.0,
+gcpe-news-media-proxy,0,0,0,0,0,0,Apache License 2.0,
+nrts-prc-admin,0,0,15,0,0,1,Apache License 2.0,
+splunk-forwarder,0,0,1,0,0,0,Apache License 2.0,Contributor Covenant
+mobile-authentication-ios,0,0,0,0,0,0,Apache License 2.0,
+mobile-authentication-android,0,0,6,0,0,0,Apache License 2.0,
+mobile-authentication-js,0,0,0,0,0,0,Apache License 2.0,
+bc-aquifer-dashboard,0,0,0,0,0,1,Apache License 2.0,
+smk-legacy-ui,0,1,0,0,0,4,Apache License 2.0,Contributor Covenant
+smk-datastore,0,0,0,0,0,2,Apache License 2.0,Contributor Covenant
+gcpe-news-webapp,0,0,0,0,0,2,Apache License 2.0,
+name-examination,0,0,8,0,0,9,Apache License 2.0,Contributor Covenant
+canwqdata,0,0,0,0,0,6,Apache License 2.0,Contributor Covenant
+shinyssdtools,0,0,0,0,0,4,Apache License 2.0,Contributor Covenant
+range-ios,0,0,0,0,0,3,Apache License 2.0,
+range-web,0,0,0,0,0,5,Apache License 2.0,
+indy-sdk,0,0,0,0,0,5,Apache License 2.0,
+wqindex,0,0,0,0,0,5,Apache License 2.0,Contributor Covenant
+GDX-Analytics,0,0,0,0,0,10,Apache License 2.0,Contributor Covenant
+http-did-auth-proxy,0,0,0,0,0,7,Apache License 2.0,Contributor Covenant
+jag-efiling-hub,0,0,0,0,0,0,Apache License 2.0,
+jag-efiling-frontend,0,0,0,0,0,0,Apache License 2.0,Contributor Covenant
+jag-efiling-api,0,0,0,0,0,0,Apache License 2.0,
+jag-lcrb-carla-public,0,0,0,0,0,1,Apache License 2.0,Contributor Covenant
+gcpe-news-archive,0,0,0,0,0,0,Apache License 2.0,
+did-auth-relying-party,0,0,0,0,0,7,Apache License 2.0,Contributor Covenant
+did-auth-extension,0,0,0,0,0,7,Apache License 2.0,Contributor Covenant
+eao-inspections-web,0,0,0,0,0,0,Apache License 2.0,
+GDX-Analytics-Looker-Snowplow-Web-Block,0,0,0,0,2,6,Apache License 2.0,Contributor Covenant
+grizzly-bear-IUCN-threats,0,0,0,0,0,4,Apache License 2.0,Contributor Covenant
+clus,0,1,0,1,0,4,Apache License 2.0,Contributor Covenant
+clamav,0,0,2,0,0,4,Apache License 2.0,
+workforce-profile-tool,0,1,8,0,0,2,Apache License 2.0,
+mds,0,0,3,0,0,3,Apache License 2.0,Contributor Covenant
+student-outcomes-dataviz,0,0,0,0,0,5,Apache License 2.0,Contributor Covenant
+msw-disposal-indicator,0,0,0,0,0,4,Apache License 2.0,Contributor Covenant
+namex-solr,0,0,0,0,0,0,MIT License,
+bc-hydrometric-dashboard,0,0,0,0,0,1,Apache License 2.0,
+Skeena-CE-Grizzly,0,0,0,0,0,0,Apache License 2.0,Contributor Covenant
+namex,0,0,17,0,0,10,Other,Contributor Covenant
+queue-management,0,1,0,0,0,1,Apache License 2.0,Contributor Covenant
+GDX-Analytics-Looker-cfms_block,0,0,0,0,2,6,Apache License 2.0,Contributor Covenant
+moh-fpcare,0,0,2,0,0,0,Other,
+intro-to-tidyhydat-and-tidyverse,0,0,0,0,0,6,Other,Contributor Covenant
+field-inspection-app-ios,0,0,0,0,0,0,Apache License 2.0,
+field-inspection-app-android,0,0,0,0,0,0,,
+prime-session,0,0,1,0,0,0,,
+nbcclim,0,0,0,0,0,4,Apache License 2.0,Contributor Covenant
+gwa-ip-anonymity,0,0,0,0,0,1,Other,
+gwa-ui,1,0,14,0,0,4,Apache License 2.0,
+gwa-kong-endpoint,0,0,0,0,0,1,Other,
+dbc-pylib,0,0,24,0,0,1,Apache License 2.0,Contributor Covenant
+argg-api,1,0,6,0,0,5,Apache License 2.0,
+argg-ui,1,0,6,0,0,1,Apache License 2.0,
+ols-router,0,0,1,0,0,4,Apache License 2.0,
+mwslds,0,0,1,0,0,0,Apache License 2.0,Contributor Covenant
+GDX-Analytics-Looker-Redshift_Admin_By_AWS,0,0,0,0,2,6,Apache License 2.0,Contributor Covenant
+devhub-signing-agent,0,0,0,0,0,1,Apache License 2.0,
+devhub-signing-api,0,0,0,0,0,1,Apache License 2.0,
+devhub-signing-web,0,0,0,0,0,1,Apache License 2.0,
+prime-oauth,0,0,0,0,0,0,Apache License 2.0,Contributor Covenant
+sp2s3,0,0,0,0,0,3,Apache License 2.0,
+kirk,2,0,1,0,0,0,Apache License 2.0,Contributor Covenant
+von-bc-registries-agent,0,0,1,0,0,6,Apache License 2.0,Contributor Covenant
+geometr,0,0,0,0,0,4,Apache License 2.0,Contributor Covenant
+SecNewsFeedReader,0,0,0,0,0,0,,
+env-moosetracker-android,0,0,1,0,0,0,Other,Contributor Covenant
+env-moosetracker-ios,0,0,1,0,0,0,Other,Contributor Covenant
+servicebc,0,0,0,0,0,0,Apache License 2.0,
+common-nodejs-utils,0,0,0,0,0,2,Apache License 2.0,
+gcpe-azure-sample,0,0,0,0,0,0,MIT License,
+representation-grant,0,0,0,0,0,1,Apache License 2.0,Contributor Covenant
+pssg-cscp-vsd,0,0,0,0,0,0,Apache License 2.0,
+BCwebcheck,0,0,0,0,0,1,Apache License 2.0,
+SecNewsFeedReader-Drupal,0,0,0,0,0,6,Apache License 2.0,
+moh-oauth,0,0,0,0,0,0,Apache License 2.0,
+smk,0,2,0,0,0,9,Apache License 2.0,Contributor Covenant
+snow-dur-analysis,0,0,0,0,0,6,Apache License 2.0,Contributor Covenant
+bcgov-sso-theme,0,0,0,0,0,0,Apache License 2.0,
+smk-bcparks,0,0,1,0,0,3,Apache License 2.0,Contributor Covenant
+smk-moh,0,0,3,0,0,6,Apache License 2.0,Contributor Covenant
+RasterLandCover,0,0,0,0,0,0,Apache License 2.0,Contributor Covenant
+gcpe-NRMS-frontend,0,0,0,0,0,2,Apache License 2.0,Contributor Covenant
+gcpe-NRMS-api,0,0,0,0,0,2,Apache License 2.0,Contributor Covenant
+jag-scheduling-hub,0,0,0,0,0,0,,
+kq-ui,1,0,8,0,0,2,Apache License 2.0,
+kq-api,1,0,4,0,0,1,Apache License 2.0,
+sbc-mcap,0,0,1,0,0,0,Apache License 2.0,Contributor Covenant
+scj-online-booking-system,0,0,0,0,0,1,Apache License 2.0,
+ldf_drf_db_comments,0,0,0,0,0,6,Apache License 2.0,Contributor Covenant
+range-api,0,0,0,0,0,1,Apache License 2.0,
+devhub-app-web,0,0,0,0,0,4,Apache License 2.0,Contributor Covenant
+OCWA,0,0,15,0,0,12,Apache License 2.0,Other
+common-ui-components,0,0,0,0,0,0,Apache License 2.0,
+repomountie,0,0,0,0,0,6,Apache License 2.0,
+common-web-utils,0,0,3,0,0,0,Apache License 2.0,Contributor Covenant
+spa-env-server,0,0,0,0,0,0,Apache License 2.0,Contributor Covenant
+design-system,0,2,0,0,0,3,Apache License 2.0,Contributor Covenant
+bcgov-useR,0,0,0,0,0,5,Other,Contributor Covenant
+bowron-ssn,0,0,0,0,0,6,Apache License 2.0,Contributor Covenant
+scheduler,0,0,0,0,0,0,ISC License,
+jag-pill-press-registry,0,0,1,0,0,0,Apache License 2.0,Contributor Covenant
+gcpe-news-dashboard,0,0,0,0,0,2,Apache License 2.0,Contributor Covenant
+VON-ESB-DRS-Agent,0,0,0,0,0,5,Apache License 2.0,Contributor Covenant
+smk-common-iac,0,0,0,0,0,0,Apache License 2.0,
+aquifer-factsheets,0,0,0,0,0,4,Apache License 2.0,Contributor Covenant
+von-agent-template,0,0,0,0,0,5,Apache License 2.0,Contributor Covenant
+bcgov-rstats-public-presentations,0,0,0,0,0,6,Other,Contributor Covenant
+ckanext-bcgov-disqus,0,0,0,0,0,3,GNU Affero General Public License v3.0,
+ckanext-bcgov-cli,0,0,0,0,0,4,GNU Affero General Public License v3.0,
+HunterDensity,0,0,0,0,0,0,Apache License 2.0,Contributor Covenant
+HumanLivestockDensity,0,0,0,0,0,0,Apache License 2.0,Contributor Covenant
+gcpe-hub-api,0,0,0,0,0,0,Apache License 2.0,Contributor Covenant
+entity,0,0,0,0,0,18,Apache License 2.0,
+WEStblr,0,0,0,0,0,2,Apache License 2.0,Contributor Covenant
+replication_health_check,0,0,16,1,0,0,Apache License 2.0,Contributor Covenant
+EDUC-ECAS,0,0,0,0,0,7,Other,
+bcgov-Shiny-deployment-paths,0,0,0,0,0,7,Apache License 2.0,Contributor Covenant
+wqo_shuswap,0,0,0,0,0,5,Apache License 2.0,Contributor Covenant
+hydrometric_stations,0,0,0,0,0,7,Apache License 2.0,Contributor Covenant
+isb-rsi-courtsintegration,0,0,0,0,0,0,Apache License 2.0,
+moh-common-styles,0,1,0,0,0,0,Other,
+SCJ-Online-Booking,0,0,0,0,0,1,Apache License 2.0,
+aries-vcr,0,0,2,0,1,14,Apache License 2.0,Contributor Covenant
+bcdata,0,0,6,0,0,7,Apache License 2.0,Contributor Covenant
+mdms-nodejs-client,0,0,0,0,0,0,Apache License 2.0,
+CHSP_dataviewer,0,0,0,0,0,6,,
+EDUC-NGN,0,0,0,0,0,2,Apache License 2.0,
+eagle-public,0,0,0,0,0,6,Apache License 2.0,
+eagle-admin,0,0,0,0,0,6,Apache License 2.0,
+eagle-api,0,0,0,0,0,6,Apache License 2.0,
+gcpe-hub,0,0,0,0,0,0,Apache License 2.0,
+Caribou_disturb_TT,0,0,0,0,0,0,Apache License 2.0,Contributor Covenant
+Caribou_Disturb_B,0,0,0,0,0,1,Apache License 2.0,Contributor Covenant
+mdms-device-signout-api,0,0,0,0,0,0,Apache License 2.0,
+mdms-device-signout-app,0,0,0,0,0,0,Apache License 2.0,
+reggie,0,0,0,0,0,0,Apache License 2.0,
+GB_Unreported,0,0,0,0,0,0,Apache License 2.0,Contributor Covenant
+reggie-web,0,0,0,0,0,0,Apache License 2.0,
+GB_Data,0,0,0,0,0,0,Apache License 2.0,Contributor Covenant
+grizzly-bear-status-indicator,0,0,1,0,0,4,Apache License 2.0,Contributor Covenant
+devhub-resources,0,0,0,0,0,1,Apache License 2.0,Contributor Covenant
+GB_Mortality,0,0,0,0,0,0,Apache License 2.0,Contributor Covenant
+teis-utilities,0,0,0,0,0,0,Apache License 2.0,Contributor Covenant
+postman-bdd,0,0,0,0,0,0,MIT License,
+wetlandmapR,0,0,1,0,0,11,Apache License 2.0,Contributor Covenant
+chimp,0,0,0,0,0,0,Apache License 2.0,
+FAIB,0,0,0,0,0,4,Apache License 2.0,
+ckan-bcgov-terraform,0,0,0,0,0,0,,
+docker-clamav,0,0,4,0,0,0,MIT License,
+foi-requests,0,0,0,0,0,0,Apache License 2.0,
+pdfmagic,0,0,0,0,0,0,,
+ts-rs-modis-snow,0,0,0,0,0,0,Apache License 2.0,Contributor Covenant
+lear,0,0,25,0,0,7,Apache License 2.0,
+sbc-pay,0,0,26,0,0,1,Apache License 2.0,Contributor Covenant
+sbc-auth,0,0,37,0,0,1,Apache License 2.0,Contributor Covenant
+invasive-species-system-build,0,0,0,0,0,0,Apache License 2.0,
+digital-gov,0,0,0,0,0,0,Other,Contributor Covenant
+GB_DNA,0,0,0,0,0,0,Apache License 2.0,Contributor Covenant
+GB_Salmon,0,0,0,0,0,0,Apache License 2.0,
+data-stream,0,0,0,0,0,3,Apache License 2.0,
+popApp,0,0,0,0,0,5,Apache License 2.0,
+air-zone-reports,0,0,0,0,0,5,Apache License 2.0,Contributor Covenant
+bcgov-looker-snowplow,0,0,0,0,0,5,GNU General Public License v2.0,
+eao-inspections-evidence-locker,0,0,0,0,0,7,Apache License 2.0,
+nr-messaging-service-showcase,0,0,0,0,0,5,Apache License 2.0,Contributor Covenant
+nr-document-management-showcase,0,0,0,0,0,4,Apache License 2.0,Contributor Covenant
+document-generation-showcase,0,0,0,0,0,5,Apache License 2.0,Contributor Covenant
+FADM_Edit_Workflows,0,0,0,0,0,4,Apache License 2.0,
+GDX-Analytics-Looker-Google-Block,0,0,0,0,1,4,Apache License 2.0,Contributor Covenant
+GDX-Analytics-OpenShift-Snowplow-Gateway-Service,0,0,0,0,0,10,Apache License 2.0,Contributor Covenant
+embc-ess,0,0,7,0,0,0,Apache License 2.0,Contributor Covenant
+statscan-taxdata-tidying,0,0,0,0,0,4,Apache License 2.0,Contributor Covenant
+TransAction,0,0,6,0,0,1,Apache License 2.0,Contributor Covenant
+Project-and-time-tracker,0,0,0,0,0,1,Apache License 2.0,
+moh-sitereg,0,0,2,0,0,0,Apache License 2.0,
+landuseplanning-admin,0,0,0,0,0,0,Apache License 2.0,
+landuseplanning-public,0,0,0,0,0,0,Apache License 2.0,
+landuseplanning-api,0,0,0,0,0,0,Apache License 2.0,
+CaribouBC,0,0,0,0,0,1,Apache License 2.0,Contributor Covenant
+imit-procurement-data-analysis,0,0,0,0,0,5,Apache License 2.0,Contributor Covenant
+ckanext-sso,0,0,0,0,0,5,GNU Affero General Public License v3.0,
+ckan-ui,0,0,0,0,0,1,GNU Affero General Public License v3.0,
+smk-francophone,0,0,0,0,0,4,Apache License 2.0,
+csv-to-api,0,0,0,0,0,0,,
+shinyrems,0,0,0,0,0,4,Other,Contributor Covenant
+lngcanada-admin,0,0,0,0,0,0,Apache License 2.0,
+lngcanada-api,0,0,0,0,0,0,Apache License 2.0,
+lngcanada-public,0,0,0,0,0,0,Apache License 2.0,
+GDX-Analytics-Looker-theq_sdpr_block,0,0,0,0,1,8,Apache License 2.0,Contributor Covenant
+jag-spd-spice,0,0,0,0,0,0,Apache License 2.0,
+iamp-maven-resources,0,0,0,0,0,0,Apache License 2.0,
+bcgov-data-science-cop,0,0,0,0,0,4,Other,Contributor Covenant
+range-dashboard-ios,0,0,0,0,0,3,,
+nr-get-token,0,1,1,0,0,6,Apache License 2.0,Contributor Covenant
+SharePoint_Solutions,0,0,0,0,0,0,MIT License,
+bc-econ-status-indices,0,0,0,0,0,5,Apache License 2.0,Contributor Covenant
+CITZ-IMB-SharePoint,0,0,4,0,0,0,Apache License 2.0,Contributor Covenant
+realm-o-matic,0,0,0,0,0,2,Apache License 2.0,
+jag-rsbc-carma,0,0,0,0,0,0,,
+site-inspections-app-ios,0,0,0,0,0,0,,
+cas-ggircs,0,0,0,1,1,0,Apache License 2.0,
+indy-email-verification,0,0,0,0,0,7,Apache License 2.0,
+agri-dcbr,0,0,0,0,0,1,Apache License 2.0,Contributor Covenant
+cas-docker-sqitch,0,0,0,0,0,0,Apache License 2.0,
+lucy-web,0,1,0,0,0,1,Apache License 2.0,Other
+iiwbook,0,0,0,0,0,6,Apache License 2.0,
+mobile-starter-kit,0,0,0,0,0,0,Other,Contributor Covenant
+Agile-Delivery-Process,0,0,0,0,0,1,,Contributor Covenant
+flatfile-tools,0,0,0,0,0,2,Apache License 2.0,
+cas-metabase,0,0,2,0,1,1,Apache License 2.0,
+GDX-Analytics-Drupal-Snowplow,0,0,0,0,0,9,Apache License 2.0,Contributor Covenant
+healthgateway,0,0,0,0,0,2,Apache License 2.0,Contributor Covenant
+aqadvisories-eservice,0,1,1,0,0,3,Apache License 2.0,
+sbc-common-components,0,0,0,0,0,2,Apache License 2.0,
+bcdc-test,0,0,2,0,0,4,Apache License 2.0,Contributor Covenant
+pssg-cornet-dynamics,0,0,0,0,0,2,,
+goshawk-ios,0,0,0,0,0,2,Apache License 2.0,
+sae-workbench,0,0,0,0,0,1,Apache License 2.0,Other
+Skeena_WB,0,0,0,0,0,0,Apache License 2.0,
+cas-ggircs-metabase,0,0,0,1,0,0,Other,
+cas-ggircs-metabase-builder,0,0,0,1,0,0,Apache License 2.0,
+EDUC-UMU,0,1,0,0,0,0,Apache License 2.0,Contributor Covenant
+bc_snow_ops,0,0,0,0,0,0,Apache License 2.0,Contributor Covenant
+ExchangeLabOps,0,1,1,0,0,7,Apache License 2.0,
+pssg-cornet-dynamics-config,0,0,0,0,0,0,Apache License 2.0,
+pssg-cornet-dynamics-queue-proc,0,0,0,0,0,0,Apache License 2.0,
+EDUC-CAPS,0,0,0,0,0,2,Apache License 2.0,
+sk_tda,0,0,0,0,0,2,Other,Contributor Covenant
+eForWasteBC,0,0,0,0,0,4,Apache License 2.0,
+rems2aquachem,0,0,0,0,0,0,Apache License 2.0,Contributor Covenant
+api-guidelines,0,0,0,0,0,4,Other,Contributor Covenant
+ckanext-edc-rss,0,0,1,0,0,5,Apache License 2.0,Contributor Covenant
+recycling-indicator,0,0,0,0,0,4,Apache License 2.0,Contributor Covenant
+iamp-email-service,0,0,0,0,0,0,Apache License 2.0,
+iamp-mq-component,0,0,0,0,0,0,,
+gis-pantry,0,0,0,0,0,2,Apache License 2.0,
+EDUC-DIGITALID-API,0,0,0,0,0,3,Apache License 2.0,
+envair,0,0,0,0,2,7,Apache License 2.0,
+bcca-payment-hub,0,0,0,0,0,6,Apache License 2.0,
+von-oil-gas-poc,0,0,0,0,0,7,Apache License 2.0,Contributor Covenant
+eagle-helper-pods,0,0,0,0,0,4,Apache License 2.0,
+nr-email-microservice,0,0,5,0,0,3,Apache License 2.0,Contributor Covenant
+pssg-cornet-dynamics-end2end-service,0,0,0,0,0,0,,
+digital-lakes,0,0,0,0,0,0,Apache License 2.0,
+nmp-arm,0,0,1,0,0,2,Apache License 2.0,
+pssg-cornet-dynamics-queue-proc-rabbitmq,0,0,0,0,0,0,Apache License 2.0,
+aries-vcr-issuer-controller,0,0,0,0,0,7,Apache License 2.0,Contributor Covenant
+EDUC-CURRICWS,0,0,0,0,0,2,Apache License 2.0,
+skeena-ogma-amendments-assessment,0,0,0,0,0,0,Apache License 2.0,Other
+cas-shipit,0,0,0,1,1,0,Apache License 2.0,
+forestry-quarterly-report,0,0,0,0,0,0,Apache License 2.0,Contributor Covenant
+jrcc-document-access-libs,0,0,19,0,0,0,GNU General Public License v3.0,Contributor Covenant
+jag-isb-devorg,0,0,0,0,0,0,Apache License 2.0,Contributor Covenant
+ranktrends,0,0,0,0,0,4,Apache License 2.0,Contributor Covenant
+pssg-cordyn-management-console,0,0,0,0,0,0,Apache License 2.0,
+pssg-cordyn-rabbitmq-interface-controller,0,0,0,0,0,0,Apache License 2.0,
+AGOL_getMapFromApp,0,0,0,0,0,4,Apache License 2.0,
+AGOL_getSizeFromGroup,0,0,0,0,0,4,Apache License 2.0,
+FAIBOracle,0,0,0,0,0,8,Apache License 2.0,Contributor Covenant
+forestDroughtTool,0,0,0,0,0,1,Apache License 2.0,Contributor Covenant
+FAIBCompiler,0,0,0,0,0,5,Apache License 2.0,Contributor Covenant
+FAIBBase,0,0,0,0,0,5,Apache License 2.0,Contributor Covenant
+eagle-dev-guides,0,0,0,0,0,5,Apache License 2.0,
+cloud-adoption-patterns,0,0,0,0,0,0,Other,Contributor Covenant
+cas-postgres,1,0,18,2,1,0,Apache License 2.0,
+GDX-Analytics-Looker-Google-MyBusiness,0,0,0,0,1,4,Apache License 2.0,Contributor Covenant
+eagle-reports,0,0,0,0,0,5,Apache License 2.0,
+EDUC-ISFS,0,0,0,0,0,1,Apache License 2.0,
+EDUC-STUDENTSUCCESS,0,0,0,0,0,2,,
+vc-authn-oidc,0,0,0,0,0,8,Apache License 2.0,
+iamp-apps-configs,0,0,0,0,0,0,Apache License 2.0,
+bcparis-service,0,0,32,0,0,2,Apache License 2.0,
+nr-showcase-devops-tools,0,0,0,0,0,7,Apache License 2.0,Contributor Covenant
+nr-showcase-devops-tools-demo-sq,0,0,0,0,0,5,Apache License 2.0,Contributor Covenant
+gatsby-source-matomo,0,0,0,0,0,0,Apache License 2.0,Contributor Covenant
+jrcc-sample-app,0,0,0,0,0,0,Apache License 2.0,
+rocketgate,0,0,0,0,0,0,Apache License 2.0,
+gatsby-source-github-raw,0,0,1,0,0,0,Apache License 2.0,Contributor Covenant
+native-species-rank-indicator,0,0,0,0,0,4,Apache License 2.0,Contributor Covenant
+orgbook-configurations,0,0,0,0,0,9,Apache License 2.0,Contributor Covenant
+cas-ggircs-ciip-2018-schema,0,0,0,1,0,2,Apache License 2.0,
+cas-ciip-portal,0,0,0,2,1,5,Apache License 2.0,Contributor Covenant
+fwben,0,0,0,0,0,0,Apache License 2.0,
+drake-example,0,0,0,0,0,5,Apache License 2.0,Contributor Covenant
+cas-pipeline,0,0,0,0,1,0,Apache License 2.0,
+cas-metascript,0,0,0,0,0,0,MIT License,
+bc-sans,0,0,0,0,0,1,Other,
+ols-geocoder,0,0,3,0,0,10,Apache License 2.0,
+forageConversionTool,0,0,0,0,0,0,Apache License 2.0,
+cas-ggircs-metabase-build,0,0,0,2,0,0,Apache License 2.0,
+aries-cloudagent-container,0,0,0,0,0,9,Apache License 2.0,
+new2Q-reports,0,0,0,0,0,2,Apache License 2.0,
+census_geography_bc,0,0,0,0,0,7,Apache License 2.0,Contributor Covenant
+ols-util,0,0,2,0,0,3,Apache License 2.0,
+GDX-Analytics-Looker-Google-MyBusiness-ServiceBC,0,0,0,0,1,4,Apache License 2.0,Contributor Covenant
+cas-ggircs-ciip-2018-extract,0,0,0,0,1,0,Apache License 2.0,
+common-hosted-email-service,0,0,0,0,0,8,Apache License 2.0,Contributor Covenant
+bcparis-apps-configs,0,0,0,0,0,0,Apache License 2.0,
+bcws-psu-research,0,0,0,0,0,3,Apache License 2.0,Contributor Covenant
+eagle-common-components,0,0,0,0,0,0,Apache License 2.0,
+searchgate,0,0,0,0,0,0,Apache License 2.0,Contributor Covenant
+ocwa-file-scanner,0,0,0,0,0,1,Apache License 2.0,
+EDUC-CURRI,0,0,0,0,0,2,Apache License 2.0,
+url-filter-proxy,0,0,0,0,0,1,Apache License 2.0,
+gitlab-keycloak-group-sync,0,0,0,0,0,1,Apache License 2.0,
+asdm-postgres,0,0,0,0,0,1,Apache License 2.0,
+git-sae-ops,0,0,11,0,0,0,,
+digital-marketplace,0,0,0,0,0,0,Apache License 2.0,Contributor Covenant
+von-bc-registries-agent-configurations,0,0,0,0,0,9,Apache License 2.0,Contributor Covenant
+GDX-Analytics-Looker-CleanBC,0,0,0,0,1,4,Apache License 2.0,Contributor Covenant
+law-society-demo,0,0,0,0,0,8,Apache License 2.0,
+Skeena_ESI_Wetlands,0,0,0,0,0,0,Apache License 2.0,Contributor Covenant
+cap-eagle-admin,0,0,0,0,0,0,Apache License 2.0,
+cap-eagle-public,0,0,0,0,0,0,Apache License 2.0,
+cap-eagle-dev-guides,0,0,0,0,0,0,Apache License 2.0,
+cap-eagle-api,0,0,0,0,0,0,Apache License 2.0,
+ckanext-bcgov-schema,0,0,0,0,0,4,Other,
+cap-eagle-helper-pods,0,0,0,0,0,0,Apache License 2.0,
+EDUC-PASS,0,0,0,0,0,0,Apache License 2.0,Contributor Covenant
+ds-cop-intro-to-r,0,0,1,0,0,4,Other,Contributor Covenant
+moh-prime,0,0,0,0,0,4,Apache License 2.0,
+docugate,0,0,0,0,0,0,Apache License 2.0,
+aries-cloudcontroller-node,0,0,0,0,0,6,,
+fams3,0,0,1,0,0,5,Apache License 2.0,
+bcgov-r-geo-workshop,0,0,0,0,0,6,Other,Contributor Covenant
+ExitSurveyAdmin,0,3,0,0,0,0,Apache License 2.0,Contributor Covenant
+ppr-deprecated,0,0,0,0,0,1,Apache License 2.0,Contributor Covenant
+mhr,0,0,0,0,0,0,,
+pssg-psd-css,0,0,0,0,0,1,Apache License 2.0,
+moh-bcp,0,0,0,0,0,0,Apache License 2.0,
+moh-address-validation,0,0,0,0,0,0,Apache License 2.0,
+jag-cullencommission,0,0,0,0,0,8,Apache License 2.0,
+Biodiversity_CC,0,0,0,0,0,0,Apache License 2.0,Contributor Covenant
+telemetry,0,0,0,0,0,4,Apache License 2.0,Contributor Covenant
+EDUC-KEYCLOAK-SOAM,0,0,0,0,0,2,Apache License 2.0,
+popProjApp,0,0,0,0,0,5,Apache License 2.0,
+hsdProj,0,0,0,0,0,4,Apache License 2.0,
+GCS,0,0,0,0,0,3,Apache License 2.0,
+Forester-Job-Placement,0,0,0,0,0,0,Apache License 2.0,Contributor Covenant
+embc-ess-mod,1,0,2,0,0,8,Apache License 2.0,
+NRPTI,0,0,23,0,0,9,Apache License 2.0,
+dpdd-snippets,0,0,0,0,0,5,Apache License 2.0,Contributor Covenant
+design-system-web-components,0,1,0,0,0,7,Apache License 2.0,
+pipeline-bot,0,0,1,0,0,4,MIT License,
+cass-api,0,0,0,0,0,7,Apache License 2.0,Contributor Covenant
+cass-frontend,0,0,0,0,0,7,Apache License 2.0,Contributor Covenant
+bc-fwa-river-profiles,0,0,0,0,0,5,Apache License 2.0,Contributor Covenant
+GDX-Analytics-Looker-SBC-Call-Centre,0,0,0,0,1,4,Apache License 2.0,Contributor Covenant
+invasivesBC-mussels-iOS,0,0,0,0,0,0,Apache License 2.0,
+eagle-mobile-inspections,0,0,1,0,0,7,Apache License 2.0,
+keycloak-group-extension,0,0,0,0,0,1,Apache License 2.0,
+shinywqg,0,0,0,0,0,4,Other,Contributor Covenant
+nr-metabase-showcase,0,0,0,0,0,5,Apache License 2.0,
+tukey,0,0,0,0,0,4,Apache License 2.0,
+CANSIM-retail-trade-shiny,0,0,0,0,0,6,Apache License 2.0,Contributor Covenant
+issuer-kit,0,0,9,0,0,7,Apache License 2.0,
+EDUC-STUDENT-API,0,0,0,0,0,3,Apache License 2.0,
+EDUC-PEN-REQUEST-API,0,0,0,0,0,3,Apache License 2.0,
+ols-geocoder-cpf-plugin,0,0,3,0,0,4,Apache License 2.0,
+cap-eagle-mobile-inspections,0,0,0,0,0,0,Apache License 2.0,
+HMCR,0,0,8,0,0,1,Apache License 2.0,
+common-document-generation-service,0,0,0,0,0,5,Apache License 2.0,Contributor Covenant
+digital_marketplace,0,0,0,0,0,10,Apache License 2.0,
+EDUC-SOAM-API,0,0,0,0,0,1,Apache License 2.0,
+sfts2s3,0,0,0,0,0,5,Apache License 2.0,Contributor Covenant
+jag-dps,0,0,4,0,0,4,Apache License 2.0,Contributor Covenant
+PIMS,0,1,0,0,0,16,Apache License 2.0,
+namerequest,0,0,11,0,0,4,Apache License 2.0,Contributor Covenant
+EDUC-STUDENT-ADMIN,0,0,0,0,0,3,Apache License 2.0,
+bcsnowdata,0,0,0,0,0,6,Apache License 2.0,Contributor Covenant
+digital-policy,0,0,3,0,0,0,Apache License 2.0,
+zeva,0,0,37,0,0,0,Apache License 2.0,
+digital.gov.bc.ca,0,0,0,0,0,1,Apache License 2.0,
+EDUC-INFRA-COMMON,0,0,0,0,0,1,Apache License 2.0,
+digital-principles,0,0,2,0,0,0,Other,Contributor Covenant
+offSiteTrees,0,0,0,0,0,0,Apache License 2.0,Contributor Covenant
+Similkameen-WQOs,0,0,0,0,0,5,Apache License 2.0,Contributor Covenant
+arcgis_hackers,0,0,0,0,0,1,Apache License 2.0,
+AGOL-PullandPushMetadata,0,0,0,0,0,0,Apache License 2.0,
+AGOL_UsageReport,0,0,0,0,0,5,Apache License 2.0,
+bcdevexchange,0,0,0,0,0,3,Apache License 2.0,
+MapRobot,0,0,0,0,0,5,Apache License 2.0,
+eagle-minio-openshift,0,0,0,0,0,0,Apache License 2.0,Contributor Covenant
+sae-virtual-display,0,0,14,0,0,1,Apache License 2.0,
+SBC_DivApps,0,0,0,0,0,1,Apache License 2.0,
+design-research-guide,0,2,0,0,0,7,,
+smk-tlink,0,3,9,0,0,9,Apache License 2.0,
+MPB-regeneration,0,0,0,0,0,4,Apache License 2.0,Contributor Covenant
+citz-imb-sp-breadcrumbs,0,0,0,0,0,5,Apache License 2.0,Contributor Covenant
+BCSC-SS,0,0,0,0,0,2,Apache License 2.0,Other
+business-create-ui,1,0,5,0,0,11,Apache License 2.0,Contributor Covenant
+citz-imb-sp-vdr,0,0,1,0,0,4,Apache License 2.0,
+moose_lch,0,0,0,0,0,1,Apache License 2.0,
+moh-soapui,0,0,0,0,0,0,Apache License 2.0,
+jag-ceis-crdp-integration,0,0,0,0,0,0,Apache License 2.0,
+bcdc2bcdc,0,0,0,0,0,1,Apache License 2.0,Contributor Covenant
+bcrs-utilities,0,0,0,0,0,0,,
+EDUC-DOCUMENT-API,0,0,0,0,0,0,Apache License 2.0,
+design-system-temporary,0,0,0,0,0,0,MIT License,
+common-service-showcase,0,1,0,0,0,8,Apache License 2.0,Contributor Covenant
+EDUC-COURSE-ACHIEVE-API,0,0,0,0,0,0,Other,
+sbc-search,0,0,3,0,0,1,Apache License 2.0,
+sdd-nifi,0,0,2,0,0,1,Apache License 2.0,
+bcrs-template-ui,0,0,0,0,0,6,Apache License 2.0,Contributor Covenant
+EDUC-COURSE-ACHIEVEMENT-UI,0,0,0,0,0,0,Other,
+zevtesthello,0,0,0,0,0,0,Apache License 2.0,
+diputils,0,0,0,0,0,2,Apache License 2.0,
+nr-arch,0,0,0,0,0,9,Apache License 2.0,
+aporeto-demo-project,0,0,0,0,0,4,Apache License 2.0,Contributor Covenant
+wqg_data,0,0,0,0,0,4,GNU General Public License v3.0,
+maltd,0,0,0,0,0,0,Apache License 2.0,
+cap-information,0,0,0,0,0,0,Apache License 2.0,
+rsbc-dmf,0,0,0,0,0,2,Apache License 2.0,
+EDUC-curricdrpl,0,0,0,0,0,2,Apache License 2.0,
+devops-credential-issuer,0,0,0,0,0,7,Apache License 2.0,
+moh-iam,0,1,0,0,0,2,Apache License 2.0,
+GDX-Analytics-Looker-CMSLite-Metadata,0,0,0,0,1,4,Apache License 2.0,Contributor Covenant
+family-law-act-app,0,0,0,0,0,3,Apache License 2.0,Contributor Covenant
+wps,0,0,0,0,0,9,Apache License 2.0,
+hosted-application-logging-performance-aggregation-services,0,0,0,0,0,6,Apache License 2.0,Contributor Covenant
+common-components-wiki,0,0,0,0,0,1,Apache License 2.0,Other
+common-logging,0,0,0,0,0,7,Apache License 2.0,Contributor Covenant
+cas-helm,0,0,0,0,0,0,,
+openshift-launchpad,0,0,0,0,0,1,Apache License 2.0,Other
+gwater-report,0,0,0,0,0,4,Apache License 2.0,Contributor Covenant
+wps-api,0,0,0,0,0,0,Apache License 2.0,
+wps-web,0,0,0,0,0,4,Apache License 2.0,
+cap-eagle-traffic-runner,0,0,0,0,0,0,Apache License 2.0,
+cas-airflow,3,0,0,1,1,0,Apache License 2.0,
+moh-middleware-test,0,0,0,0,0,0,Apache License 2.0,
+bcstats_ohcs_craigslist,0,0,0,0,0,1,Apache License 2.0,
+jag-instrumentation,0,0,0,0,0,0,Apache License 2.0,
+business-schemas,0,0,31,0,0,4,Apache License 2.0,Contributor Covenant
+EDUC-SERVICES-CARD-API,0,0,0,0,0,2,Apache License 2.0,
+aries-vcr-api-draft,0,0,0,0,0,0,,
+healthgateproxy,0,0,0,0,0,0,Apache License 2.0,
+EDUC-PEN-DEMOG-API,0,0,0,0,0,2,Apache License 2.0,
+business-filings-ui,0,0,17,0,0,11,Apache License 2.0,Contributor Covenant
+RSBC-DataHub-API,0,0,0,0,0,4,Apache License 2.0,
+jag-justin-courtlist-api,0,0,0,0,0,0,Apache License 2.0,
+jag-ecrc,0,0,0,0,0,8,Apache License 2.0,
+Wetland_SkeenaESI_Monitoring,0,0,0,0,0,2,Apache License 2.0,Contributor Covenant
+bcsc-sample-client,0,0,0,0,0,0,Apache License 2.0,
+cloud-adoption-patterns-II,0,0,0,0,0,0,Apache License 2.0,Contributor Covenant
+cloud-pathfinder,0,0,0,0,0,1,Creative Commons Zero v1.0 Universal,
+cloud-pathfinder-business-process,0,0,0,0,0,0,Creative Commons Zero v1.0 Universal,
+python_beginning,0,0,0,0,0,1,GNU General Public License v3.0,
+intro-to-r,0,0,0,0,0,2,Apache License 2.0,Contributor Covenant
+dipr,0,0,0,0,0,4,Apache License 2.0,Contributor Covenant
+metadata-curator,0,0,3,0,0,1,Apache License 2.0,Other
+nr-team-zero,0,0,0,0,0,0,Apache License 2.0,
+citz-imb-sp-collectionnavigation,0,0,0,0,0,0,Apache License 2.0,
+openshift-launchpad-fe-vue,0,0,0,0,0,0,Apache License 2.0,
+openshift-launchpad-be-node,0,0,0,0,0,0,Apache License 2.0,
+openshift-launchpad-fe-react,0,0,0,0,0,0,Apache License 2.0,Other
+openshift-launchpad-be-python,0,0,0,0,0,0,Apache License 2.0,Other
+citz-imb-sp-peoplepicker,0,0,0,0,0,0,Apache License 2.0,
+elucidate,0,0,0,0,0,6,Other,Contributor Covenant
+EDUC-HUB,0,0,0,0,0,3,Apache License 2.0,
+EDUC-PROMETHEUS-GRAFANA,0,0,0,0,0,3,Apache License 2.0,
+openshift-launchpad-deployment,0,0,3,0,0,0,Apache License 2.0,
+helm-charts,0,0,142,0,0,0,,
+EDUC-REPORT-API,0,0,0,0,0,3,Apache License 2.0,
+workbc-sdd-map,0,0,0,0,0,0,Apache License 2.0,
+a2a-trust-over-ip-configurations,0,0,0,0,0,5,Apache License 2.0,Contributor Covenant
+citz-imb-sp-batchrestapi,0,0,0,0,0,0,,
+common-components-catalogue,0,0,0,0,0,1,Apache License 2.0,Other
+foi-report-download,0,0,0,0,0,4,Apache License 2.0,Contributor Covenant
+common-services-team-library,0,0,0,0,0,9,Apache License 2.0,Contributor Covenant
+zeebe-camunda,0,0,0,0,0,0,Apache License 2.0,Contributor Covenant
+bcgov-python-presentations,0,0,0,0,0,5,Apache License 2.0,
+cloud-guardrails,0,0,0,0,0,2,MIT License,
+CC_Biodiversity_Refugia,0,0,0,0,0,0,Apache License 2.0,Contributor Covenant
+GDX-Analytics-Looker-FOI,0,0,0,0,1,5,Apache License 2.0,Contributor Covenant
+platform-services-status,0,0,0,0,0,3,Apache License 2.0,Contributor Covenant
+cas-shelf,1,0,0,1,1,0,Apache License 2.0,
+citz-imb-sp-utilities,0,0,0,0,0,5,Apache License 2.0,
+HADF-Overview,0,0,0,0,0,14,Apache License 2.0,
+bctw-api,0,0,0,0,0,8,,
+openshift-notifications,0,0,0,0,0,1,Apache License 2.0,
+bctw-ui,0,0,0,0,0,7,,
+gdx-covid-19-dashboard,0,0,0,0,0,0,Apache License 2.0,Contributor Covenant
+covid19,0,0,0,0,0,3,Apache License 2.0,
+epr,0,1,0,0,0,0,Apache License 2.0,
+EDUC-RULE-ENGINE-API,0,0,0,0,0,3,Apache License 2.0,
+cascade_border_data,0,0,0,0,0,4,Apache License 2.0,Contributor Covenant
+spa-text-service,0,0,0,0,0,0,Apache License 2.0,
+common-hosted-form-service,0,0,3,0,0,4,Apache License 2.0,Contributor Covenant
+EDUC-LOAD-TEST,0,0,0,0,0,0,Apache License 2.0,
+InvasivesBC-iOS,0,0,0,0,0,0,Apache License 2.0,
+enhanced-travel-screening,0,0,6,0,0,1,Apache License 2.0,Other
+bctw-db,0,0,0,0,0,6,,
+ts-rs-modis-snow-perc-norm,0,0,0,0,0,4,Apache License 2.0,Contributor Covenant
+bcrs-charts,0,0,1,0,0,0,GNU Affero General Public License v3.0,
+essential-services-delivery,0,0,0,0,0,13,Apache License 2.0,Contributor Covenant
+vc-visual-verifier,0,0,0,0,0,13,Apache License 2.0,Contributor Covenant
+dts-esr-demo,0,0,0,0,0,13,Apache License 2.0,
+dts-safe-entry-demo,0,0,0,0,0,15,Apache License 2.0,
+namex-synonyms-api-py-client,0,0,0,0,0,0,,
+EDUC-STUDENT-PROFILE-API,0,0,0,0,0,0,Apache License 2.0,
+forum-api,0,0,0,0,0,1,,
+ds-intro-to-r-2-day,0,0,1,0,0,4,Apache License 2.0,Contributor Covenant
+Foreign-Farm-Workers-Permitting-System,0,0,1,0,0,0,Apache License 2.0,Other
+EDUC-STUDENT-PROFILE-EMAIL-API,0,0,0,0,0,3,Apache License 2.0,
+test-123,0,0,0,0,0,1,,
+silviculture-ipc,0,0,0,0,0,5,Apache License 2.0,Contributor Covenant
+secure-image-app,0,0,0,0,0,5,Apache License 2.0,Contributor Covenant
+EDUC-STUDENT-PROFILE,0,0,0,0,0,0,Apache License 2.0,
+platform-services-registry,0,0,0,0,0,1,Apache License 2.0,
+supreme-court-viewer,0,0,0,0,0,3,Apache License 2.0,Contributor Covenant
+EDUC-STUDENT-PROFILE-SAGA-API,0,0,0,0,0,3,Apache License 2.0,
+bowron-ssn-openstars,0,0,0,0,0,4,Apache License 2.0,Contributor Covenant
+servicescard-selfservice,0,0,0,0,0,4,Apache License 2.0,
+jag-pcss,0,0,0,0,0,4,Apache License 2.0,
+indy-tails-server,0,0,0,0,0,10,Apache License 2.0,
+moh-eRx,0,0,0,0,0,3,Apache License 2.0,Contributor Covenant
+jag-bcsc-auth-service,0,0,0,0,0,6,Apache License 2.0,
+forms-flow-ai,0,0,0,0,0,0,Apache License 2.0,
+supreme-court-viewer-configurations,0,0,0,0,0,3,Apache License 2.0,Contributor Covenant
+sdpr-orbeon,0,0,0,0,0,0,,
+data-publication,0,0,0,0,0,11,Apache License 2.0,
+platform-ops-argo-poc,0,0,0,0,1,0,,
+dormant-site-reclamation-program,0,0,0,0,0,0,Apache License 2.0,Contributor Covenant
+CITZ-IMB-playbook,0,0,3,0,0,11,Apache License 2.0,
+CITZ-IMB-Capstone2020,0,0,1,0,0,20,Apache License 2.0,
+moh-fpincome,0,0,0,0,0,0,Apache License 2.0,
+common-forms-toolkit,0,0,0,0,0,8,Apache License 2.0,Contributor Covenant
+service-analytics-guide,0,0,0,0,0,1,,
+moh-keycloak-user-management,0,0,0,0,0,2,Apache License 2.0,
+sae-docs-bridge,0,0,0,0,0,1,Apache License 2.0,
+nr-dell-objectstore_admin,0,0,0,0,0,4,Other,
+site-status-checker,0,0,0,0,0,0,Apache License 2.0,
+jag-vips-client,0,0,0,0,0,0,Apache License 2.0,
+EDUC-SERVICES-CARD-SAGA-API,0,0,0,0,0,3,Apache License 2.0,
+startup-sample-project,0,0,0,0,0,1,Apache License 2.0,Other
+STUDENTSUCCESS-V2.0,0,0,0,0,0,2,,
+Wetlands_OperationalFactors_SkeenaEastESI,0,0,0,0,0,0,Apache License 2.0,Other
+violation-dispute-form,0,0,0,0,0,2,Apache License 2.0,Contributor Covenant
+embc-eaf,0,0,0,0,0,1,Apache License 2.0,
+s2i-caddy-nodejs,0,0,0,0,0,3,Apache License 2.0,
+containerization-and-cloud-economic-model,0,0,0,0,0,0,Apache License 2.0,
+semantic_infer,0,0,0,0,0,0,Apache License 2.0,
+jag-rsbc-digital-forms-vips-integration,0,0,0,0,0,0,Apache License 2.0,
+jag-file-submission,4,1,9,0,0,9,Apache License 2.0,Contributor Covenant
+cas-notebooks,0,0,0,0,0,0,,
+bcregistry,0,0,0,0,0,0,Apache License 2.0,
+IRIS,0,0,0,0,0,0,Apache License 2.0,
+Protected-Area-Wetland-Assessment-By-Assessment-Area,0,0,0,0,0,0,Apache License 2.0,
+community-air-quality-reports,0,0,0,0,0,8,Apache License 2.0,Contributor Covenant
+EDUC-EDNET,0,0,0,0,0,2,Apache License 2.0,
+figma,0,1,2,0,0,4,Other,
+labour-force-survey-digest,0,0,0,0,0,5,Apache License 2.0,Contributor Covenant
+nr-mals,0,0,0,0,0,3,Apache License 2.0,
+cloud-iac,0,0,0,0,0,0,,
+mobile-signing-service,0,0,0,0,0,1,Apache License 2.0,
+nr-alm-ops,0,0,0,0,0,0,Apache License 2.0,
+namex-payment-api-py-client,0,0,0,0,0,0,,
+bcwebmaps-options,0,0,0,0,0,14,Other,Contributor Covenant
+moh-plr-fhir,0,0,0,0,0,4,Apache License 2.0,Contributor Covenant
+CIT,0,0,0,0,0,0,Apache License 2.0,
+moh-hnclient-v2-PoC,0,0,0,0,0,3,Apache License 2.0,
+react-shared-components,0,0,29,0,0,5,Apache License 2.0,
+EDUC-PEN-REG-BATCH-API,0,0,0,0,0,4,Apache License 2.0,
+spring-boot-starters,6,0,8,0,0,0,Apache License 2.0,
+Digital-Support-Team-Guidelines,0,0,0,0,0,0,Creative Commons Zero v1.0 Universal,
+tutorials,0,0,0,0,0,0,MIT License,
+EDUC-PEN-MATCH-API,0,0,0,0,0,1,Apache License 2.0,
+smk-tradebc,0,0,0,0,0,4,Apache License 2.0,
+epi.branch.sim,0,0,1,0,0,5,Apache License 2.0,Contributor Covenant
+Watershed_SkeenaESI_Monitoring,0,0,0,0,0,0,Apache License 2.0,Contributor Covenant
+workbc-small-grants,0,0,0,0,0,5,Apache License 2.0,
+bcdc-smk,1,0,14,0,0,3,Other,
+CE_RipDist_AddingFireInsect,0,0,0,0,0,0,Apache License 2.0,
+orgbook-api,0,0,0,0,0,9,Apache License 2.0,
+Technology-Code-of-Practice,0,0,0,0,0,0,Other,Contributor Covenant
+jag-isb-splunk-chatops,0,0,0,0,0,8,Apache License 2.0,
+EDUC-forms,0,0,0,0,0,2,Apache License 2.0,
+business-edit-ui,0,0,5,0,0,11,Apache License 2.0,Contributor Covenant
+vue-shared-components,0,0,1,0,0,6,Apache License 2.0,
+smk-cli,0,2,0,0,0,11,Apache License 2.0,
+gwa-cli,1,2,22,0,0,0,Apache License 2.0,
+api-serv-gw,0,0,0,0,0,0,,
+bcrs-shared-components,0,0,0,0,0,0,Apache License 2.0,
+citz-imb-sp-projectIntakeForm,0,0,0,0,0,0,MIT License,
+agri-nmp-msa,0,0,0,0,0,1,Apache License 2.0,
+workbc-wage-subsidy,0,0,0,0,0,5,Apache License 2.0,
+hcap,0,0,0,0,0,6,Apache License 2.0,Other
+EDUC-PEN-DEMOG-MIGRATION-API,0,0,0,0,0,2,Apache License 2.0,
+entity-selection-tool,0,0,0,0,0,0,Apache License 2.0,
+moh-iam-kong-keycloak,0,0,0,0,0,3,Apache License 2.0,
+sheriff-scheduling,0,0,0,0,0,2,Apache License 2.0,Contributor Covenant
+biohubbc,0,0,0,0,0,5,Apache License 2.0,Other
+biohubbc-common-codes,0,0,0,0,0,11,Apache License 2.0,Other
+jason-test-123,0,0,0,0,0,1,Apache License 2.0,
+MD10A1_MSLP_LDA,0,0,0,0,0,4,Apache License 2.0,
+bcmoh-iam-integration-guide,0,0,0,0,0,2,Apache License 2.0,Contributor Covenant
+sheriff-scheduling-configurations,0,0,0,0,0,2,Apache License 2.0,Contributor Covenant
+ensemble-app-CMIP5,0,0,0,0,0,1,Apache License 2.0,
+parks-adventure-mobile,0,0,0,0,0,6,Apache License 2.0,
+invasivesbc,0,0,0,0,0,7,Apache License 2.0,Other
+GDX-Analytics-Looker-DES-Reporting,0,0,0,0,1,5,Apache License 2.0,Contributor Covenant
+moh-iam-kong-plugin,0,0,0,0,0,4,Apache License 2.0,
+Interactive_topic_modeling,0,0,0,0,0,0,Other,Contributor Covenant
+GCS_update,0,0,0,0,0,5,Apache License 2.0,Contributor Covenant
+vue-scaffold,0,0,0,0,0,9,Apache License 2.0,Contributor Covenant
+EDUC-MSDYN-COMMON,0,0,0,0,0,1,GNU Lesser General Public License v2.1,
+EDUC-PEN-SERVICES-API,0,0,0,0,0,2,Apache License 2.0,
+bcrs-testing,0,0,0,0,0,0,Apache License 2.0,
+FNDFAS,0,0,0,0,0,0,Apache License 2.0,
+pssg-cscp-vsu,0,0,0,0,0,0,Apache License 2.0,
+EDUC-STUDENT-COURSE_API,0,0,0,0,0,3,Apache License 2.0,
+gwa-api,1,0,35,0,0,3,,
+EDUC-STUDENT-ASSESSMENT-API,0,0,0,0,0,3,Apache License 2.0,
+EDUC-GRAD-TOOLS,0,0,0,0,0,3,Apache License 2.0,
+EDUC-PEN-REG-AUTOMATION,0,0,0,0,0,1,Apache License 2.0,
+GDX-Analytics-Looker-Maintenance,0,0,0,0,1,4,Apache License 2.0,Contributor Covenant
+EDUC-GRAD-STUDENT-API,0,0,0,0,0,4,Apache License 2.0,
+EDUC-GRAD-ADMIN,0,0,0,0,0,4,Apache License 2.0,
+MOH-MSP-Enrolment,0,0,0,0,0,1,Apache License 2.0,
+whse_2_agol,0,1,0,0,0,5,,
+EDUC-GRAD-COURSE-API,0,0,0,0,0,3,Apache License 2.0,
+issuer-kit-demo-verifier-chat,0,0,0,0,0,0,Apache License 2.0,
+MoH-SAT,0,0,18,0,0,1,,
+ddm-documents,0,0,0,0,0,2,Apache License 2.0,
+BGC3D,0,0,0,0,0,1,Apache License 2.0,
+ClimateApp_FLP,0,0,0,0,0,0,Apache License 2.0,
+nr-designer-erstudio,0,0,0,0,0,0,Creative Commons Zero v1.0 Universal,
+EDUC-GRAD-SANDBOX-REPO,0,0,0,0,0,4,Apache License 2.0,
+EDUC-GRAD-ASSESSMENT-API,0,0,0,0,0,3,Apache License 2.0,
+von-bc-registries-audit,0,0,0,0,0,6,Apache License 2.0,Contributor Covenant
+EDUC-GRAD-PROGRAM-MANAGEMENT-API,0,0,0,0,0,2,Apache License 2.0,
+EDUC-GRAD-ALGORITHM-API,0,0,0,0,0,3,Apache License 2.0,
+jag-document-utils,0,0,1,0,0,0,Apache License 2.0,
+EDUC-GRAD-SCHOOL-API,0,0,0,0,0,2,Apache License 2.0,
+patroni-postgres-container,0,0,0,0,0,2,Apache License 2.0,
+EDUC-GRAD-PSI-API,0,0,0,0,0,2,Apache License 2.0,
+smk-fap-bcfls,1,0,0,0,0,5,Apache License 2.0,Contributor Covenant
+smk-fap-fcb,1,0,6,0,0,6,Apache License 2.0,Contributor Covenant
+smk-fap-stcb,1,0,0,0,0,6,Apache License 2.0,Contributor Covenant
+geoserver_build,0,0,0,0,0,0,,
+EDUC-GRAD-CODE-API,0,0,0,0,0,2,Apache License 2.0,
+ofi-tools,1,0,1,0,0,1,Apache License 2.0,
+court-interpreter-scheduling,0,0,0,0,0,0,,
+tracks,0,0,0,0,0,0,Apache License 2.0,
+tracks-devops,0,0,0,0,0,0,Apache License 2.0,
+jag-pci-gateway,0,0,1,0,0,0,Apache License 2.0,
+Wetland_Summary,0,0,0,0,0,0,Apache License 2.0,Contributor Covenant
+sbc-maximus-services,0,0,0,0,0,0,Apache License 2.0,
+mines-digital-trust,0,1,0,0,0,6,Apache License 2.0,Contributor Covenant
+EDUC-GRAD-GRADUATION-STATUS-API,0,0,0,0,0,2,Apache License 2.0,
+cmip6-BC,0,0,0,0,0,1,Apache License 2.0,
+EDUC-GRAD-GRADUATION-API,0,0,0,0,0,2,Apache License 2.0,
+EDUC-GRAD-COMMON-API,0,0,0,0,0,2,Apache License 2.0,
+moh-bcer,0,0,0,0,0,0,Apache License 2.0,
+EDUC-SCHOOL-API,0,0,0,0,0,0,Apache License 2.0,
+SSAF_FFH_Summary,0,0,0,0,0,0,Apache License 2.0,Contributor Covenant
+safepaths,0,0,0,0,0,5,Apache License 2.0,Contributor Covenant
+pssg-cscp-cpu,0,0,0,0,0,0,Apache License 2.0,
+crt,0,0,0,0,0,1,Apache License 2.0,
+EDUC-SLD-API,0,0,0,0,0,0,Apache License 2.0,
+EDUC-PEN-TRAX-API,0,0,0,0,0,0,Apache License 2.0,
+jag-lrb-web,0,0,0,0,0,0,Apache License 2.0,
+NotifyBC,0,0,19,0,0,5,Apache License 2.0,
+SIMS,0,0,0,0,0,1,Apache License 2.0,
+moh-maid,0,0,0,0,0,0,Apache License 2.0,
+cas-airflow-upstream,0,0,0,0,0,0,Apache License 2.0,Other
+climate-disturbances,0,0,0,0,0,5,Apache License 2.0,Contributor Covenant
+nr-fom-admin,0,0,0,0,0,5,Apache License 2.0,Contributor Covenant
+aps-portal,6,0,1,0,0,0,Apache License 2.0,
+nr-fom-public,0,0,0,0,0,7,Apache License 2.0,Contributor Covenant
+nr-fom-api,0,0,0,0,0,3,Apache License 2.0,Contributor Covenant
+MOH-AOP-OOP,0,0,0,0,0,0,Apache License 2.0,Contributor Covenant
+bc-data-literacy-self-assessment,0,0,0,0,0,0,Other,Contributor Covenant
+streamflow-indicator,0,0,0,0,0,6,Apache License 2.0,Contributor Covenant
+ccsummary-tahltan,0,0,0,0,0,0,Apache License 2.0,
+MOH-BCP-Enrolment,0,0,0,0,0,0,Apache License 2.0,
+moh-hnclient-v2,0,0,0,0,0,0,Apache License 2.0,
+moh-hni-esb,0,0,0,0,0,0,Apache License 2.0,
+ccsummary-FLP,0,0,0,0,0,0,Apache License 2.0,
+jag-traffic-courts-online,0,0,0,0,0,1,Apache License 2.0,Contributor Covenant
+jag-trafficcourts-partner,0,0,0,0,0,0,,
+jag-trafficcourts-api,0,0,0,0,0,0,,
+rocketchat,0,0,0,0,0,1,Apache License 2.0,
+moh-external-api-protocol-mapper,0,0,0,0,0,3,Apache License 2.0,
+performance,0,0,0,0,0,0,Apache License 2.0,
+citz-imb-sp-aar,0,0,0,0,0,0,Apache License 2.0,
+PSP,0,0,0,0,0,0,Apache License 2.0,
+MOH-FPC-Enrolment,0,0,0,0,0,0,Apache License 2.0,
+startup-sample-project-terraform-modules,0,0,0,0,0,0,Apache License 2.0,Contributor Covenant
+Wetzinkwa,0,0,0,0,0,0,Apache License 2.0,Contributor Covenant
+aries-vcr-client,0,0,1,0,0,15,Apache License 2.0,Contributor Covenant
+Mautic-Subscription-App,0,0,0,0,0,0,Apache License 2.0,
+EDUC-PEN-REPORT-GENERATION-API,0,0,0,0,0,3,Apache License 2.0,
+smk-helms,0,0,8,0,0,4,,
+orgbook-bc-client,0,0,1,0,0,16,Apache License 2.0,Contributor Covenant
+orgbook-on-client,0,0,0,0,0,15,Apache License 2.0,Contributor Covenant
+ets-cpf-ea-onboarding,0,0,0,0,0,0,Apache License 2.0,Other
+citz-imb-sp-restapi,0,0,0,0,0,0,Apache License 2.0,
+transportation-datascience-sandbox,0,0,0,0,0,3,Apache License 2.0,Contributor Covenant
+smk-actions,0,0,2,0,0,3,Apache License 2.0,
+jag-rsbc-nextcloud,0,0,0,0,0,0,Apache License 2.0,
+Teams-FAQ-Bot,0,0,0,0,0,4,MIT License,Other
+cloud-custodian-policies,0,0,0,0,0,0,Apache License 2.0,Contributor Covenant
+ppr,0,0,0,0,0,5,Apache License 2.0,
+registry-schemas,0,0,3,0,0,4,Apache License 2.0,Contributor Covenant
+EDUC-PEN-REPLICATION-API,0,0,0,0,0,3,Apache License 2.0,
+material-table,0,0,0,0,0,0,MIT License,Contributor Covenant
+aries-vcr-issuer-agency,0,0,0,0,0,0,Apache License 2.0,Contributor Covenant
+GDX-Analytics-microservice,0,0,0,0,0,5,Apache License 2.0,Contributor Covenant
+nrm-ea-onboarding,0,0,0,0,0,0,Apache License 2.0,Other
+dip-metadata-viewer,0,0,0,0,0,5,Apache License 2.0,Contributor Covenant
+bc_dtm_testing,0,0,0,0,0,3,Apache License 2.0,Contributor Covenant
+court-of-appeal,0,0,0,0,0,2,Apache License 2.0,
+nr-rfc-processing,0,0,1,0,0,4,Apache License 2.0,
+networkpolicy-migration-workshop,0,0,0,0,0,1,Creative Commons Zero v1.0 Universal,
+MOH-IAM-Enrolment,0,0,0,0,0,0,Apache License 2.0,
+nr-rfc-ensweather,0,0,5,0,0,4,Apache License 2.0,
+representation-grant-app,0,0,0,0,0,1,Apache License 2.0,Contributor Covenant
+economic_recovery_indicators,0,0,0,0,0,4,Apache License 2.0,Contributor Covenant
+geodock,0,0,0,0,0,0,Apache License 2.0,
+Distributed-Leader-ToolKit,0,0,0,0,0,0,Apache License 2.0,
+access-to-technology,0,0,0,0,0,4,Apache License 2.0,
+Mautic-Openshift,0,0,0,0,0,0,Apache License 2.0,
+EDUC-FSA-ILR,0,0,0,0,0,2,Apache License 2.0,
+mds-startup-sample-project,0,0,0,0,0,0,Apache License 2.0,Other
+citz-imb-sp-gdx-bif,0,0,0,0,0,4,Apache License 2.0,
+discover-camping,0,0,0,0,0,0,,
+smk-moh-mhsu,0,0,0,0,0,6,Apache License 2.0,
+ised-business-banking-initiative,0,0,0,0,0,9,Apache License 2.0,Contributor Covenant
+dbutils,0,0,0,0,0,3,Other,
+CCISS_ShinyApp,0,0,0,0,0,2,Other,
+moh-ldap-service,0,0,0,0,0,3,Apache License 2.0,
+eco-info,0,0,0,0,0,0,Apache License 2.0,
+EDUC-TRAX-NOTIFICATION-API,0,0,0,0,0,1,Apache License 2.0,
+digital_talent,0,0,0,0,0,0,Apache License 2.0,
+moh-iam-sf,0,0,0,0,0,0,Apache License 2.0,
+SBC-AUTH-Service,0,0,0,0,0,0,Apache License 2.0,
+css-job-scheduling,0,0,0,0,0,0,,
+EDUC-GRAD-BATCH-GRADUATION-API,0,0,0,0,0,3,Apache License 2.0,
+common-lib-vue,0,0,0,0,0,0,Apache License 2.0,
+groundwater-level-review-report,0,0,0,0,0,3,Apache License 2.0,Contributor Covenant
+identity-kit-configurations,0,0,0,0,0,0,Apache License 2.0,
+aps-testing,0,0,0,0,0,0,Apache License 2.0,
+jag-github-templates,0,0,0,0,0,0,Apache License 2.0,
+BCP-CMS,0,0,0,0,0,10,Apache License 2.0,
+platform-services-edb-template,0,0,0,0,0,0,Apache License 2.0,
+jag-mail-it,0,0,0,0,0,0,Apache License 2.0,
+EDUC-PEN-API-GATEWAY,0,0,0,0,0,0,Apache License 2.0,
+mtc-scripts,0,0,0,0,0,1,Apache License 2.0,
+mhsu-broker,0,0,14,0,0,0,,
+elmsd-workbc-comms,0,0,0,0,0,0,Apache License 2.0,
+nr-lidar-viewer,0,0,0,0,0,3,GNU General Public License v3.0,
+vue-test-utils-helpers,0,0,0,0,0,1,MIT License,Contributor Covenant
+github-optimization,0,1,0,0,0,0,Apache License 2.0,
+cas-onboarding,0,0,0,0,0,0,,
+platform-services-requestron,0,0,0,0,0,0,Apache License 2.0,Contributor Covenant
+dts-vc-issuer-service,0,0,0,0,0,6,Apache License 2.0,
+platform-services-template,0,0,0,0,0,5,Apache License 2.0,
+nr-playbook,0,0,0,0,0,3,,
+b2b-credential-manager,0,0,0,0,0,5,Apache License 2.0,
+platform-services-archeobot,0,0,0,0,0,5,Apache License 2.0,
+cas-payment-interface,0,0,0,0,0,3,,
+nr-flnr-ecas-processing,0,0,0,0,0,0,Creative Commons Zero v1.0 Universal,
+PECSF,0,0,0,0,0,0,,
+cmip6-BC-eval,0,0,0,0,0,2,Apache License 2.0,
+bcregistry-sre,0,0,0,0,0,0,Apache License 2.0,Contributor Covenant
+jason-test-delete-me,0,0,0,0,0,1,Apache License 2.0,
+foi-flow,0,0,0,0,0,0,Apache License 2.0,
+EDUC-PEN-CONSUMER-API,0,0,0,0,0,2,Apache License 2.0,
