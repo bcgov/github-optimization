@@ -18,7 +18,7 @@ func check(e error) {
 	}
 }
 
-func writeLineToFile(f *os.File, cells [2]string) {
+func writeLineToFile(f *os.File, cells [3]string) {
 	var line string
 	for i, b := range cells {
 		if i == 0 {
@@ -45,7 +45,7 @@ type QueryListRepositories struct {
 
 // Repository is a code repository
 type Repository struct {
-	Name      string
+	Name string
 }
 
 // Repositories is a list of GitHub repositories
@@ -53,7 +53,8 @@ type Repositories []Repository
 
 // RepositoryExtra is ...
 type RepositoryExtra struct {
-	ForkPullRequestCount int
+	ForkPullRequestCount   int
+	ReviewPullRequestCount int
 }
 
 // RepositoryExtras is ...
@@ -88,14 +89,11 @@ func GetRepositories(ctx context.Context, client Client) (Repositories, Reposito
 
 		for i, v := range query.Organization.Repositories.Nodes {
 			opts := BranchOptions{
-				Org:     "bcgov",
-				Name:    v.Name,
+				Org:  "bcgov",
+				Name: v.Name,
 			}
 
-			n, _ := GetForkPullRequestCount(ctx, client, opts)
-			extra := RepositoryExtra{
-				ForkPullRequestCount: n,
-			}
+			extra, _ := GetForkPullRequestCount(ctx, client, opts)
 			extras = append(extras, extra)
 
 			r[i] = v
@@ -117,8 +115,8 @@ func GetRepositories(ctx context.Context, client Client) (Repositories, Reposito
 }
 
 type BranchOptions struct {
-	Org     string
-	Name    string
+	Org  string
+	Name string
 }
 
 // QueryForkPullRequestCount is ...
@@ -139,22 +137,29 @@ type QueryForkPullRequestCount struct {
 				HeadRepository struct {
 					Name string
 				}
+				Reviews struct {
+					TotalCount int
+				}
 			}
 		} `graphql:"pullRequests(first: 100, after: $cursor)"`
 	} `graphql:"repository(name: $name, owner: $org)"`
 }
 
 // GetForkPullRequestCount retruns ...
-func GetForkPullRequestCount(ctx context.Context, client Client, ops BranchOptions) (int, error) {
+func GetForkPullRequestCount(ctx context.Context, client Client, ops BranchOptions) (RepositoryExtra, error) {
 	var (
 		variables = map[string]interface{}{
-			"org":     githubv4.String(ops.Org),
-			"name":    githubv4.String(ops.Name),
+			"org":    githubv4.String(ops.Org),
+			"name":   githubv4.String(ops.Name),
 			"cursor": (*githubv4.String)(nil),
 		}
 
-		forkPrCount  = 0
-		page   = 1
+		extra = RepositoryExtra{
+			ForkPullRequestCount:   0,
+			ReviewPullRequestCount: 0,
+		}
+
+		page = 1
 	)
 
 	for {
@@ -163,12 +168,16 @@ func GetForkPullRequestCount(ctx context.Context, client Client, ops BranchOptio
 		query := &QueryForkPullRequestCount{}
 		if err := client.Query(ctx, query, variables); err != nil {
 			fmt.Println(err)
-			return 0, err
+			return RepositoryExtra{}, err
 		}
 
 		for _, v := range query.Repository.PullRequests.Nodes {
 			if v.Repository.Name == v.BaseRepository.Name && v.HeadRepository.Name != "" && v.BaseRepository.Name != v.HeadRepository.Name {
-				forkPrCount++
+				extra.ForkPullRequestCount++
+			}
+
+			if v.Reviews.TotalCount > 0 {
+				extra.ReviewPullRequestCount++
 			}
 		}
 
@@ -180,7 +189,7 @@ func GetForkPullRequestCount(ctx context.Context, client Client, ops BranchOptio
 		page++
 	}
 
-	return forkPrCount,  nil
+	return extra, nil
 }
 
 func main() {
@@ -191,7 +200,7 @@ func main() {
 	}
 
 	targetDir := "../../../notebook/dat/"
-	targetFile := "/repository-fork-pr.csv"
+	targetFile := "/repository-pr.csv"
 
 	err = os.MkdirAll(path+targetDir, os.ModePerm)
 	check(err)
@@ -214,17 +223,19 @@ func main() {
 	header := [...]string{
 		"Repository",
 		"Fork PullRequest Count",
+		"Review Count",
 	}
 	writeLineToFile(f, header)
 
 	for i, repo := range repos {
 		name := repo.Name
 		forkPrCount := extras[i].ForkPullRequestCount
-		forkPrCountStr := strconv.Itoa(forkPrCount)
+		reviewPrCount := extras[i].ForkPullRequestCount
 
 		cells := [...]string{
 			name,
-			forkPrCountStr,
+			strconv.Itoa(forkPrCount),
+			strconv.Itoa(reviewPrCount),
 		}
 
 		writeLineToFile(f, cells)
