@@ -64,7 +64,7 @@ async function getAllRepositoryCollaboratorsByOrg(org, repo){
 
 async function main(){
   const failures = []
-  const stream = fs.createWriteStream("./data/collaborators2.csv", { flags: "a" });
+  const stream = fs.createWriteStream("./data/outside-contributors.csv", { flags: "a" });
   stream.write(
     "Repository, Outside Contributor Count \n"
   );
