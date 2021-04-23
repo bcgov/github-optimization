@@ -18,7 +18,7 @@ async function getAllRepositoryContributors(owner, repo){
     repo,
   });
   const contributorIds = contributors.data.map(contributor => contributor.node_id);
-  return contributors.data
+  return contributorIds
 }
 
 async function getAllRepositoryCollaboratorsByOrg(org, repo){
@@ -64,7 +64,7 @@ async function getAllRepositoryCollaboratorsByOrg(org, repo){
 
 async function main(){
   const failures = []
-  const stream = fs.createWriteStream("./data/collaborators.csv", { flags: "a" });
+  const stream = fs.createWriteStream("./data/collaborators2.csv", { flags: "a" });
   stream.write(
     "Repository, Outside Contributor Count \n"
   );
