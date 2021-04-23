@@ -230,7 +230,7 @@ func main() {
 	for i, repo := range repos {
 		name := repo.Name
 		forkPrCount := extras[i].ForkPullRequestCount
-		reviewPrCount := extras[i].ForkPullRequestCount
+		reviewPrCount := extras[i].ReviewPullRequestCount
 
 		cells := [...]string{
 			name,
