@@ -138,7 +138,7 @@ func main() {
 		fmt.Println(err)
 	}
 
-	f, err := os.Create(path + "/dat/issue-topics.csv")
+	f, err := os.Create(path + "../../../notebook/dat/issues.csv")
 	check(err)
 	defer f.Close()
 

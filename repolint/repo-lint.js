@@ -2,7 +2,7 @@ const util = require("util");
 const exec = util.promisify(require("child_process").exec);
 const fs = require('fs')
 
-const org = "bcgov";
+const org = "bcdevops";
 
 const defaults = [
   "license-file-exists",

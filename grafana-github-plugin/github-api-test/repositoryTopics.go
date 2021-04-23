@@ -68,7 +68,7 @@ func main() {
 		fmt.Println(err)
 	}
 
-	f, err := os.Create(path + "/dat/repo-topics.csv")
+	f, err := os.Create(path + "../../../notebook/dat/repo-topics.csv")
 	check(err)
 	defer f.Close()
 

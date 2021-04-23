@@ -1,0 +1,107 @@
+Repository,PackageCount,ProjectCount,ReleaseCount,SubmoduleCount,DeployKeyCount,TopicCount,License,CodeOfConduct
+openshift-workshop,0,0,0,0,0,0,Apache License 2.0,
+gigles,0,0,0,0,0,0,Apache License 2.0,
+templates,0,0,0,0,0,0,Apache License 2.0,
+openshift-components,0,0,0,0,0,9,Apache License 2.0,
+issues-and-solutions,0,0,0,0,0,0,Creative Commons Zero v1.0 Universal,
+meta-guide-docker,0,0,0,0,0,0,Apache License 2.0,
+openopps-platform,0,0,0,0,0,0,Other,
+illr,0,0,0,0,0,0,Apache License 2.0,
+shiftbot,0,0,0,0,0,0,Apache License 2.0,
+openshift-tools,0,0,0,0,0,0,Apache License 2.0,
+openshift-jee-sample,0,0,0,0,0,0,,
+jee-wildfly-test,0,0,0,0,0,0,Apache License 2.0,
+s2i-nginx,0,0,1,0,0,0,Apache License 2.0,
+s2i-nginx-example,0,0,0,0,0,0,Apache License 2.0,
+nodejs-ex,0,0,0,0,0,0,,
+s2i-nginx-npm,0,0,0,0,0,0,Apache License 2.0,
+tree-model-bower,0,0,0,0,0,0,MIT License,
+BCDevOps-Guide,0,0,0,0,0,0,Other,
+pathfinder-jenkins,0,0,0,0,0,0,Apache License 2.0,
+sonar-pipeline,0,0,0,0,0,0,,
+pathfinder,0,0,0,0,0,0,Other,Contributor Covenant
+s2i-caddy,0,0,0,0,0,0,Apache License 2.0,
+openshift-wiki,0,1,0,0,0,7,Apache License 2.0,
+exo-community,0,0,0,0,0,0,,
+opendev-template,0,0,0,0,0,0,Apache License 2.0,Contributor Covenant
+jenkins,0,0,0,0,0,0,,
+examples,0,0,0,0,0,0,Apache License 2.0,
+openshift-templates,0,0,0,0,0,0,Apache License 2.0,
+openshift-developer-tools,0,0,0,0,0,0,Apache License 2.0,
+minio-openshift,0,0,0,0,0,1,Apache License 2.0,Contributor Covenant
+BDDStack,0,1,4,0,0,9,Apache License 2.0,
+owasp-zap-openshift,0,0,0,0,0,0,,
+innovation-lab-projects,0,0,0,0,0,0,Apache License 2.0,
+sonarqube,0,0,2,0,0,0,GNU Lesser General Public License v3.0,Contributor Covenant
+OWASP-ZAP,0,0,0,0,0,0,Apache License 2.0,
+geb-mobile,0,0,0,0,0,0,,
+jenkins-pipeline-shared-lib,0,0,1,0,0,0,Apache License 2.0,
+rhsso-examples,0,0,0,0,0,0,Apache License 2.0,
+pathfinder-static-web-pages,0,0,0,0,0,0,Apache License 2.0,
+certbot,0,0,0,0,0,0,Apache License 2.0,
+ocp-cd-pipeline,0,0,4,0,0,0,Apache License 2.0,
+keycloak-admin,0,0,0,0,0,0,Apache License 2.0,
+developer-platform,0,0,0,0,0,0,Apache License 2.0,Contributor Covenant
+open-component-stewardship,0,0,0,0,0,0,Apache License 2.0,
+backup-container,0,0,11,0,0,10,Apache License 2.0,Contributor Covenant
+devops-platform-workshops,0,0,0,0,0,4,Apache License 2.0,
+devops-platform-workshops-labs,0,0,0,0,0,0,Apache License 2.0,
+provision-nfs-apb,0,0,0,0,0,0,Apache License 2.0,
+platform-services,0,0,0,0,0,6,Apache License 2.0,
+pipeline-cli,0,0,2,0,0,0,Apache License 2.0,
+fathom-openshift,0,0,0,0,0,0,Apache License 2.0,Contributor Covenant
+StorageMigration,0,0,0,0,0,0,Apache License 2.0,
+matomo-openshift,0,0,4,0,0,0,Apache License 2.0,Contributor Covenant
+go-crond,0,0,2,0,0,0,GNU General Public License v2.0,
+bcdk,0,0,0,0,0,0,Apache License 2.0,
+developer-engagement,0,0,0,0,0,0,,
+docker-weasyprint,0,0,3,0,0,2,GNU General Public License v3.0,
+platform-services-status-page-notifications,0,0,0,0,0,3,Apache License 2.0,
+nr-pipeline-ext,0,0,1,0,0,0,Apache License 2.0,
+nr-jenkins-shared-lib,0,0,0,0,0,0,Apache License 2.0,
+nr-devops-tools,0,0,0,0,0,0,Apache License 2.0,
+eval-crunchydata,0,0,0,0,0,0,,
+gh-deploy,0,0,1,0,0,0,Apache License 2.0,Contributor Covenant
+OpenShift4-RollOut,0,0,0,0,0,0,Apache License 2.0,
+OpenShift4-Migration,0,0,0,0,0,0,Apache License 2.0,
+devops-requests,0,0,0,0,0,0,,
+developer-experience,0,0,0,0,0,0,Apache License 2.0,
+ha-tomcat9,0,0,0,0,0,0,Apache License 2.0,
+surveyjs-vue-scaffold,0,0,0,0,0,0,,
+managed-ocp,0,0,0,0,0,0,Apache License 2.0,
+azure-landing-zone,0,0,0,0,0,0,Apache License 2.0,
+gcp-landing-zone,0,0,0,0,0,0,Apache License 2.0,
+nr-elasticsearch-stack,0,0,0,0,0,0,Apache License 2.0,
+aws-saml2sts-bookmarklet,0,0,0,0,0,0,Apache License 2.0,Contributor Covenant
+nrdk,0,1,0,0,0,0,Apache License 2.0,
+aws-login,0,0,0,0,0,0,,Contributor Covenant
+bcgov-terraform-module-template,0,0,0,0,0,0,Apache License 2.0,Contributor Covenant
+terraform-aws-account-set,0,0,0,0,0,0,Apache License 2.0,Contributor Covenant
+terraform-aws-organization-info,0,0,0,0,0,0,Apache License 2.0,Contributor Covenant
+terraform-octk-tf-workspace,0,0,0,0,0,0,Apache License 2.0,Contributor Covenant
+terraform-octk-aws-workspace,0,0,0,0,0,0,Apache License 2.0,Contributor Covenant
+terraform-keycloak-role-group-simplification,0,0,0,0,0,0,Apache License 2.0,Contributor Covenant
+terraform-octk-gcp-workspace,0,0,0,0,0,0,Apache License 2.0,Contributor Covenant
+terraform-gcp-project-set,0,0,0,0,0,0,Apache License 2.0,Contributor Covenant
+terraform-aws-keycloak-lz-sso-setup,0,0,0,0,0,0,Apache License 2.0,Contributor Covenant
+terraform-aws-sea-organization-info,0,0,0,0,0,0,Apache License 2.0,Contributor Covenant
+terraform-aws-sea-account-set,0,0,0,0,0,0,Apache License 2.0,Contributor Covenant
+terraform-octk-aws-sea-workspace,0,0,0,0,0,0,Apache License 2.0,Contributor Covenant
+aws-secure-environment-accelerator,0,0,0,0,0,0,Apache License 2.0,Other
+terraform-octk-aws-workload-automation-setup,0,0,0,0,0,0,Apache License 2.0,Contributor Covenant
+baserow,0,0,0,0,0,0,Apache License 2.0,
+terraform-octk-aws-keycloak-account-set-role-setup,0,0,0,0,0,0,Apache License 2.0,Contributor Covenant
+cloudops,0,0,0,0,0,0,,
+terraform-octk-aws-sea-dns,0,0,0,0,0,0,Apache License 2.0,Contributor Covenant
+terraform-octk-tfc-workspace-set,0,0,0,0,0,0,Apache License 2.0,Contributor Covenant
+cloud-guardrails-aws,0,0,0,0,0,0,MIT License,
+allure-framework-openshift,0,0,0,0,0,0,Apache License 2.0,Contributor Covenant
+sig-cli,0,0,0,0,0,0,Apache License 2.0,
+terraform-octk-aws-sea-network-info,0,0,0,0,0,0,Apache License 2.0,Contributor Covenant
+terraform-octk-aws-workload-alb,0,0,0,0,0,0,Apache License 2.0,Contributor Covenant
+platform-services-documize,0,0,0,0,0,0,Apache License 2.0,
+terraform-octk-aws-sea-routing,0,0,0,0,0,0,Apache License 2.0,Contributor Covenant
+terraform-octk-aws-workload-ecr,0,0,0,0,0,0,Apache License 2.0,Contributor Covenant
+terraform-octk-aws-sea-rocketchat-notifications,0,0,0,0,0,0,Apache License 2.0,Contributor Covenant
+terraform-aws-sea-organization-info-extended,0,0,0,0,0,0,Apache License 2.0,Contributor Covenant
+terraform-octk-aws-sea-client-vpn-setup,0,0,0,0,0,0,Apache License 2.0,Contributor Covenant

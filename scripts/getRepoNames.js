@@ -44,7 +44,7 @@ async function main(){
   stream.write(
     "[ \n"
   );
-  const repoNames = await getAllRepositoryNamesByOrg("bcgov")
+  const repoNames = await getAllRepositoryNamesByOrg("bcdevops")
   repoNames.forEach(repoName => {
     stream.write(`"${repoName}", \n`)
   })
