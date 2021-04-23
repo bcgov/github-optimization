@@ -40,7 +40,7 @@ async function getAllRepositoryNamesByOrg(org){
 }
 
 async function main(){
-  const stream = fs.createWriteStream("./data/repoNames.csv", { flags: "a" });
+  const stream = fs.createWriteStream("./data/repoNames.json", { flags: "a" });
   stream.write(
     "[ \n"
   );
