@@ -1,4 +1,4 @@
-Repository,Author,Closed,ClosedAt, CreatedAt, LastEditedAt, State, Title, UpdatedAt
+Repository,Author,Closed,ClosedAt,CreatedAt,LastEditedAt,State,Title,UpdatedAt
 openshift-workshop,kelpisland,false,,2016-02-05T19:30:28Z,,OPEN,"BC Gov - Deploy App",2016-02-05T19:30:28Z
 openshift-workshop,kelpisland,false,,2016-02-05T19:30:29Z,,OPEN,"Deploy mongo for ESM app",2016-02-05T19:30:29Z
 openshift-workshop,kelpisland,false,,2016-02-05T19:30:31Z,,OPEN,"Install Metrics Component",2016-02-05T19:30:31Z
