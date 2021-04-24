@@ -214,14 +214,14 @@ func main() {
 	// Append data into csv
 	header := []string{
 		"Repository",
-		"DaysOpen",
-		"IssueCount",
-		"PrCount",
-		"CommitCount",
-		"AverageIssueCountPerDay",
-		"AveragePrCountPerDay",
-		"AverageCommitCountPerDay",
-		"DefaultBranchName",
+		"Days Open",
+		"Issue Count",
+		"PR Count",
+		"Commit Count",
+		"Avg. Issue Count Per Day",
+		"Avg. PR Count Per Day",
+		"Avg. Commit Count Per Day",
+		"Default Branch Name",
 		"Languages",
 	}
 	utils.WriteLineToFile(f, header...)

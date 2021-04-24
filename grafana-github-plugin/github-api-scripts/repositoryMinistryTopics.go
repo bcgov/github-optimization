@@ -6,7 +6,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	"strconv"
+	"strings"
 
 	utils "github.com/grafana/github-datasource/github-api-scripts/utils"
 	"github.com/shurcooL/githubv4"
@@ -28,31 +28,14 @@ type QueryListRepositories struct {
 
 // Repository is a code repository
 type Repository struct {
-	Name     string
-	Packages struct {
-		TotalCount int
-	}
-	Projects struct {
-		TotalCount int
-	}
-	Releases struct {
-		TotalCount int
-	}
-	Submodules struct {
-		TotalCount int
-	}
-	DeployKeys struct {
-		TotalCount int
-	}
+	Name             string
 	RepositoryTopics struct {
-		TotalCount int
-	}
-	LicenseInfo struct {
-		Name string
-	}
-	CodeOfConduct struct {
-		Name string
-	}
+		Nodes []struct {
+			Topic struct {
+				Name string
+			}
+		}
+	} `graphql:"repositoryTopics(first: 100)"`
 }
 
 // Repositories is a list of GitHub repositories
@@ -107,6 +90,8 @@ func GetRepositories(ctx context.Context, client Client, opts RepositoryOptions)
 	return repos, nil
 }
 
+var ministryCodes = [...]string{"AEST", "AGRI", "ALC", "AG", "MCF", "CITZ", "DBC", "EMBC", "EAO", "EDUC", "EMPR", "ENV", "FIN", "FLNR", "HLTH", "IRR", "JEDC", "LBR", "LDB", "MMHA", "MAH", "BCPC", "PSA", "PSSG", "SDPR", "TCA", "TRAN"}
+
 func main() {
 	token, org := utils.CheckEnv()
 
@@ -115,7 +100,7 @@ func main() {
 	utils.HandleError(err)
 
 	targetDir := fmt.Sprintf("../../../notebook/dat/%v/", org)
-	targetFile := "/repository-details-1.csv"
+	targetFile := "/repository-ministry-topics.csv"
 
 	err = os.MkdirAll(path+targetDir, os.ModePerm)
 	utils.HandleError(err)
@@ -142,37 +127,32 @@ func main() {
 	// Append data into csv
 	header := []string{
 		"Repository",
-		"Package Count",
-		"Project Count",
-		"Release Count",
-		"Submodule Count",
-		"Deploy Key Count",
-		"Topic Count",
-		"License",
-		"Code Of Conduct",
+		"Ministry Code",
 	}
 	utils.WriteLineToFile(f, header...)
 
 	for _, repo := range repos {
-		packageCount := repo.Packages.TotalCount
-		projectCount := repo.Projects.TotalCount
-		releaseCount := repo.Releases.TotalCount
-		submoduleCount := repo.Submodules.TotalCount
-		deployKeyCount := repo.DeployKeys.TotalCount
-		topicCount := repo.RepositoryTopics.TotalCount
+		hasTopic := false
+		name := repo.Name
+		for _, node := range repo.RepositoryTopics.Nodes {
+			topic := strings.ToUpper(node.Topic.Name)
 
-		cells := []string{
-			repo.Name,
-			strconv.Itoa(packageCount),
-			strconv.Itoa(projectCount),
-			strconv.Itoa(releaseCount),
-			strconv.Itoa(submoduleCount),
-			strconv.Itoa(deployKeyCount),
-			strconv.Itoa(topicCount),
-			repo.LicenseInfo.Name,
-			repo.CodeOfConduct.Name,
+			if contains(ministryCodes[:], topic) {
+				utils.WriteLineToFile(f, name, topic)
+				hasTopic = true
+			}
 		}
-
-		utils.WriteLineToFile(f, cells...)
+		if !hasTopic {
+			utils.WriteLineToFile(f, name, "")
+		}
 	}
+}
+
+func contains(s []string, e string) bool {
+	for _, a := range s {
+		if a == e {
+			return true
+		}
+	}
+	return false
 }

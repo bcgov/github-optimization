@@ -9,170 +9,231 @@ import (
 	"strconv"
 	"strings"
 
+	utils "github.com/grafana/github-datasource/github-api-scripts/utils"
 	"github.com/shurcooL/githubv4"
 	"golang.org/x/oauth2"
 )
 
-func check(e error) {
-	if e != nil {
-		panic(e)
-	}
-}
-
-func writeLineToFile(f *os.File, cells [9]string) {
-	var line string
-	for i, b := range cells {
-		if i == 0 {
-			line += b
-		} else {
-			line += "," + b
-		}
-	}
-	f.WriteString(line + "\n")
-}
-
-type QueryListRepositoryIssues struct {
+// QueryListRepositories is the GraphQL query for retrieving a list of repositories for an organization
+type QueryListRepositories struct {
 	Organization struct {
 		Repositories struct {
 			PageInfo struct {
 				HasNextPage githubv4.Boolean
 				EndCursor   githubv4.String
 			}
-			Nodes []struct {
-				Name   githubv4.String
-				Issues struct {
-					Nodes []struct {
-						Author struct {
-							Login githubv4.String
-						}
-						Closed       githubv4.Boolean
-						ClosedAt     githubv4.String
-						CreatedAt    githubv4.String
-						LastEditedAt githubv4.String
-						State        githubv4.String
-						Title        githubv4.String
-						UpdatedAt    githubv4.String
-					}
-					PageInfo struct {
-						HasNextPage githubv4.Boolean
-						EndCursor   githubv4.String
-					}
-				} `graphql:"issues(first: 100)"`
-			}
-		} `graphql:"repositories(first: 100, after: $reposCursor)"`
+			Nodes []Repository
+		} `graphql:"repositories(first: 100, after: $cursor)"`
 	} `graphql:"organization(login: $org)"`
 }
 
-type QueryListPaginatedRepositoryIssues struct {
-	Organization struct {
-		Repository struct {
-			Issues struct {
-				Nodes []struct {
-					Author struct {
-						Login githubv4.String
-					}
-					Closed       githubv4.Boolean
-					ClosedAt     githubv4.String
-					CreatedAt    githubv4.String
-					LastEditedAt githubv4.String
-					State        githubv4.String
-					Title        githubv4.String
-					UpdatedAt    githubv4.String
-				}
-				PageInfo struct {
-					HasNextPage githubv4.Boolean
-					EndCursor   githubv4.String
-				}
-			} `graphql:"issues(first: 100, after: $issuesCursor)"`
-		} `graphql:"repository(name: $name)"`
-	} `graphql:"organization(login: $org)"`
+// Repository is ...
+type Repository struct {
+	Name string
 }
 
-func listPaginatedIssues(client *githubv4.Client, f *os.File, name githubv4.String, issuesCursor githubv4.String) {
-	variables := map[string]interface{}{
-		"org":          githubv4.String("bcgov"),
-		"name":         name,
-		"issuesCursor": issuesCursor,
+// Repo is ...
+type Repo struct {
+	Name   string
+	Issues Issues
+}
+
+// Repositories is a list of GitHub repositories
+type Repositories []Repo
+
+// Issue is ...
+type Issue struct {
+	Author struct {
+		Login string
 	}
+	Closed       bool
+	ClosedAt     string
+	CreatedAt    string
+	LastEditedAt string
+	State        string
+	Title        string
+	UpdatedAt    string
+}
+
+// Issues is ...
+type Issues []Issue
+
+type Client interface {
+	Query(ctx context.Context, q interface{}, variables map[string]interface{}) error
+}
+
+type RepositoryOptions struct {
+	Org string
+}
+
+// GetRepositories retruns the organization basic information for the client
+func GetRepositories(ctx context.Context, client Client, opts RepositoryOptions) (Repositories, error) {
+	var (
+		variables = map[string]interface{}{
+			"org":    githubv4.String(opts.Org),
+			"cursor": (*githubv4.String)(nil),
+		}
+
+		repos = []Repo{}
+		page  = 1
+	)
+
 	for {
-		q := &QueryListPaginatedRepositoryIssues{}
-		err := client.Query(context.Background(), &q, variables)
-		if err != nil {
-			fmt.Print(err)
+		fmt.Printf("Querying %v page...\n", page)
+
+		query := &QueryListRepositories{}
+		if err := client.Query(ctx, query, variables); err != nil {
+			fmt.Println(err)
+			return []Repo{}, err
 		}
-		for _, b := range q.Organization.Repository.Issues.Nodes {
-			author := string(b.Author.Login)
-			closed := strconv.FormatBool(bool(b.Closed))
-			closedAt := string(b.ClosedAt)
-			createdAt := string(b.CreatedAt)
-			lastEditedAt := string(b.LastEditedAt)
-			state := string(b.State)
-			title := strings.Replace(string(b.Title), "\"", "'", -1)
-			updatedAt := string(b.UpdatedAt)
-			cells := [...]string{string(name), author, closed, closedAt, createdAt, lastEditedAt, state, "\"" + title + "\"", updatedAt}
-			writeLineToFile(f, cells)
+
+		r := make([]Repo, len(query.Organization.Repositories.Nodes))
+
+		for i, v := range query.Organization.Repositories.Nodes {
+			opts := BranchOptions{
+				Org:  opts.Org,
+				Name: v.Name,
+			}
+
+			issues, _ := GetRepositoryIssues(ctx, client, opts)
+
+			repo := Repo{}
+			repo.Name = v.Name
+			repo.Issues = issues
+
+			r[i] = repo
 		}
-		fmt.Println("looping issues for repo: " + string(name))
-		if !q.Organization.Repository.Issues.PageInfo.HasNextPage {
+
+		repos = append(repos, r...)
+
+		if !query.Organization.Repositories.PageInfo.HasNextPage {
 			break
 		}
-		variables["issuesCursor"] = q.Organization.Repository.Issues.PageInfo.EndCursor
+
+		variables["cursor"] = query.Organization.Repositories.PageInfo.EndCursor
+		page++
+
+		// time.Sleep(10 * time.Minute)
 	}
+
+	return repos, nil
+}
+
+type BranchOptions struct {
+	Org  string
+	Name string
+}
+
+// QueryRepositoryIssues is ...
+type QueryRepositoryIssues struct {
+	Repository struct {
+		Issues struct {
+			Nodes    []Issue
+			PageInfo struct {
+				HasNextPage githubv4.Boolean
+				EndCursor   githubv4.String
+			}
+		} `graphql:"issues(first: 100, after: $cursor)"`
+	} `graphql:"repository(name: $name, owner: $org)"`
+}
+
+// GetRepositoryIssues retruns ...
+func GetRepositoryIssues(ctx context.Context, client Client, ops BranchOptions) (Issues, error) {
+	var (
+		variables = map[string]interface{}{
+			"org":    githubv4.String(ops.Org),
+			"name":   githubv4.String(ops.Name),
+			"cursor": (*githubv4.String)(nil),
+		}
+
+		issues = []Issue{}
+
+		page = 1
+	)
+
+	for {
+		fmt.Printf("Querying %v - %v issue page...\n", ops.Name, page)
+
+		query := &QueryRepositoryIssues{}
+		if err := client.Query(ctx, query, variables); err != nil {
+			fmt.Println(err)
+			return []Issue{}, err
+		}
+
+		issues = append(issues, query.Repository.Issues.Nodes...)
+
+		if !query.Repository.Issues.PageInfo.HasNextPage {
+			break
+		}
+
+		variables["cursor"] = query.Repository.Issues.PageInfo.EndCursor
+		page++
+	}
+
+	return issues, nil
 }
 
 func main() {
-	variables := map[string]interface{}{
-		"org":         githubv4.String("bcgov"),
-		"reposCursor": (*githubv4.String)(nil),
-	}
+	token, org := utils.CheckEnv()
 
+	// Try creating csv first
+	path, err := os.Getwd()
+	utils.HandleError(err)
+
+	targetDir := fmt.Sprintf("../../../notebook/dat/%v/", org)
+	targetFile := "/repository-issues.csv"
+
+	err = os.MkdirAll(path+targetDir, os.ModePerm)
+	utils.HandleError(err)
+
+	f, err := os.Create(path + targetDir + targetFile)
+	utils.HandleError(err)
+	defer f.Close()
+
+	// Main segment
 	src := oauth2.StaticTokenSource(
-		&oauth2.Token{AccessToken: os.Getenv("GITHUB_TOKEN")},
+		&oauth2.Token{AccessToken: token},
 	)
+
 	httpClient := oauth2.NewClient(context.Background(), src)
 
 	client := githubv4.NewClient(httpClient)
 
-	path, err := os.Getwd()
-	if err != nil {
-		fmt.Println(err)
+	opts := RepositoryOptions{
+		Org: org,
 	}
 
-	f, err := os.Create(path + "/dat/issue-topics.csv")
-	check(err)
-	defer f.Close()
+	repos, _ := GetRepositories(context.Background(), client, opts)
 
-	f.WriteString("Repository,Author,Closed,ClosedAt, CreatedAt, LastEditedAt, State, Title, UpdatedAt\n")
+	// Append data into csv
+	header := []string{
+		"Repository",
+		"Author",
+		"Closed",
+		"ClosedAt",
+		"CreatedAt",
+		"LastEditedAt",
+		"State",
+		"Title",
+		"UpdatedAt",
+	}
+	utils.WriteLineToFile(f, header...)
 
-	for {
-		q := &QueryListRepositoryIssues{}
-		err := client.Query(context.Background(), &q, variables)
-		if err != nil {
-			fmt.Print(err)
-		}
-		for _, b := range q.Organization.Repositories.Nodes {
-			name := b.Name
-			if b.Issues.PageInfo.HasNextPage {
-				listPaginatedIssues(client, f, name, b.Issues.PageInfo.EndCursor)
-			} else {
-				variables["reposCursor"] = q.Organization.Repositories.PageInfo.EndCursor
+	for _, repo := range repos {
+		for _, issue := range repo.Issues {
+			cells := []string{
+				repo.Name,
+				issue.Author.Login,
+				strconv.FormatBool(issue.Closed),
+				issue.ClosedAt,
+				issue.CreatedAt,
+				issue.LastEditedAt,
+				issue.State,
+				strings.Replace(issue.Title, "\"", "'", -1),
+				issue.UpdatedAt,
 			}
-			for _, c := range b.Issues.Nodes {
-				author := string(c.Author.Login)
-				closed := strconv.FormatBool(bool(c.Closed))
-				closedAt := string(c.ClosedAt)
-				createdAt := string(c.CreatedAt)
-				lastEditedAt := string(c.LastEditedAt)
-				state := string(c.State)
-				title := strings.Replace(string(c.Title), "\"", "'", -1)
-				updatedAt := string(c.UpdatedAt)
-				cells := [...]string{string(name), author, closed, closedAt, createdAt, lastEditedAt, state, "\"" + title + "\"", updatedAt}
-				writeLineToFile(f, cells)
-			}
-		}
 
-		if !q.Organization.Repositories.PageInfo.HasNextPage {
-			break
+			utils.WriteLineToFile(f, cells...)
 		}
 	}
 }

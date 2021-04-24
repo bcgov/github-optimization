@@ -220,12 +220,11 @@ func main() {
 	utils.WriteLineToFile(f, header...)
 
 	for i, repo := range repos {
-		name := repo.Name
 		forkPrCount := extras[i].ForkPullRequestCount
 		reviewPrCount := extras[i].ReviewPullRequestCount
 
 		cells := []string{
-			name,
+			repo.Name,
 			strconv.Itoa(forkPrCount),
 			strconv.Itoa(reviewPrCount),
 		}
