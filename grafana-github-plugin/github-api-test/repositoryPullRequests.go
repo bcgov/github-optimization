@@ -68,7 +68,7 @@ type Client interface {
 func GetRepositories(ctx context.Context, client Client) (Repositories, RepositoryExtras, error) {
 	var (
 		variables = map[string]interface{}{
-			"org":    githubv4.String("bcdevops"),
+			"org":    githubv4.String("bcgov"),
 			"cursor": (*githubv4.String)(nil),
 		}
 
