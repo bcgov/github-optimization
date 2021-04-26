@@ -10,27 +10,10 @@ import (
 	"strconv"
 	"time"
 
+	utils "github.com/grafana/github-datasource/github-api-scripts/utils"
 	"github.com/shurcooL/githubv4"
 	"golang.org/x/oauth2"
 )
-
-func check(e error) {
-	if e != nil {
-		panic(e)
-	}
-}
-
-func writeLineToFile(f *os.File, cells [10]string) {
-	var line string
-	for i, b := range cells {
-		if i == 0 {
-			line += b
-		} else {
-			line += "," + b
-		}
-	}
-	f.WriteString(line + "\n")
-}
 
 // QueryListRepositories is the GraphQL query for retrieving a list of repositories for an organization
 type QueryListRepositories struct {
@@ -83,11 +66,15 @@ type Client interface {
 	Query(ctx context.Context, q interface{}, variables map[string]interface{}) error
 }
 
+type RepositoryOptions struct {
+	Org string
+}
+
 // GetRepositories retruns the organization basic information for the client
-func GetRepositories(ctx context.Context, client Client) (Repositories, RepositoryExtras, error) {
+func GetRepositories(ctx context.Context, client Client, opts RepositoryOptions) (Repositories, RepositoryExtras, error) {
 	var (
 		variables = map[string]interface{}{
-			"org":    githubv4.String("bcgov"),
+			"org":    githubv4.String(opts.Org),
 			"cursor": (*githubv4.String)(nil),
 		}
 
@@ -108,7 +95,7 @@ func GetRepositories(ctx context.Context, client Client) (Repositories, Reposito
 
 		for i, v := range query.Organization.Repositories.Nodes {
 			opts := BranchOptions{
-				Org:     "bcgov",
+				Org:     opts.Org,
 				Name:    v.Name,
 				RefName: v.DefaultBranchRef.Name,
 			}
@@ -193,46 +180,51 @@ func GetDefaultBranchCommitCount(ctx context.Context, client Client, ops BranchO
 }
 
 func main() {
+	token, org := utils.CheckEnv()
+
 	// Try creating csv first
 	path, err := os.Getwd()
-	if err != nil {
-		fmt.Println(err)
-	}
+	utils.HandleError(err)
 
-	targetDir := "../../../notebook/dat/"
+	targetDir := fmt.Sprintf("../../../notebook/dat/%v/", org)
 	targetFile := "/repository-details-2.csv"
 
 	err = os.MkdirAll(path+targetDir, os.ModePerm)
-	check(err)
+	utils.HandleError(err)
 
 	f, err := os.Create(path + targetDir + targetFile)
-	check(err)
+	utils.HandleError(err)
 	defer f.Close()
 
 	// Main segment
 	src := oauth2.StaticTokenSource(
-		&oauth2.Token{AccessToken: os.Getenv("GITHUB_TOKEN")},
+		&oauth2.Token{AccessToken: token},
 	)
+
 	httpClient := oauth2.NewClient(context.Background(), src)
 
 	client := githubv4.NewClient(httpClient)
 
-	repos, extras, _ := GetRepositories(context.Background(), client)
+	opts := RepositoryOptions{
+		Org: org,
+	}
+
+	repos, extras, _ := GetRepositories(context.Background(), client, opts)
 
 	// Append data into csv
-	header := [...]string{
+	header := []string{
 		"Repository",
-		"DaysOpen",
-		"IssueCount",
-		"PrCount",
-		"CommitCount",
-		"AverageIssueCountPerDay",
-		"AveragePrCountPerDay",
-		"AverageCommitCountPerDay",
-		"DefaultBranchName",
+		"Days Open",
+		"Issue Count",
+		"PR Count",
+		"Commit Count",
+		"Avg. Issue Count Per Day",
+		"Avg. PR Count Per Day",
+		"Avg. Commit Count Per Day",
+		"Default Branch Name",
 		"Languages",
 	}
-	writeLineToFile(f, header)
+	utils.WriteLineToFile(f, header...)
 
 	for i, repo := range repos {
 		name := repo.Name
@@ -264,7 +256,7 @@ func main() {
 		averagePrCountPerDayStr := strconv.FormatFloat(math.Round(averagePrCountPerDay*100)/100, 'f', -1, 32)
 		averageCommitCountPerDayStr := strconv.FormatFloat(math.Round(averageCommitCountPerDay*100)/100, 'f', -1, 32)
 
-		cells := [...]string{
+		cells := []string{
 			name,
 			daysOpenStr,
 			issueCountStr,
@@ -277,6 +269,6 @@ func main() {
 			languages,
 		}
 
-		writeLineToFile(f, cells)
+		utils.WriteLineToFile(f, cells...)
 	}
 }

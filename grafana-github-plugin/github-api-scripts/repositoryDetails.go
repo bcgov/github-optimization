@@ -8,27 +8,10 @@ import (
 	"os"
 	"strconv"
 
+	utils "github.com/grafana/github-datasource/github-api-scripts/utils"
 	"github.com/shurcooL/githubv4"
 	"golang.org/x/oauth2"
 )
-
-func check(e error) {
-	if e != nil {
-		panic(e)
-	}
-}
-
-func writeLineToFile(f *os.File, cells [9]string) {
-	var line string
-	for i, b := range cells {
-		if i == 0 {
-			line += b
-		} else {
-			line += "," + b
-		}
-	}
-	f.WriteString(line + "\n")
-}
 
 // QueryListRepositories is the GraphQL query for retrieving a list of repositories for an organization
 type QueryListRepositories struct {
@@ -45,7 +28,7 @@ type QueryListRepositories struct {
 
 // Repository is a code repository
 type Repository struct {
-	Name      string
+	Name     string
 	Packages struct {
 		TotalCount int
 	}
@@ -79,16 +62,20 @@ type Client interface {
 	Query(ctx context.Context, q interface{}, variables map[string]interface{}) error
 }
 
+type RepositoryOptions struct {
+	Org string
+}
+
 // GetRepositories retruns the organization basic information for the client
-func GetRepositories(ctx context.Context, client Client) (Repositories, error) {
+func GetRepositories(ctx context.Context, client Client, opts RepositoryOptions) (Repositories, error) {
 	var (
 		variables = map[string]interface{}{
-			"org":    githubv4.String("bcgov"),
+			"org":    githubv4.String(opts.Org),
 			"cursor": (*githubv4.String)(nil),
 		}
 
-		repos  = []Repository{}
-		page   = 1
+		repos = []Repository{}
+		page  = 1
 	)
 
 	for {
@@ -121,76 +108,71 @@ func GetRepositories(ctx context.Context, client Client) (Repositories, error) {
 }
 
 func main() {
+	token, org := utils.CheckEnv()
+
 	// Try creating csv first
 	path, err := os.Getwd()
-	if err != nil {
-		fmt.Println(err)
-	}
+	utils.HandleError(err)
 
-	targetDir := "../../../notebook/dat/"
+	targetDir := fmt.Sprintf("../../../notebook/dat/%v/", org)
 	targetFile := "/repository-details-1.csv"
 
 	err = os.MkdirAll(path+targetDir, os.ModePerm)
-	check(err)
+	utils.HandleError(err)
 
 	f, err := os.Create(path + targetDir + targetFile)
-	check(err)
+	utils.HandleError(err)
 	defer f.Close()
 
 	// Main segment
 	src := oauth2.StaticTokenSource(
-		&oauth2.Token{AccessToken: os.Getenv("GITHUB_TOKEN")},
+		&oauth2.Token{AccessToken: token},
 	)
+
 	httpClient := oauth2.NewClient(context.Background(), src)
 
 	client := githubv4.NewClient(httpClient)
 
-	repos, _ := GetRepositories(context.Background(), client)
+	opts := RepositoryOptions{
+		Org: org,
+	}
+
+	repos, _ := GetRepositories(context.Background(), client, opts)
 
 	// Append data into csv
-	header := [...]string{
+	header := []string{
 		"Repository",
-		"PackageCount",
-		"ProjectCount",
-		"ReleaseCount",
-		"SubmoduleCount",
-		"DeployKeyCount",
-		"TopicCount",
+		"Package Count",
+		"Project Count",
+		"Release Count",
+		"Submodule Count",
+		"Deploy Key Count",
+		"Topic Count",
 		"License",
-		"CodeOfConduct",
+		"Code Of Conduct",
 	}
-	writeLineToFile(f, header)
+	utils.WriteLineToFile(f, header...)
 
 	for _, repo := range repos {
-		name := repo.Name
 		packageCount := repo.Packages.TotalCount
 		projectCount := repo.Projects.TotalCount
 		releaseCount := repo.Releases.TotalCount
 		submoduleCount := repo.Submodules.TotalCount
 		deployKeyCount := repo.DeployKeys.TotalCount
 		topicCount := repo.RepositoryTopics.TotalCount
-		license := repo.LicenseInfo.Name
-		codeOfConduct := repo.CodeOfConduct.Name
 
-		packageCountStr := strconv.Itoa(packageCount)
-		projectCountStr := strconv.Itoa(projectCount)
-		releaseCountStr := strconv.Itoa(releaseCount)
-		submoduleCountStr := strconv.Itoa(submoduleCount)
-		deployKeyCountStr := strconv.Itoa(deployKeyCount)
-		topicCountStr := strconv.Itoa(topicCount)
-
-		cells := [...]string{
-			name,
-			packageCountStr,
-			projectCountStr,
-			releaseCountStr,
-			submoduleCountStr,
-			deployKeyCountStr,
-			topicCountStr,
-			license,
-			codeOfConduct,
+		cells := []string{
+			repo.Name,
+			strconv.Itoa(packageCount),
+			strconv.Itoa(projectCount),
+			strconv.Itoa(releaseCount),
+			strconv.Itoa(submoduleCount),
+			strconv.Itoa(deployKeyCount),
+			strconv.Itoa(topicCount),
+			repo.LicenseInfo.Name,
+			repo.CodeOfConduct.Name,
 		}
 
-		writeLineToFile(f, cells)
+		utils.WriteLineToFile(f, cells...)
 	}
 }
