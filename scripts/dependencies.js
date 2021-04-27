@@ -4,20 +4,28 @@ const fs = require("fs");
 
 const token = process.env.GITHUB_TOKEN;
 
-async function getAllRepositoryTopicsByOrg(org){
+async function getAllRepositoryTopicsByOrg(org, repo){
   let hasNextPage;
   let after = "";
   let repoNames = [];
 
-  do {
-    const { organization } = await graphql(
+  // do {
+    const { repository } = await graphql(
       `
       {
-        organization(login: "${org}") {
-          repository(name: "bc-sans") {
-            dependencies {
-              graph {
-                hasDependencies
+        repository(name: "${repo}", owner: "${org}") {
+          dependencyGraphManifests(first: 100){
+            totalCount
+            pageInfo {
+              endCursor
+              hasNextPage
+            }
+            nodes {
+              id
+              filename
+              dependenciesCount
+              dependencies (first: 100){
+                totalCount 
               }
             }
           }
@@ -31,14 +39,14 @@ async function getAllRepositoryTopicsByOrg(org){
         },
       }
     );
-    const { endCursor } = pageInfo;
-    console.log(JSON.stringify(organization, null, 2));
-    hasNextPage = pageInfo.hasNextPage;
+    // const { endCursor } = pageInfo;
+    console.log(JSON.stringify(repository, null, 2));
+    // hasNextPage = pageInfo.hasNextPage;
     // if (hasNextPage) after = endCursor;
     // repoNames = repoNames.concat(nodes.map(node => {
     //   return {repoName: node.name, license: node.licenseInfo ? node.licenseInfo.name : "Null"}
     // }))
-  } while (false)
+  // } while (false)
   return repoNames;
 }
 
@@ -47,7 +55,7 @@ async function main(){
   // stream.write(
   //   "Repository, license \n"
   // );
-  const repoTopics = await getAllRepositoryTopicsByOrg("bcgov")
+  const repoTopics = await getAllRepositoryTopicsByOrg("bcgov", "bc-sans")
   // repoTopics.forEach(repo => {
   //   const {repoName, license} = repo;
   //   stream.write(`${repoName}, ${license} \n`)
