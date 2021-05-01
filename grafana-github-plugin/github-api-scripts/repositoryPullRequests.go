@@ -213,9 +213,9 @@ func main() {
 
 	// Append data into csv
 	header := []string{
-		"Repository",
-		"Fork PullRequest Count",
-		"Review Count",
+		"repository",
+		"fork_pr_count",
+		"review_count",
 	}
 	utils.WriteLineToFile(f, header...)
 

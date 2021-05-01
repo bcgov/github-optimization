@@ -141,15 +141,15 @@ func main() {
 
 	// Append data into csv
 	header := []string{
-		"Repository",
-		"Package Count",
-		"Project Count",
-		"Release Count",
-		"Submodule Count",
-		"Deploy Key Count",
-		"Topic Count",
-		"License",
-		"Code Of Conduct",
+		"repository",
+		"package_count",
+		"project_count",
+		"release_count",
+		"submodule_count",
+		"deploy_key_count",
+		"topic_count",
+		"license",
+		"code_of_conduct",
 	}
 	utils.WriteLineToFile(f, header...)
 

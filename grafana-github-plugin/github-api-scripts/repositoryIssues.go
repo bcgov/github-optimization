@@ -207,15 +207,15 @@ func main() {
 
 	// Append data into csv
 	header := []string{
-		"Repository",
-		"Author",
-		"Closed",
-		"ClosedAt",
-		"CreatedAt",
-		"LastEditedAt",
-		"State",
-		"Title",
-		"UpdatedAt",
+		"repository",
+		"author",
+		"closed",
+		"closed_at",
+		"created_at",
+		"last_edited_at",
+		"state",
+		"title",
+		"updated_at",
 	}
 	utils.WriteLineToFile(f, header...)
 
