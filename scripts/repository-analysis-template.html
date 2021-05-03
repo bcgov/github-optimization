@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css"
+      integrity="sha512-8bHTC73gkZ7rZ7vpqUQThUDhqcNFyYi2xgDgPDHc+GXVGHXq+xPjynxIopALmOPqzo9JZj0k6OqqewdGO3EsrQ=="
+      crossorigin="anonymous"
+    />
+    <style>
+      table th {
+        cursor: pointer !important;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="ui container">
+      <% _.forEach(groups, (val) => { %>
+
+      <h3><%- val.name %></h3>
+
+      <table class="ui celled compact table">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Name</th>
+            <th class="right aligned">Count</th>
+            <th class="right aligned">Percentage (%)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% _.forEach(val.value, (val) => { %>
+          <tr>
+            <td><%- val.key %></td>
+            <td><%- val.name %></td>
+            <td class="right aligned"><%- val.value %></td>
+            <td class="right aligned"><%- val.perc %> %</td>
+          </tr>
+          <% }); %>
+        </tbody>
+      </table>
+
+      <% }); %>
+    </div>
+  </body>
+  <footer>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+      integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      var tryToNumber = function (val) {
+        var num = Number(val);
+        return isNaN(num) ? val : num;
+      };
+
+      jQuery.fn.sortElements = (function () {
+        var sort = [].sort;
+
+        return function (comparator, getSortable) {
+          getSortable =
+            getSortable ||
+            function () {
+              return this;
+            };
+
+          var placements = this.map(function () {
+            var sortElement = getSortable.call(this),
+              parentNode = sortElement.parentNode,
+              nextSibling = parentNode.insertBefore(document.createTextNode(''), sortElement.nextSibling);
+
+            return function () {
+              if (parentNode === this) {
+                throw new Error("You can't sort elements if any one is a descendant of another.");
+              }
+
+              parentNode.insertBefore(this, nextSibling);
+              parentNode.removeChild(nextSibling);
+            };
+          });
+
+          return sort.call(this, comparator).each(function (i) {
+            placements[i].call(getSortable.call(this));
+          });
+        };
+      })();
+
+      $('table').each(function () {
+        var _table = $(this);
+
+        _table
+          .find('th')
+          .wrapInner('<span title="sort this column"/>')
+          .each(function () {
+            var th = $(this),
+              thIndex = th.index(),
+              inverse = false;
+
+            th.click(function () {
+              _table
+                .find('td')
+                .filter(function () {
+                  return $(this).index() === thIndex;
+                })
+                .sortElements(
+                  function (a, b) {
+                    var at = $.text([a]);
+                    var bt = $.text([b]);
+
+                    if (at.endsWith('%')) at = at.slice(0, -1);
+                    if (bt.endsWith('%')) bt = bt.slice(0, -1);
+
+                    var an = tryToNumber(at);
+                    var bn = tryToNumber(bt);
+
+                    return an > bn ? (inverse ? -1 : 1) : inverse ? 1 : -1;
+                  },
+                  function () {
+                    return this.parentNode;
+                  }
+                );
+
+              inverse = !inverse;
+            });
+          });
+      });
+    </script>
+  </footer>
+</html>

@@ -126,8 +126,8 @@ func main() {
 
 	// Append data into csv
 	header := []string{
-		"Repository",
-		"Ministry Code",
+		"repository",
+		"ministry_code",
 	}
 	utils.WriteLineToFile(f, header...)
 
