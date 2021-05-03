@@ -310,7 +310,7 @@ async function main() {
       result.totalCount = totalCount;
       result.groups = groups;
 
-      fs.writeFile(path.resolve(__dirname, '../gh-page', 'index.html'), compiled(result), 'utf8', () =>
+      fs.writeFile(path.resolve(__dirname, '../docs', 'index.html'), compiled(result), 'utf8', () =>
         process.exit()
       );
     });
