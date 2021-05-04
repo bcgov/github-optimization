@@ -104,4 +104,6 @@ terraform-octk-aws-sea-routing,0,0,0,0,0,0,Apache License 2.0,Contributor Covena
 terraform-octk-aws-workload-ecr,0,0,0,0,0,0,Apache License 2.0,Contributor Covenant
 terraform-octk-aws-sea-rocketchat-notifications,0,0,0,0,0,0,Apache License 2.0,Contributor Covenant
 terraform-aws-sea-organization-info-extended,0,0,0,0,0,0,Apache License 2.0,Contributor Covenant
+terraform-octk-aws-sea-billing-reports,0,0,0,0,0,0,Apache License 2.0,Contributor Covenant
+openshift-quota-rec,0,0,0,0,0,0,,
 terraform-octk-aws-sea-client-vpn-setup,0,0,0,0,0,0,Apache License 2.0,Contributor Covenant

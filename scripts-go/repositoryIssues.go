@@ -9,7 +9,7 @@ import (
 	"strconv"
 	"strings"
 
-	utils "github.com/grafana/github-datasource/github-api-scripts/utils"
+	utils "gh.com/api-test/utils"
 	"github.com/shurcooL/githubv4"
 	"golang.org/x/oauth2"
 )
@@ -180,7 +180,7 @@ func main() {
 	path, err := os.Getwd()
 	utils.HandleError(err)
 
-	targetDir := fmt.Sprintf("../../../notebook/dat/%v/", org)
+	targetDir := fmt.Sprintf("../../notebook/dat/%v/", org)
 	targetFile := "/repository-issues.csv"
 
 	err = os.MkdirAll(path+targetDir, os.ModePerm)
