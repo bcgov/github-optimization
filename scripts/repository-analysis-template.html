@@ -51,9 +51,11 @@
 
       <canvas
         class="chart"
+        height="200"
         data-label="<%- JSON.stringify(sorted.map(v => v.name)) %>"
         data-data="<%- JSON.stringify(sorted.map(v => v.value)) %>"
         data-type="<%- val.chartType %>"
+        data-title="<%- val.name %>"
       ></canvas>
 
       <hr />
@@ -157,6 +159,7 @@
         var labels = ct.data().label;
         var data = ct.data().data;
         var type = ct.data().type;
+        var title = ct.data().title;
 
         var backgroundColor = [];
         var borderColor = [];
@@ -183,8 +186,12 @@
             ],
           },
           options: {
+            title: {
+              display: true,
+              text: title,
+            },
             legend: {
-              display: false,
+              display: type !== 'bar',
             },
             tooltips: {
               enabled: true,
