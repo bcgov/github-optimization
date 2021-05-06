@@ -18,8 +18,9 @@
   <body>
     <div class="ui container">
       <p>
-        * The below data was collected for the <a href="https://github.com/bcgov" target="_blank">bcgov</a> GitHub
-        organization repositories at a specific time and does not display live data.
+        * The below data was collected for the
+        <a href="https://github.com/bcgov" target="_blank">bcgov</a> GitHub organization repositories at a specific time
+        and does not display live data.
       </p>
       <% _.forEach(groups, (val) => { %>
 
@@ -46,6 +47,16 @@
         </tbody>
       </table>
 
+      <% const sorted = _.sortBy(val.value, [function(o) { return o.value; }]); %>
+
+      <canvas
+        class="chart"
+        data-label="<%- JSON.stringify(sorted.map(v => v.name)) %>"
+        data-data="<%- JSON.stringify(sorted.map(v => v.value)) %>"
+        data-type="<%- val.chartType %>"
+      ></canvas>
+
+      <hr />
       <% }); %>
     </div>
   </body>
@@ -53,6 +64,11 @@
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
       integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"
+      integrity="sha512-hZf9Qhp3rlDJBvAKvmiG+goaaKRZA6LKUO35oK6EsM0/kjPK32Yw7URqrq3Q+Nvbbt8Usss+IekL7CRn83dYmw=="
       crossorigin="anonymous"
     ></script>
     <script>
@@ -131,6 +147,60 @@
             });
           });
       });
+    </script>
+
+    <script>
+      var ctx = $('.chart');
+
+      for (var x = 0; x < ctx.length; x++) {
+        var ct = $(ctx[x]);
+        var labels = ct.data().label;
+        var data = ct.data().data;
+        var type = ct.data().type;
+
+        var backgroundColor = [];
+        var borderColor = [];
+
+        var colors = data.forEach(function (v) {
+          var color = getRandomColor();
+          backgroundColor.push(color);
+          borderColor.push(color);
+        });
+
+        var chart = new Chart(ctx[x], {
+          type: type,
+          data: {
+            labels: labels,
+            datasets: [
+              {
+                label: null,
+                data: data,
+                backgroundColor: backgroundColor,
+                borderColor: borderColor,
+                borderWidth: 1,
+                hoverOffset: 10,
+              },
+            ],
+          },
+          options: {
+            legend: {
+              display: false,
+            },
+            tooltips: {
+              enabled: true,
+            },
+          },
+        });
+      }
+
+      function getRandomColor() {
+        var letters = '0123456789ABCDEF';
+        var color = '#';
+        for (var i = 0; i < 6; i++) {
+          color += letters[Math.floor(Math.random() * 16)];
+        }
+        return color;
+      }
     </script>
   </footer>
 </html>

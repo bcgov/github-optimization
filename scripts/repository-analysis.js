@@ -299,20 +299,18 @@ async function main() {
         if (val.group) {
           const name = _.camelCase(`${key}_group`);
           const group = toArr(result[name]);
-          groups.push({ name: val.group, value: group });
+          groups.push({ name: val.group, value: group, chartType: 'pie' });
         }
       });
 
-      groups.unshift({ name: 'General Stastics', value: counts });
-      groups.push({ name: 'Primary Languages', value: toArr(result.primaryLanguages) });
-      groups.push({ name: 'All Languages', value: toArr(result.allLanguages) });
+      groups.unshift({ name: 'General Stastics', value: counts, chartType: 'bar' });
+      groups.push({ name: 'Primary Languages', value: toArr(result.primaryLanguages), chartType: 'pie' });
+      groups.push({ name: 'All Languages', value: toArr(result.allLanguages), chartType: 'pie' });
 
       result.totalCount = totalCount;
       result.groups = groups;
 
-      fs.writeFile(path.resolve(__dirname, '../docs', 'index.html'), compiled(result), 'utf8', () =>
-        process.exit()
-      );
+      fs.writeFile(path.resolve(__dirname, '../docs', 'index.html'), compiled(result), 'utf8', () => process.exit());
     });
 }
 
