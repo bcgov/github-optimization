@@ -191,16 +191,17 @@ const schema = {
   issue_count: {},
   pr_count: {},
   commit_count: {},
-  average_issue_count_per_day: {},
-  average_pr_count_per_day: {},
-  average_commit_count_per_day: {},
+  branch_protection_rule_count: {},
+  avg_issue_count_per_day: {},
+  avg_pr_count_per_day: {},
+  avg_commit_count_per_day: {},
   default_branch_name: {
     type: String,
     group: 'Default Branches',
   },
   languages: {
     type: Array,
-    custom: (data, row) => {
+    custom: (data = '', row) => {
       const langs = data.split('_');
       const primaryLang = langs.length > 0 ? langs[0] : '';
 
@@ -239,19 +240,26 @@ async function main({ orgName, source, outputFilename }) {
     .transform((row, next) => {
       totalCount++;
 
-      Object.keys(row).forEach((field) => {
-        if (!schema[field]) return;
+      Object.keys(row).forEach((key) => {
+        const field = _.snakeCase(key);
+
+        if (!schema[field]) {
+          if (totalCount === 1) console.log(`schema definition for ${field} is missing`);
+          return;
+        }
+
+        const value = row[key];
 
         if (schema[field].count) {
           switch (schema[field].type) {
             case String:
-              if (row[field].length > 0) result[field]++;
+              if (value.length > 0) result[field]++;
               break;
             case Boolean:
-              if (row[field] === 'True') result[field]++;
+              if (value === 'True') result[field]++;
               break;
             case Number:
-              if (Number(row[field]) > 0) result[field]++;
+              if (Number(value) > 0) result[field]++;
               break;
             default:
               break;
@@ -261,12 +269,12 @@ async function main({ orgName, source, outputFilename }) {
         if (schema[field].group) {
           const key = _.camelCase(`${field}_group`);
 
-          if (!result[key][row[field]]) result[key][row[field]] = 1;
-          else result[key][row[field]]++;
+          if (!result[key][value]) result[key][value] = 1;
+          else result[key][value]++;
         }
 
         const customProcess = schema[field].custom || _.noop;
-        customProcess(row[field], row);
+        customProcess(value, row);
       });
 
       next(null);
