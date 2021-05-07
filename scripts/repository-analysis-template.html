@@ -37,12 +37,12 @@
 
       <h3>On this page:</h3>
       <div class="ui bulleted list">
-        <% _.forEach(groups, (val) => { %> <% const sorted = _.orderBy(val.value, ['value'], ['desc']); %>
+        <% _.forEach(groups, (val) => { %>
         <a class="item" href="#<%- val.name %>"><%- val.name %></a>
         <% }); %>
       </div>
 
-      <% _.forEach(groups, (val) => { %> <% const sorted = _.orderBy(val.value, ['value'], ['desc']); %>
+      <% _.forEach(groups, (val) => { %> <% const sorted = _.orderBy(val.value, [val.sortBy], [val.sortOrder]); %>
 
       <h3 id="<%- val.name %>"><a href="#<%- val.name %>"># <%- val.name %></a></h3>
 
@@ -67,7 +67,7 @@
 
       <canvas
         class="chart"
-        height="<%- sorted.length * 6 + 15 %>"
+        height="<%- val.chartType === 'bar' ? 150 : sorted.length * 6 + 15 %>"
         data-label="<%- JSON.stringify(sorted.map(v => v.name)) %>"
         data-data="<%- JSON.stringify(sorted.map(v => v.value)) %>"
         data-type="<%- val.chartType %>"
