@@ -10,7 +10,7 @@ import (
 	"strconv"
 	"time"
 
-	utils "github.com/grafana/github-datasource/github-api-scripts/utils"
+	utils "gh.com/api-test/utils"
 	"github.com/shurcooL/githubv4"
 	"golang.org/x/oauth2"
 )
@@ -38,6 +38,9 @@ type Repository struct {
 		TotalCount int
 	}
 	PullRequests struct {
+		TotalCount int
+	}
+	BranchProtectionRules struct {
 		TotalCount int
 	}
 	DefaultBranchRef struct {
@@ -186,7 +189,7 @@ func main() {
 	path, err := os.Getwd()
 	utils.HandleError(err)
 
-	targetDir := fmt.Sprintf("../../../notebook/dat/%v/", org)
+	targetDir := fmt.Sprintf("../../notebook/dat/%v/", org)
 	targetFile := "/repository-details-2.csv"
 
 	err = os.MkdirAll(path+targetDir, os.ModePerm)
@@ -213,16 +216,17 @@ func main() {
 
 	// Append data into csv
 	header := []string{
-		"Repository",
-		"Days Open",
-		"Issue Count",
-		"PR Count",
-		"Commit Count",
-		"Avg. Issue Count Per Day",
-		"Avg. PR Count Per Day",
-		"Avg. Commit Count Per Day",
-		"Default Branch Name",
-		"Languages",
+		"repository",
+		"days_open",
+		"issue_count",
+		"pr_count",
+		"commit_count",
+		"branch_protection_rule_count",
+		"avg_issue_count_per_day",
+		"avg_pr_count_per_day",
+		"avg_commit_count_per_day",
+		"default_branch_name",
+		"languages",
 	}
 	utils.WriteLineToFile(f, header...)
 
@@ -230,6 +234,7 @@ func main() {
 		name := repo.Name
 		issueCount := repo.Issues.TotalCount
 		prCount := repo.PullRequests.TotalCount
+		branchProtectionRuleCount := repo.BranchProtectionRules.TotalCount
 		commitCount := extras[i].DefaultBranchCommitCount
 		defaultBranchName := repo.DefaultBranchRef.Name
 
@@ -251,6 +256,7 @@ func main() {
 		issueCountStr := strconv.Itoa(issueCount)
 		prCountStr := strconv.Itoa(prCount)
 		commitCountStr := strconv.Itoa(commitCount)
+		branchProtectionRuleCountStr := strconv.Itoa(branchProtectionRuleCount)
 		daysOpenStr := strconv.Itoa(int(daysOpen))
 		averageIssueCountPerDayStr := strconv.FormatFloat(math.Round(averageIssueCountPerDay*100)/100, 'f', -1, 32)
 		averagePrCountPerDayStr := strconv.FormatFloat(math.Round(averagePrCountPerDay*100)/100, 'f', -1, 32)
@@ -262,6 +268,7 @@ func main() {
 			issueCountStr,
 			prCountStr,
 			commitCountStr,
+			branchProtectionRuleCountStr,
 			averageIssueCountPerDayStr,
 			averagePrCountPerDayStr,
 			averageCommitCountPerDayStr,

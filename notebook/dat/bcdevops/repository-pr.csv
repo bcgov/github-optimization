@@ -104,4 +104,6 @@ terraform-octk-aws-sea-routing,0,1
 terraform-octk-aws-workload-ecr,0,0
 terraform-octk-aws-sea-rocketchat-notifications,0,1
 terraform-aws-sea-organization-info-extended,0,0
+terraform-octk-aws-sea-billing-reports,0,0
+openshift-quota-rec,0,1
 terraform-octk-aws-sea-client-vpn-setup,0,0

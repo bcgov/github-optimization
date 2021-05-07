@@ -7,8 +7,9 @@ import (
 	"fmt"
 	"os"
 	"strconv"
+	"strings"
 
-	utils "github.com/grafana/github-datasource/github-api-scripts/utils"
+	utils "gh.com/api-test/utils"
 	"github.com/shurcooL/githubv4"
 	"golang.org/x/oauth2"
 )
@@ -26,22 +27,36 @@ type QueryListRepositories struct {
 	} `graphql:"organization(login: $org)"`
 }
 
-// Repository is a code repository
+// Repository is ...
 type Repository struct {
 	Name string
 }
 
-// Repositories is a list of GitHub repositories
-type Repositories []Repository
-
-// RepositoryExtra is ...
-type RepositoryExtra struct {
-	ForkPullRequestCount   int
-	ReviewPullRequestCount int
+// Repo is ...
+type Repo struct {
+	Name   string
+	Issues Issues
 }
 
-// RepositoryExtras is ...
-type RepositoryExtras []RepositoryExtra
+// Repositories is a list of GitHub repositories
+type Repositories []Repo
+
+// Issue is ...
+type Issue struct {
+	Author struct {
+		Login string
+	}
+	Closed       bool
+	ClosedAt     string
+	CreatedAt    string
+	LastEditedAt string
+	State        string
+	Title        string
+	UpdatedAt    string
+}
+
+// Issues is ...
+type Issues []Issue
 
 type Client interface {
 	Query(ctx context.Context, q interface{}, variables map[string]interface{}) error
@@ -52,16 +67,15 @@ type RepositoryOptions struct {
 }
 
 // GetRepositories retruns the organization basic information for the client
-func GetRepositories(ctx context.Context, client Client, opts RepositoryOptions) (Repositories, RepositoryExtras, error) {
+func GetRepositories(ctx context.Context, client Client, opts RepositoryOptions) (Repositories, error) {
 	var (
 		variables = map[string]interface{}{
 			"org":    githubv4.String(opts.Org),
 			"cursor": (*githubv4.String)(nil),
 		}
 
-		repos  = []Repository{}
-		extras = []RepositoryExtra{}
-		page   = 1
+		repos = []Repo{}
+		page  = 1
 	)
 
 	for {
@@ -70,9 +84,10 @@ func GetRepositories(ctx context.Context, client Client, opts RepositoryOptions)
 		query := &QueryListRepositories{}
 		if err := client.Query(ctx, query, variables); err != nil {
 			fmt.Println(err)
-			return nil, nil, err
+			return []Repo{}, err
 		}
-		r := make([]Repository, len(query.Organization.Repositories.Nodes))
+
+		r := make([]Repo, len(query.Organization.Repositories.Nodes))
 
 		for i, v := range query.Organization.Repositories.Nodes {
 			opts := BranchOptions{
@@ -80,10 +95,13 @@ func GetRepositories(ctx context.Context, client Client, opts RepositoryOptions)
 				Name: v.Name,
 			}
 
-			extra, _ := GetForkPullRequestCount(ctx, client, opts)
-			extras = append(extras, extra)
+			issues, _ := GetRepositoryIssues(ctx, client, opts)
 
-			r[i] = v
+			repo := Repo{}
+			repo.Name = v.Name
+			repo.Issues = issues
+
+			r[i] = repo
 		}
 
 		repos = append(repos, r...)
@@ -98,7 +116,7 @@ func GetRepositories(ctx context.Context, client Client, opts RepositoryOptions)
 		// time.Sleep(10 * time.Minute)
 	}
 
-	return repos, extras, nil
+	return repos, nil
 }
 
 type BranchOptions struct {
@@ -106,34 +124,21 @@ type BranchOptions struct {
 	Name string
 }
 
-// QueryForkPullRequestCount is ...
-type QueryForkPullRequestCount struct {
+// QueryRepositoryIssues is ...
+type QueryRepositoryIssues struct {
 	Repository struct {
-		PullRequests struct {
+		Issues struct {
+			Nodes    []Issue
 			PageInfo struct {
 				HasNextPage githubv4.Boolean
 				EndCursor   githubv4.String
 			}
-			Nodes []struct {
-				Repository struct {
-					Name string
-				}
-				BaseRepository struct {
-					Name string
-				}
-				HeadRepository struct {
-					Name string
-				}
-				Reviews struct {
-					TotalCount int
-				}
-			}
-		} `graphql:"pullRequests(first: 100, after: $cursor)"`
+		} `graphql:"issues(first: 100, after: $cursor)"`
 	} `graphql:"repository(name: $name, owner: $org)"`
 }
 
-// GetForkPullRequestCount retruns ...
-func GetForkPullRequestCount(ctx context.Context, client Client, ops BranchOptions) (RepositoryExtra, error) {
+// GetRepositoryIssues retruns ...
+func GetRepositoryIssues(ctx context.Context, client Client, ops BranchOptions) (Issues, error) {
 	var (
 		variables = map[string]interface{}{
 			"org":    githubv4.String(ops.Org),
@@ -141,42 +146,31 @@ func GetForkPullRequestCount(ctx context.Context, client Client, ops BranchOptio
 			"cursor": (*githubv4.String)(nil),
 		}
 
-		extra = RepositoryExtra{
-			ForkPullRequestCount:   0,
-			ReviewPullRequestCount: 0,
-		}
+		issues = []Issue{}
 
 		page = 1
 	)
 
 	for {
-		fmt.Printf("Querying %v - %v pr page...\n", ops.Name, page)
+		fmt.Printf("Querying %v - %v issue page...\n", ops.Name, page)
 
-		query := &QueryForkPullRequestCount{}
+		query := &QueryRepositoryIssues{}
 		if err := client.Query(ctx, query, variables); err != nil {
 			fmt.Println(err)
-			return RepositoryExtra{}, err
+			return []Issue{}, err
 		}
 
-		for _, v := range query.Repository.PullRequests.Nodes {
-			if v.Repository.Name == v.BaseRepository.Name && v.HeadRepository.Name != "" && v.BaseRepository.Name != v.HeadRepository.Name {
-				extra.ForkPullRequestCount++
-			}
+		issues = append(issues, query.Repository.Issues.Nodes...)
 
-			if v.Reviews.TotalCount > 0 {
-				extra.ReviewPullRequestCount++
-			}
-		}
-
-		if !query.Repository.PullRequests.PageInfo.HasNextPage {
+		if !query.Repository.Issues.PageInfo.HasNextPage {
 			break
 		}
 
-		variables["cursor"] = query.Repository.PullRequests.PageInfo.EndCursor
+		variables["cursor"] = query.Repository.Issues.PageInfo.EndCursor
 		page++
 	}
 
-	return extra, nil
+	return issues, nil
 }
 
 func main() {
@@ -186,8 +180,8 @@ func main() {
 	path, err := os.Getwd()
 	utils.HandleError(err)
 
-	targetDir := fmt.Sprintf("../../../notebook/dat/%v/", org)
-	targetFile := "/repository-pr.csv"
+	targetDir := fmt.Sprintf("../../notebook/dat/%v/", org)
+	targetFile := "/repository-issues.csv"
 
 	err = os.MkdirAll(path+targetDir, os.ModePerm)
 	utils.HandleError(err)
@@ -209,26 +203,37 @@ func main() {
 		Org: org,
 	}
 
-	repos, extras, _ := GetRepositories(context.Background(), client, opts)
+	repos, _ := GetRepositories(context.Background(), client, opts)
 
 	// Append data into csv
 	header := []string{
-		"Repository",
-		"Fork PullRequest Count",
-		"Review Count",
+		"repository",
+		"author",
+		"closed",
+		"closed_at",
+		"created_at",
+		"last_edited_at",
+		"state",
+		"title",
+		"updated_at",
 	}
 	utils.WriteLineToFile(f, header...)
 
-	for i, repo := range repos {
-		forkPrCount := extras[i].ForkPullRequestCount
-		reviewPrCount := extras[i].ReviewPullRequestCount
+	for _, repo := range repos {
+		for _, issue := range repo.Issues {
+			cells := []string{
+				repo.Name,
+				issue.Author.Login,
+				strconv.FormatBool(issue.Closed),
+				issue.ClosedAt,
+				issue.CreatedAt,
+				issue.LastEditedAt,
+				issue.State,
+				strings.Replace(issue.Title, "\"", "'", -1),
+				issue.UpdatedAt,
+			}
 
-		cells := []string{
-			repo.Name,
-			strconv.Itoa(forkPrCount),
-			strconv.Itoa(reviewPrCount),
+			utils.WriteLineToFile(f, cells...)
 		}
-
-		utils.WriteLineToFile(f, cells...)
 	}
 }

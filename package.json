@@ -1,7 +1,7 @@
 {
   "name": "github-optimization",
   "version": "1.0.0",
-  "description": "",
+  "description": "A repository to understand `bcgov` and `BCDevOps` GitHub organizations",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -11,6 +11,11 @@
   "dependencies": {
     "@octokit/graphql": "^4.6.1",
     "@octokit/rest": "^18.5.3",
-    "dotenv": "^8.2.0"
+    "axios": "^0.21.1",
+    "cheerio": "^1.0.0-rc.6",
+    "cli-table": "^0.3.6",
+    "dotenv": "^8.2.0",
+    "fast-csv": "^4.3.6",
+    "lodash": "^4.17.21"
   }
 }

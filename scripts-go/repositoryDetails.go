@@ -8,7 +8,7 @@ import (
 	"os"
 	"strconv"
 
-	utils "github.com/grafana/github-datasource/github-api-scripts/utils"
+	utils "gh.com/api-test/utils"
 	"github.com/shurcooL/githubv4"
 	"golang.org/x/oauth2"
 )
@@ -28,31 +28,31 @@ type QueryListRepositories struct {
 
 // Repository is a code repository
 type Repository struct {
-	Name  string
-	Owner struct {
-		Login string
+	Name     string
+	Packages struct {
+		TotalCount int
 	}
-	NameWithOwner      string
-	URL                string
-	HomepageURL        string
-	Description        string
-	ForkCount          int
-	IsFork             bool
-	IsMirror           bool
-	IsPrivate          bool
-	IsArchived         bool
-	IsTemplate         bool
-	StargazerCount     int
-	DiskUsage          int
-	HasIssuesEnabled   bool
-	HasProjectsEnabled bool
-	HasWikiEnabled     bool
-	MergeCommitAllowed bool
-	RebaseMergeAllowed bool
-	SquashMergeAllowed bool
-	CreatedAt          string
-	UpdatedAt          string
-	PushedAt           string
+	Projects struct {
+		TotalCount int
+	}
+	Releases struct {
+		TotalCount int
+	}
+	Submodules struct {
+		TotalCount int
+	}
+	DeployKeys struct {
+		TotalCount int
+	}
+	RepositoryTopics struct {
+		TotalCount int
+	}
+	LicenseInfo struct {
+		Name string
+	}
+	CodeOfConduct struct {
+		Name string
+	}
 }
 
 // Repositories is a list of GitHub repositories
@@ -114,8 +114,8 @@ func main() {
 	path, err := os.Getwd()
 	utils.HandleError(err)
 
-	targetDir := fmt.Sprintf("../../../notebook/dat/%v/", org)
-	targetFile := "/repository-basics.csv"
+	targetDir := fmt.Sprintf("../../notebook/dat/%v/", org)
+	targetFile := "/repository-details-1.csv"
 
 	err = os.MkdirAll(path+targetDir, os.ModePerm)
 	utils.HandleError(err)
@@ -141,57 +141,36 @@ func main() {
 
 	// Append data into csv
 	header := []string{
-		"Repository",
-		"Owner",
-		"Name With Owner",
-		"Url",
-		"Homepage Url",
-		"Description",
-		"Forks",
-		"Is Fork",
-		"Is Mirror",
-		"Is Private",
-		"Is Archived",
-		"Is Template",
-		"Stars",
-		"Disk Usage",
-		"Has Issues Enabled",
-		"Has Projects Enabled",
-		"Has Wiki Enabled",
-		"Merge Commit Allowed",
-		"Rebase Merge Allowed",
-		"Squash Merge Allowed",
-		"Created At",
-		"Updated At",
-		"Pushed At",
+		"repository",
+		"package_count",
+		"project_count",
+		"release_count",
+		"submodule_count",
+		"deploy_key_count",
+		"topic_count",
+		"license",
+		"code_of_conduct",
 	}
 	utils.WriteLineToFile(f, header...)
 
 	for _, repo := range repos {
+		packageCount := repo.Packages.TotalCount
+		projectCount := repo.Projects.TotalCount
+		releaseCount := repo.Releases.TotalCount
+		submoduleCount := repo.Submodules.TotalCount
+		deployKeyCount := repo.DeployKeys.TotalCount
+		topicCount := repo.RepositoryTopics.TotalCount
+
 		cells := []string{
 			repo.Name,
-			repo.Owner.Login,
-			repo.NameWithOwner,
-			repo.URL,
-			repo.HomepageURL,
-			repo.Description,
-			strconv.Itoa(repo.StargazerCount),
-			strconv.Itoa(repo.ForkCount),
-			strconv.Itoa(repo.DiskUsage),
-			strconv.FormatBool(repo.IsFork),
-			strconv.FormatBool(repo.IsMirror),
-			strconv.FormatBool(repo.IsPrivate),
-			strconv.FormatBool(repo.IsArchived),
-			strconv.FormatBool(repo.IsTemplate),
-			strconv.FormatBool(repo.HasIssuesEnabled),
-			strconv.FormatBool(repo.HasProjectsEnabled),
-			strconv.FormatBool(repo.HasWikiEnabled),
-			strconv.FormatBool(repo.MergeCommitAllowed),
-			strconv.FormatBool(repo.RebaseMergeAllowed),
-			strconv.FormatBool(repo.SquashMergeAllowed),
-			repo.CreatedAt,
-			repo.UpdatedAt,
-			repo.PushedAt,
+			strconv.Itoa(packageCount),
+			strconv.Itoa(projectCount),
+			strconv.Itoa(releaseCount),
+			strconv.Itoa(submoduleCount),
+			strconv.Itoa(deployKeyCount),
+			strconv.Itoa(topicCount),
+			repo.LicenseInfo.Name,
+			repo.CodeOfConduct.Name,
 		}
 
 		utils.WriteLineToFile(f, cells...)
