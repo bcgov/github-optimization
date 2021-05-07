@@ -256,7 +256,6 @@ async function main({ orgName, source, outputFilename }) {
   _.each(schema, (val, key) => {
     if (val.count) result[key] = 0;
     if (val.group) result[_.camelCase(`${key}_group`)] = {};
-    if (val.range) result[_.camelCase(`${key}_range`)] = [];
   });
 
   let totalCount = 0;
@@ -305,7 +304,7 @@ async function main({ orgName, source, outputFilename }) {
 
         if (schema[field].range && schema[field].type === Number) {
           const key = _.camelCase(`${field}_range`);
-
+``
           if (!ranges[key]) ranges[key] = [Number(value)];
           else ranges[key].push(Number(value));
         }
