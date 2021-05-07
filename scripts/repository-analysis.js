@@ -48,8 +48,14 @@ const schema = {
     type: Boolean,
     count: `% of template repositories`,
   },
-  stars: {},
-  disk_usage: {},
+  stars: {
+    type: Number,
+    range: true,
+  },
+  disk_usage: {
+    type: Number,
+    range: true,
+  },
   has_issues_enabled: {
     type: Boolean,
     count: `% of repositories with "Issues" enabled`,
@@ -304,7 +310,6 @@ async function main({ orgName, source, outputFilename }) {
 
         if (schema[field].range && schema[field].type === Number) {
           const key = _.camelCase(`${field}_range`);
-``
           if (!ranges[key]) ranges[key] = [Number(value)];
           else ranges[key].push(Number(value));
         }
