@@ -13,18 +13,37 @@
       table th {
         cursor: pointer !important;
       }
+      .text-right {
+        text-align: right;
+      }
     </style>
   </head>
   <body>
     <div class="ui container">
+      <div class="ui inverted pointing menu" id="top">
+        <a class="<%- orgName === 'bcgov' ? 'active' : '' %> item" href="/github-optimization"> bcgov </a>
+        <a class="<%- orgName === 'bcdevops' ? 'active' : '' %> item" href="/github-optimization/bcdevops">
+          BCDevOps
+        </a>
+      </div>
+
       <p>
         * The below data was collected for the
-        <a href="https://github.com/bcgov" target="_blank">bcgov</a> GitHub organization repositories at a specific time
-        and does not display live data.
+        <a href="https://github.com/<%- orgName %>" target="_blank"><%- orgName %></a> GitHub organization repositories
+        at a specific time and does not display live data.
       </p>
-      <% _.forEach(groups, (val) => { %>
+      <p>* You can find the master data file located in <a href="<%- sourceUrl %>" target="_blank">here.</a></p>
 
-      <h3><%- val.name %></h3>
+      <h3>On this page:</h3>
+      <div class="ui bulleted list">
+        <% _.forEach(groups, (val) => { %> <% const sorted = _.orderBy(val.value, ['value'], ['desc']); %>
+        <a class="item" href="#<%- val.name %>"><%- val.name %></a>
+        <% }); %>
+      </div>
+
+      <% _.forEach(groups, (val) => { %> <% const sorted = _.orderBy(val.value, ['value'], ['desc']); %>
+
+      <h3 id="<%- val.name %>"><a href="#<%- val.name %>"># <%- val.name %></a></h3>
 
       <table class="ui celled compact table">
         <thead>
@@ -36,7 +55,7 @@
           </tr>
         </thead>
         <tbody>
-          <% _.forEach(val.value, (val) => { %>
+          <% _.forEach(sorted, (val) => { %>
           <tr>
             <td><%- val.key %></td>
             <td><%- val.name %></td>
@@ -47,16 +66,16 @@
         </tbody>
       </table>
 
-      <% const sorted = _.sortBy(val.value, [function(o) { return o.value; }]); %>
-
       <canvas
         class="chart"
-        height="200"
+        height="<%- sorted.length * 6 + 15 %>"
         data-label="<%- JSON.stringify(sorted.map(v => v.name)) %>"
         data-data="<%- JSON.stringify(sorted.map(v => v.value)) %>"
         data-type="<%- val.chartType %>"
         data-title="<%- val.name %>"
       ></canvas>
+
+      <h4 class="text-right"><a href="#top">Go to Top</a></h4>
 
       <hr />
       <% }); %>
@@ -191,7 +210,7 @@
               text: title,
             },
             legend: {
-              display: type !== 'bar',
+              display: false,
             },
             tooltips: {
               enabled: true,
