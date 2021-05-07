@@ -147,14 +147,14 @@ func main() {
 		"url",
 		"homepage_url",
 		"description",
+		"stars",
 		"forks",
+		"disk_usage",
 		"is_fork",
 		"is_mirror",
 		"is_private",
 		"is_archived",
 		"is_template",
-		"stars",
-		"disk_usage",
 		"has_issues_enabled",
 		"has_projects_enabled",
 		"has_wiki_enabled",
@@ -165,7 +165,7 @@ func main() {
 		"updated_at",
 		"pushed_at",
 	}
-	
+
 	utils.WriteLineToFile(f, header...)
 
 	for _, repo := range repos {
