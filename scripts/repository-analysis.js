@@ -12,6 +12,8 @@ const result = {
   allLanguages: {},
 };
 
+const RANGE_COUNT = 7;
+
 const schema = {
   repository: {},
   owner: {},
@@ -353,14 +355,14 @@ async function main({ orgName, source, outputFilename }) {
 
           const min = _.min(array);
           const max = _.max(array);
-          const range = (max - min) / 5;
+          const range = (max - min) / RANGE_COUNT;
 
           if (min === 0 && max === 0) return true;
           if (range < 1) return true;
 
           const group = [];
 
-          for (let x = 0; x < 5; x++) {
+          for (let x = 0; x < RANGE_COUNT; x++) {
             group.push({
               key: x,
               name: `${Math.floor(range * x)} - ${Math.floor(range * (x + 1) - 1)}`,
@@ -373,7 +375,7 @@ async function main({ orgName, source, outputFilename }) {
             group[parseInt((val - min - 1) / range)].value++;
           });
 
-          for (let x = 0; x < 5; x++) {
+          for (let x = 0; x < RANGE_COUNT; x++) {
             group[x].perc = toPerc(group[x].value);
           }
 

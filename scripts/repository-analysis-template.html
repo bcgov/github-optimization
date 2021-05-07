@@ -42,7 +42,7 @@
         <% }); %>
       </div>
 
-      <% _.forEach(groups, (val) => { %> <% const sorted = _.orderBy(val.value, [val.sortBy], [val.sortOrder]); %>
+      <% _.forEach(groups, (val) => { %> <% const sorted = _.orderBy(val.value, [val.sortBy || 'value'], [val.sortOrder || 'desc']); %>
 
       <h3 id="<%- val.name %>"><a href="#<%- val.name %>"># <%- val.name %></a></h3>
 
