@@ -19,11 +19,11 @@ const schema = {
   url: {},
   homepage_url: {
     type: String,
-    count: `% of repositories has "Homepage Url"`,
+    count: `% of repositories that contain "Homepage Url"`,
   },
   description: {
     type: String,
-    count: `% of repositories has "Description"`,
+    count: `% of repositories that contain "Description"`,
   },
   forks: {},
   is_fork: {
@@ -62,15 +62,15 @@ const schema = {
   },
   merge_commit_allowed: {
     type: Boolean,
-    count: `% of repositories that allows "Merge Commit"`,
+    count: `% of repositories that allow "Merge Commit"`,
   },
   rebase_merge_allowed: {
     type: Boolean,
-    count: `% of repositories that allows "Rebase Merge"`,
+    count: `% of repositories that allow "Rebase Merge"`,
   },
   squash_merge_allowed: {
     type: Boolean,
-    count: `% of repositories that allows "Squash Merge"`,
+    count: `% of repositories that allow "Squash Merge"`,
   },
   created_at: {},
   updated_at: {},
@@ -93,35 +93,35 @@ const schema = {
   },
   ministry_codes_count: {
     type: Number,
-    count: `% of repositories that have Ministry codes`,
+    count: `% of repositories that contain "Ministry codes"`,
   },
   license_file_exists: {
     type: Boolean,
-    count: `% of repositories that have "License"`,
+    count: `% of repositories that contain "License"`,
   },
   readme_file_exists: {
     type: Boolean,
-    count: `% of repositories that "README"`,
+    count: `% of repositories that contain "README"`,
   },
   contributing_file_exists: {
     type: Boolean,
-    count: `% of repositories that "Contributing"`,
+    count: `% of repositories that contain "Contributing"`,
   },
   code_of_conduct_file_exists: {
     type: Boolean,
-    count: `% of repositories that "Code of Conduct"`,
+    count: `% of repositories that contain "Code of Conduct"`,
   },
   changelog_file_exists: {
     type: Boolean,
-    count: `% of repositories that "Change log"`,
+    count: `% of repositories that contain "Change log"`,
   },
   security_file_exists: {
     type: Boolean,
-    count: `% of repositories that "SECURITY"`,
+    count: `% of repositories that contain "SECURITY"`,
   },
   support_file_exists: {
     type: Boolean,
-    count: `% of repositories that "SUPPORT"`,
+    count: `% of repositories that contain "SUPPORT"`,
   },
   readme_references_license: {
     type: Boolean,
@@ -149,35 +149,35 @@ const schema = {
   },
   github_issue_template_exists: {
     type: Boolean,
-    count: `% of repositories that contain Issue Templates`,
+    count: `% of repositories that contain "Issue Templates"`,
   },
   github_pull_request_template_exists: {
     type: Boolean,
-    count: `% of repositories that contain Pull Request Templates`,
+    count: `% of repositories that contain "Pull Request Templates"`,
   },
   package_count: {
     type: Number,
-    count: `% of repositories that contain Packages`,
+    count: `% of repositories that contain "Packages"`,
   },
   project_count: {
     type: Number,
-    count: `% of repositories that contain Projects`,
+    count: `% of repositories that contain "Projects"`,
   },
   release_count: {
     type: Number,
-    count: `% of repositories that contain Releases`,
+    count: `% of repositories that contain "Releases"`,
   },
   submodule_count: {
     type: Number,
-    count: `% of repositories that contain Sub modules`,
+    count: `% of repositories that contain "Sub-modules"`,
   },
   deploy_key_count: {
     type: Number,
-    count: `% of repositories that contain Deploy Keys`,
+    count: `% of repositories that contain "Deploy Keys"`,
   },
   topic_count: {
     type: Number,
-    count: `% of repositories that contain Topics`,
+    count: `% of repositories that contain "Topics"`,
   },
   license: {
     type: String,
@@ -191,16 +191,17 @@ const schema = {
   issue_count: {},
   pr_count: {},
   commit_count: {},
-  average_issue_count_per_day: {},
-  average_pr_count_per_day: {},
-  average_commit_count_per_day: {},
+  branch_protection_rule_count: {},
+  avg_issue_count_per_day: {},
+  avg_pr_count_per_day: {},
+  avg_commit_count_per_day: {},
   default_branch_name: {
     type: String,
     group: 'Default Branches',
   },
   languages: {
     type: Array,
-    custom: (data, row) => {
+    custom: (data = '', row) => {
       const langs = data.split('_');
       const primaryLang = langs.length > 0 ? langs[0] : '';
 
@@ -223,7 +224,7 @@ const schema = {
   },
 };
 
-async function main() {
+async function main({ orgName, source, outputFilename }) {
   _.each(schema, (val, key) => {
     if (val.count) result[key] = 0;
     if (val.group) result[_.camelCase(`${key}_group`)] = {};
@@ -231,7 +232,7 @@ async function main() {
 
   let totalCount = 0;
 
-  fs.createReadStream(path.resolve(__dirname, '../notebook/dat/bcgov', 'master.csv'))
+  fs.createReadStream(path.resolve(__dirname, '../notebook/dat', source))
     .pipe(csv.parse({ headers: true }))
     // pipe the parsed input into a csv formatter
     .pipe(csv.format({ headers: true }))
@@ -239,19 +240,26 @@ async function main() {
     .transform((row, next) => {
       totalCount++;
 
-      Object.keys(row).forEach((field) => {
-        if (!schema[field]) return;
+      Object.keys(row).forEach((key) => {
+        const field = _.snakeCase(key);
+
+        if (!schema[field]) {
+          if (totalCount === 1) console.log(`schema definition for ${field} is missing`);
+          return;
+        }
+
+        const value = row[key];
 
         if (schema[field].count) {
           switch (schema[field].type) {
             case String:
-              if (row[field].length > 0) result[field]++;
+              if (value.length > 0) result[field]++;
               break;
             case Boolean:
-              if (row[field] === 'True') result[field]++;
+              if (value === 'True') result[field]++;
               break;
             case Number:
-              if (Number(row[field]) > 0) result[field]++;
+              if (Number(value) > 0) result[field]++;
               break;
             default:
               break;
@@ -261,12 +269,12 @@ async function main() {
         if (schema[field].group) {
           const key = _.camelCase(`${field}_group`);
 
-          if (!result[key][row[field]]) result[key][row[field]] = 1;
-          else result[key][row[field]]++;
+          if (!result[key][value]) result[key][value] = 1;
+          else result[key][value]++;
         }
 
         const customProcess = schema[field].custom || _.noop;
-        customProcess(row[field], row);
+        customProcess(value, row);
       });
 
       next(null);
@@ -299,19 +307,22 @@ async function main() {
         if (val.group) {
           const name = _.camelCase(`${key}_group`);
           const group = toArr(result[name]);
-          groups.push({ name: val.group, value: group, chartType: 'pie' });
+          groups.push({ name: val.group, value: group, chartType: 'horizontalBar' });
         }
       });
 
-      groups.unshift({ name: 'General Stastics', value: counts, chartType: 'bar' });
-      groups.push({ name: 'Primary Languages', value: toArr(result.primaryLanguages), chartType: 'pie' });
-      groups.push({ name: 'All Languages', value: toArr(result.allLanguages), chartType: 'pie' });
+      groups.unshift({ name: 'General Stastics', value: counts, chartType: 'horizontalBar' });
+      groups.push({ name: 'Primary Languages', value: toArr(result.primaryLanguages), chartType: 'horizontalBar' });
+      groups.push({ name: 'All Languages', value: toArr(result.allLanguages), chartType: 'horizontalBar' });
 
       result.totalCount = totalCount;
       result.groups = groups;
 
-      fs.writeFile(path.resolve(__dirname, '../docs', 'index.html'), compiled(result), 'utf8', () => process.exit());
+      result.orgName = orgName;
+      result.sourceUrl = `https://github.com/bcgov/github-optimization/blob/main/notebook/dat/${source}`;
+
+      fs.writeFile(path.resolve(__dirname, '../docs', outputFilename), compiled(result), 'utf8', () => process.exit());
     });
 }
 
-main();
+module.exports = main;
