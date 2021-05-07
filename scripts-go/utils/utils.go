@@ -4,6 +4,7 @@ import (
 	"errors"
 	"fmt"
 	"os"
+	"strings"
 )
 
 func HandleError(err error) {
@@ -16,10 +17,11 @@ func HandleError(err error) {
 func WriteLineToFile(f *os.File, cells ...string) {
 	var line string
 	for i, b := range cells {
+		escaped := strings.ReplaceAll(b, "\"", "'")
 		if i == 0 {
-			line += b
+			line += "\"" + escaped + "\""
 		} else {
-			line += "," + b
+			line += "," + "\"" + escaped + "\""
 		}
 	}
 
