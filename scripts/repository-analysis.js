@@ -12,6 +12,8 @@ const result = {
   allLanguages: {},
 };
 
+const RANGE_COUNT = 7;
+
 const schema = {
   repository: {},
   owner: {},
@@ -187,14 +189,38 @@ const schema = {
     type: String,
     group: 'Code Of Conduct',
   },
-  days_open: {},
-  issue_count: {},
-  pr_count: {},
-  commit_count: {},
-  branch_protection_rule_count: {},
-  avg_issue_count_per_day: {},
-  avg_pr_count_per_day: {},
-  avg_commit_count_per_day: {},
+  days_open: {
+    type: Number,
+    range: true,
+  },
+  issue_count: {
+    type: Number,
+    range: true,
+  },
+  pr_count: {
+    type: Number,
+    range: true,
+  },
+  commit_count: {
+    type: Number,
+    range: true,
+  },
+  branch_protection_rule_count: {
+    type: Number,
+    range: true,
+  },
+  avg_issue_count_per_day: {
+    type: Number,
+    range: true,
+  },
+  avg_pr_count_per_day: {
+    type: Number,
+    range: true,
+  },
+  avg_commit_count_per_day: {
+    type: Number,
+    range: true,
+  },
   default_branch_name: {
     type: String,
     group: 'Default Branches',
@@ -217,10 +243,12 @@ const schema = {
   fork_pr_count: {
     type: Number,
     count: `% of repositories that contain Outside Contributions`,
+    range: true,
   },
   review_count: {
     type: Number,
     count: `% of repositories that contain Pull Request Reviews`,
+    range: true,
   },
 };
 
@@ -231,6 +259,7 @@ async function main({ orgName, source, outputFilename }) {
   });
 
   let totalCount = 0;
+  const ranges = {};
 
   fs.createReadStream(path.resolve(__dirname, '../notebook/dat', source))
     .pipe(csv.parse({ headers: true }))
@@ -273,6 +302,13 @@ async function main({ orgName, source, outputFilename }) {
           else result[key][value]++;
         }
 
+        if (schema[field].range && schema[field].type === Number) {
+          const key = _.camelCase(`${field}_range`);
+``
+          if (!ranges[key]) ranges[key] = [Number(value)];
+          else ranges[key].push(Number(value));
+        }
+
         const customProcess = schema[field].custom || _.noop;
         customProcess(value, row);
       });
@@ -308,6 +344,47 @@ async function main({ orgName, source, outputFilename }) {
           const name = _.camelCase(`${key}_group`);
           const group = toArr(result[name]);
           groups.push({ name: val.group, value: group, chartType: 'horizontalBar' });
+        }
+
+        if (val.range) {
+          const name = _.camelCase(`${key}_range`);
+          const array = ranges[name];
+
+          if (!array) return true;
+
+          const min = _.min(array);
+          const max = _.max(array);
+          const range = (max - min) / RANGE_COUNT;
+
+          if (min === 0 && max === 0) return true;
+          if (range < 1) return true;
+
+          const group = [];
+
+          for (let x = 0; x < RANGE_COUNT; x++) {
+            group.push({
+              key: x,
+              name: `${Math.floor(range * x)} - ${Math.floor(range * (x + 1) - 1)}`,
+              value: 0,
+              perc: 0,
+            });
+          }
+
+          array.forEach((val) => {
+            group[parseInt((val - min - 1) / range)].value++;
+          });
+
+          for (let x = 0; x < RANGE_COUNT; x++) {
+            group[x].perc = toPerc(group[x].value);
+          }
+
+          groups.push({
+            name: val.range === true ? _.startCase(key) : val.name,
+            value: group,
+            chartType: 'bar',
+            sortBy: val.sortBy || 'key',
+            sortOrder: val.sortOrder || 'asc',
+          });
         }
       });
 
