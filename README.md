@@ -2,10 +2,12 @@
 
 [![Lifecycle:Experimental](https://img.shields.io/badge/Lifecycle-Experimental-339999)](Redirect-URL)
 
-This repository includes the following artifacts developed to understand the repositories in `bcgov` and `BCDevOps` GitHub organizations:
+The goal of this GitHub Optimization Project is to provide tangible progress and recommendations for BC Government that will nurture and grow a healthy, compliant, and vibrant open-source development community. ​
 
 
 ## Features
+
+This repository includes the following artifacts developed to understand the repositories in `bcgov` and `BCDevOps` GitHub organizations:
 
 - `grafana-github-plugin`: a forked repository of the official grafana [`github-datasource`](https://github.com/grafana/github-datasource)
 - `scripts-go`: a set of golang scripts to collect repository data from GitHub API
