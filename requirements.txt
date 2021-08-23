@@ -1,4 +1,4 @@
-jupyterlab==3.0.14
+jupyterlab==3.0.17
 jupyter==1.0.0
 pandas==1.2.4
 gspread==3.7.0
